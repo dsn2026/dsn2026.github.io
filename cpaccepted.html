@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<title>Accepted Papers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/DSN_logo.png"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div w3-include-html="sidebar.html"></div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="dsnHeader">
+    <div w3-include-html="header.html"></div>
+  </header>
+  
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h1><b>DSN-2024: Research Track</b></h1>
+    <h3><b>Accepted Papers</b></h3>
+
+    <!-- <ul>
+    <li><a href="#research">Research Track</a></li>
+    <li><a href="#industry">Industry Track</a></li>
+    <li><a href="#selse">Best of SELSE</a></li>
+    <li><a href="#abstracts">Fast Abstracts</a></li>
+    <li><a href="#doctoral">Doctoral Forum</a></li>
+    </ul> -->
+
+<!--     <h3 id="research"><b>Research Track</b></h3> -->
+    <ul class="w3-ul">
+    <li class="w3-padding-large"><b>Mutiny! How does Kubernetes fail, and what can we do about it?</b><br>Marco Barletta, Marcello Cinque (Università degli Studi di Napoli Federico II); Catello Di Martino (Nokia Bell Labs);
+      Zbigniew Kalbarczyk, Ravishankar K. Iyer (University of Illinois at Urbana-Champaign)<br></li>
+
+    <li class="w3-padding-large"><b>Reboot-based Recovery of Unikernels at the Component Level</b><br>Takeru Wada, Hiroshi Yamada (TUAT)<br></li>
+
+    <li class="w3-padding-large"><b>On the Correctness of Metadata-based SBOM Generation: A
+      Differential Analysis Approach</b><br>Sheng Yu (University of California, Riverside & Deepbits Technology Inc.); Wei Song, Xunchao Hu (Deepbits Technology
+      Inc.); Heng Yin (University of California, Riverside & Deepbits Technology Inc.)<br></li>
+    
+    <li class="w3-padding-large"><b>SPP: Safe Persistent Pointers for Memory Safety</b><br>Dimitrios Stavrakakis (TU Munich & The University of Edinburgh); Alexandra Panfill, MJin Nam, Pramod Bhatotia (TU
+      Munich)<br></li>
+
+    <li class="w3-padding-large"><b>Byzantine Attacks Exploiting Penalties in Ethereum PoS</b><br>Ulysse Pavloff (CEA LIST, Université Paris-Saclay, France); Yackolley Amoussou-Guenou (Université Paris-Panthéon-
+      Assas, CRED); Sara Tucci-Piergiovanni (CEA LIST, Université Paris-Saclay, France)<br></li>
+    
+    <li class="w3-padding-large"><b>ADSynth: Synthesizing Realistic Active Directory Attack Graphs</b><br>Nhu Long Nguyen (University of Adelaide); Nick Falkner, Hung Nguyen (The University of Adelaide)<br></li>
+    
+    <li class="w3-padding-large"><b>Read Disturbance in High Bandwidth Memory: A Detailed
+      Experimental Study on HBM2 DRAM Chips</b><br>Ataberk Olgun, Majd Osseiran, Giray Yaglikci (ETH Zurich); Yahya Can Tuğrul (ETH Zurich, TOBB University of Economics
+      & Technology); Haocong Luo, Steve Rhyner (ETH Zurich); Behzad Salami (BSC and ETH); Juan Gómez Luna (ETH Zurich);
+      Onur Mutlu (ETH Zurich & Stanford University)<br></li>
+    
+    <li class="w3-padding-large"><b>A Fast Low-Level Error Detection Technique</b><br>Zhengyang He (University of Iowa); Hui Xu (Fudan University); Guanpeng Li (University of Iowa)<br></li>
+    
+    <li class="w3-padding-large"><b>Simultaneous Many-Row Activation in Off-the-Shelf DRAM Chips: Experimental Characterization and Analysis</b><br>Ismail Emir Yuksel (ETH Zurich); Yahya Can Tuğrul (ETH Zurich, TOBB University of Economics & Technology); Nisa
+      Bostanci, Geraldo Francisco de Oliveira Junior, Giray Yaglikci, Ataberk Olgun, Melina Soysal, Haocong Luo, Juan Gómez
+      Luna, Mohammad Sadrosadati (ETH Zurich); Onur Mutlu (ETH Zurich & Stanford University)<br></li>
+    
+    <li class="w3-padding-large"><b>Grunt Attack: Exploiting Execution Dependencies in Microservices</b><br>Xuhang Gu, Qingyang Wang, Jianshu Liu (Louisiana State University); Jinpeng Wei (University of North Carolina at
+      Charlotte)<br></li>
+    
+    <li class="w3-padding-large"><b>PAROLE: Profitable Arbitrage in Optimistic Rollup with ERC-721
+      Token Transactions</b><br>Alvi Ataur Khalil, Mohammad Ashiqur Rahman (Florida International University)<br></li>
+    
+    <li class="w3-padding-large"><b>iPrism: Characterize and Mitigate Risk by Quantifying Change in
+      Escape Routes</b><br>Shengkun Cui (University of Illinois at Urbana-Champaign); Saurabh Jha (IBM Research); Ziheng Chen, Zbigniew T.
+      Kalbarczyk, Ravishankar K. Iyer (University of Illinois at Urbana-Champaign)<br></li>
+    
+    <li class="w3-padding-large"><b>JITBULL: Securing JavaScript Runtime with a Go/No-Go policy for
+      JIT Engine</b><br>Jean-Baptiste Decourcelle (IRIT, Université de Toulouse, CNRS, Toulouse INP, UT3, Toulouse, France); Boris Teabe (INPTIRIT);
+      Daniel Hagimont (University of Toulouse, Toulouse, France)<br></li>
+    
+    <li class="w3-padding-large"><b>Privacy Leakage from Logits Attack and Its Defense in Federated
+      Distillation</b><br>Danyang Xiao, Diying Yang, Jialun Li, Xu Chen, Weigang Wu (Sun Yat-sen University)<br></li>
+    
+    <li class="w3-padding-large"><b>System Call Interposition Without Compromise</b><br>Adriaan Jacobs (DistriNet, KU Leuven, Belgium); Merve Gülmez (Ericsson Security Research, Sweden and DistriNet, KU
+      Leuven, Belgium); Alicia Andries, Stijn Volckaert (DistriNet, KU Leuven, Belgium); Alexios Voulimeneas (TU Delft)<br></li>
+    
+    <li class="w3-padding-large"><b>Protecting Confidential Virtual Machines from Hardware
+      Performance Counter Side Channels</b><br>Xiaoxuan Lou, Kangjie Chen, Guowen Xu (Nanyang Technological University); Han Qiu (Tsinghua University); Guo
+      Shangwei (Chongqing University); Tianwei Zhang (Nanyang Technological University)<br></li>
+    
+    <li class="w3-padding-large"><b>ZLB: A Blockchain to Tolerate Colluding Majorities</b><br>Alejandro Ranchal-Pedrosa (Protocol Labs); Vincent Gramoli (University of Sydney and Redbelly Network)<br></li>
+    
+    <li class="w3-padding-large"><b>ZipChannel: Cache Side-Channel Vulnerabilities in Compression
+      Algorithms</b><br>Marina Minkin (University of Michigan); Baris Kasikci (University of Washington and Google)<br></li>
+    
+    <li class="w3-padding-large"><b>ChainNet: A Customized Graph Neural Network Model for Loss-aware
+      Edge AI Service Deployment</b><br>Zifeng Niu (Imperial College London); Manuel Roveri (Politecnico di Milano); Giuliano Casale (Imperial College London)<br></li>
+    
+    <li class="w3-padding-large"><b>Goldfish: an Efficient Federated Unlearning Framework</b><br>Houzhe Wang (University of Chinese Academy of Sciences); Xiaojie Zhu (King Abdullah University of Science and
+      Technology); Chi Chen (Chinese Academy of Sciences); Paulo Esteves-Veríssimo (Resilient Computing and Cybersecurity
+      Center (RC3), CEMSE - Faculty of Computer, Electrical and Mathematical Science and Engineering, King Abdullah
+      University of Science and Technology)<br></li>
+    
+    <li class="w3-padding-large"><b>IPMES: A Tool for Incremental TTP Detection over the System Audit
+      Event Stream (Tool)</b><br>Hong-Wei Li (Research Center for Information Technology Innovation, Academia Sinica, Taiwan); Ping-Ting Liu, Bo-Wei Lin
+      (Department of Computer Science, National Yang Ming Chiao Tung University, Taiwan); Yi-Chun Liao (Department of
+      Computer Science and Information Engineering, National Taiwan University, Taiwan); Yennun Huang (Research Center for
+      Information Technology Innovation, Academia Sinica, Taiwan)<br></li>
+    
+    <li class="w3-padding-large"><b>Decentagram: Highly-Available Decentralized Publish/Subscribe
+      Systems</b><br>Haofan Zheng, Tuan Tran, Roy Shadmon, Owen Arden (UC Santa Cruz)<br></li>
+    
+    <li class="w3-padding-large"><b>Toward Evaluating Robustness of Reinforcement Learning with
+      Adversarial Policy</b><br>Xiang Zheng (City University of Hong Kong); Xingjun Ma (Fudan University); Shengjie Wang (Tsinghua University); Xinyu
+      Wang (Tencent Inc.); Chao Shen (Xi'an Jiaotong University); Cong Wang (City University of Hong Kong)<br></li>
+    
+    <li class="w3-padding-large"><b>Towards Shielding 5G Control Plane Functions</b><br>Sudip Maitra, Tolga Atalay, Angelos Stavrou, Haining Wang (Virginia Tech)<br></li>
+    
+    <li class="w3-padding-large"><b>A comprehensive study on drones resilience in the presence of
+      Inertial Measurement Unit faults</b><br>Anamta Khan, Naghmeh Ivaki, Henrique Madeira (CISUC, Department of Informatics Engineering, University of Coimbra,
+      Portugal)<br></li>
+    
+    <li class="w3-padding-large"><b>Stealthy Peers: Understanding Security and Privacy Risks of Peer-
+      Assisted Video Streaming</b><br>Siyuan Tang (Indiana University Bloomington); Eihal Alowaisheq (King Saud University); Xianghang Mi (University of
+      Science and Technology of China); Yi Chen, XiaoFeng Wang (Indiana University Bloomington); Yanzhi Dou (Independent
+      Researcher)<br></li>
+    
+    <li class="w3-padding-large"><b>Intrusion Tolerance for Networked Systems Through Two-Level
+      Feedback Control</b><br>Kim Hammar, Rolf Stadler (KTH Royal Institute of Technology)<br></li>
+    
+    <li class="w3-padding-large"><b>RABIT, a Robot Arm Bug Intervention Tool for Self-Driving Labs</b><br>Zainab Saeed Wattoo, Petal Vitis, Ruizhe Zhu, Noah Depner, Ivory Zhang, Jason Hein, Arpan Gujarati, Margo Seltzer
+      (University of British Columbia, Vancouver)<br></li>
+    
+    <li class="w3-padding-large"><b>Owl: Differential-based Side-Channel Leakage Detection for CUDA
+      Applications</b><br>Yu Zhao, Wenjie Xue (Huazhong University of Science and Technology); Weijie Chen (School of Cyber Science and
+      Engineering, Huazhong University of Science and Technology (HUST)); Weizhong Qiang, Deqing Zou, Hai Jin (Huazhong
+      University of Science and Technology)<br></li>
+    
+    <li class="w3-padding-large"><b>AOAB: Optimal and Fair Ordering of Financial Transactions</b><br>Vincent Gramoli (University of Sydney and Redbelly Network); Zhenliang Lu (University of Sydney); Qiang Tang (The
+      University of Sydney); Pouriya Zarbafian (University of Sydney)<br></li>
+    
+    <li class="w3-padding-large"><b>BFTRAND: Low-latency Random Number Provider for BFT Smart
+      Contracts</b><br>Jinghui Liao (Southern University of Science and Technology and Wayne State University); Borui Gong (Southern
+      University of Science and Technology and The Hong Kong Polytechnic University); Wenhai Sun (Purdue University, West
+      Lafayette, USA); Fengwei Zhang (Southern University of Science and Technology (SUSTech)); Zhenyu Ning (Hunan
+      University); Man Ho Allen Au (Hong Kong Polytechnic University); Weisong Shi (University of Delaware)<br></li>
+    
+    <li class="w3-padding-large"><b>Verifying Randomized Consensus Protocols with Common Coins</b><br>Song Gao, Bohua Zhan, Zhilin Wu, Lijun Zhang (Institute of Software, Chinese Academy of Sciences)<br></li>
+    
+    <li class="w3-padding-large"><b>Real Time Intrusion Detection and Flow Control with Neural Network
+      in Kernel using eBPF</b><br>Junyu Zhang, Pengfei Chen, Zilong He, Hongyang Chen, Xiaoyun Li (School of Computer Science and Engineering, Sun
+      Yat-sen University)<br></li>
+    
+    <li class="w3-padding-large"><b>PagPassGPT: Pattern Guided Password Guessing via Generative
+      Pretrained Transformer</b><br>Xingyu Su (University of Chinese Academy of Sciences); Xiaojie Zhu (King Abdullah University of Science and
+      Technology); Yang Li (University of Chinese Academy of Sciences); Yong Li (Institute of Information Engineering, Chinese
+      Academy of Sciences); Chi Chen (University of Chinese Academy of Sciences); Paulo Esteves-Veríssimo (King Abdullah
+      University of Science and Technology)<br></li>
+    
+    <li class="w3-padding-large"><b>Iniva: Inclusive and Incentive-compatible Vote Aggregation</b><br>Arian Baloochestani Asl, Hanish Gogada, Leander Jehl, Hein Meling (University of Stavanger)<br></li>
+    
+    <li class="w3-padding-large"><b>Delphi: Efficient Asynchronous Approximate Agreement for
+      Distributed Oracles</b><br>Akhil Bandarupalli (Purdue University); Adithya Bhat (Visa Research); Saurabh Bagchi, Aniket Kate (Purdue University);
+      Chen-Da Liu-Zhang (Luzern University of Applied Sciences and Arts); Michael K. Reiter (Duke University)<br></li>
+    
+    <li class="w3-padding-large"><b>Moonshot: Optimizing Block Period and Commit Latency in Chain-Based Rotating Leader BFT</b><br>Isaac Doidge, Raghavendra Ramesh, Nibesh Shrestha, Joshua Tobkin (Supra Research)<br></li>
+    
+    <li class="w3-padding-large"><b>SyRep: Efficient Synthesis and Repair of Fast Re-Route Forwarding
+      Tables for Resilient Networks</b><br>Csaba Györgyi (University of Vienna); Kim Larsen (Aalborg University); Stefan Schmid (TU Berlin); Jiri Srba (Aalborg
+      University, Denmark)<br></li>
+    
+    <li class="w3-padding-large"><b>FIRMRES: Exposing Broken Device-Cloud Access Control in IoT
+      Through Static Firmware Analysis</b><br>Yuting Xiao (Hunan University); Jiongyi Chen (National University of Defense Technology); Yupeng Hu, Jing Huang (Hunan
+      University)<br></li>
+    
+    <li class="w3-padding-large"><b>ChatScam: Unveiling the Rising Impact of ChatGPT on Domain Name
+      Abuse</b><br>Mingxuan Liu (Zhongguancun Laboratory); Zhenglong Jin (Tsinghua University); Jiahai Yang (Fuzhou University); Baojun
+      Liu, Haixin Duan, Ying Liu (Tsinghua University); Ximeng Liu (Fuzhou University); Shujun Tang (QI-ANXIN Technology
+      Research Institute)<br></li>
+    
+    <li class="w3-padding-large"><b>SEDSpec: Securing Emulated Devices by Enforcing Execution
+      Specification</b><br>Yang Chen (nstitute of Information Engineering, Chinese Academy of Sciences. School of Cyber Security, University of
+      Chinese Academy of Sciences.); Shengzhi Zhang (Department of Computer Science, Metropolitan College, Boston
+      University, USA); Qihang Zhou (Institute of Information Engineering, Chinese Academy of Sciences.); Xiaoqi Jia (Institute
+      of Information Engineering,Chinese Academy of Sciences); Heqing Huang (Institute of Information Engineering, Chinese
+      Academy of Sciences); Shaowen Xu (Institute of Information Engineering, Chinese Academy of Sciences. School of Cyber Security, University of Chinese Academy of Sciences.); Haichao Du (Institute of Information Engineering, Chinese
+      Academy of Sciences.)<br></li>
+    
+    <li class="w3-padding-large"><b>OffRAMPS: An FPGA-based Intermediary for Analysis and
+      Modification of Additive Manufacturing Control Systems</b><br>Jason Blocklove, Md Raz, Prithwish Basu Roy (NYU Tandon School of Engineering); Hammond Pearce (University of New
+      South Wales); Prashanth Krishnamurthy, Farshad Khorrami, Ramesh Karri (NYU Tandon School of Engineering)<br></li>
+    </ul>
+
+  
+        
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey">
+  <div class="w3-row-padding">
+    <h3>Sponsors</h3>
+    <div class="w3-half">
+      <img src="images/logoIEEE2.png" alt="IEEE Logo" style="width:50%">
+    </div>
+    <div class="w3-half">
+      <img src="images/logoIFIP.png" alt="IFIP Logo" style="width:35%">
+    </div>
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24" id="acknowledgments">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+includeHTML();
+
+function accordianFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
