@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<title>Travel Info</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/DSN_logo.png"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" async></script>
+<link rel="stylesheet" href="cvtravel.css">
+
+
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div w3-include-html="sidebar.html"></div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="dsnHeader">
+    <div w3-include-html="header.html"></div>
+  </header>
+<div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
+    <h1><b>Visas and Invitation Letters</b></h1>
+    
+	<p>
+        
+        If your embassy requires a letter from an organizer of the conference, we will provide visa support letters. If you require one, please email the organization <a style="color: blue" href="mailto:visa_application@dsn.org?cc=alessandra.debenedictis@unina.it&amp;subject=Visa Support Letter Request&amp;body=Hi, I would like to request a visa support letter.%0D%0DFull Name:%0DAffiliation:%0DConference/Workshop:%0DPaper/Title/Committee:">email the organization (click here)</a>. 
+        The following information should be included with your request:
+
+        <ul>
+            <li>Full Name as it appears on passport;
+            <li>Affiliation;
+            <li>Name of the conference/workshop you are registering for;
+            <li>Authors should indicate their paper title, speakers should provide the title of their talk, committee members should specify to which committee they are part of.
+
+        </ul>
+
+    </p>
+    In order to obtain a visa letter, you must meet at least one of the following criteria:
+
+    <ul>
+        <li>Have a paper accepted;
+        <li>I am a speaker;
+        <li>I am a committee member;
+        <li>Have registered and paid in full.    
+    </ul>
+  <p>
+    
+    
+</p>
+  
+  
+</div>
+
+  
+<footer class="w3-container w3-padding-32 w3-light-grey" style="padding-left:100px;">
+  <div class="w3-row-padding">
+    <h3>Sponsors</h3>
+    <div class="w3-third">
+      <img src="images/logoIEEE2.png" alt="IEEE Logo" style="width:50%">
+    </div>
+    <div class="w3-third">
+      <img src="images/logoIFIP.png" alt="IFIP Logo" style="width:50%">
+    </div>
+    <div class="w3-third">
+      <img src="images/sponsors/DIETI_logo.png" alt="DIETI Logo" style="width:50%">
+    </div>
+    <div class="w3-half">
+      <img src="images/sponsors/[LOGO] GoGrowing_per-sfondi-chiari.svg" alt="GoGrowing Logo" style="width:50%">
+    </div>
+    <div class="w3-half">
+      <img src="images/sponsors/micron-logo-blk-rgb.png" alt="Micron Logo" style="width:50%">
+    </div>
+  </div>
+</footer>
+  
+<div class="w3-white w3-center w3-padding-24" id="acknowledgments">
+  Supported by <a href="https://www.critiware.com/" title="Critiware" target="_blank" class="w3-hover-opacity">
+      <img src="images/sponsors/logo-critiware.png" alt="IEEE Logo" style="width:20%">
+    </a>
+</div>
+
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+includeHTML();
+
+function accordianFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+</script>
+
+<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+	
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+
+  
+</body>
+</html>
