@@ -1,324 +1,1306 @@
 <!DOCTYPE html>
 <html>
-<title>Program at a Glance</title>
+<title>Conference Program</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="images/DSN_logo.png"/>
+<link rel="icon" type="image/png" href="images/DSN_logo.png" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+	integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+	crossorigin="anonymous"></script>
+
+
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Raleway", sans-serif
+	}
 </style>
+
+<style>
+	:root {
+		--awards-color: rgba(118, 203, 78, 0.95);
+		--keynotes-color: rgba(142, 169, 219, 0.95);
+		--rt-color: rgba(193, 228, 169, 0.95);
+		--it-color: rgba(124, 188, 189, 0.896);
+		--d23-color: rgba(203, 202, 149, 0.95);
+		--tut-color: rgba(143, 183, 140, 0.95);
+		--cps-color: rgba(191, 142, 153, 0.95);
+		--df-color: rgba(220, 158, 126, 0.75);
+		--social-color: rgba(48, 184, 150, 0.95);
+		--workshop-color: rgba(251, 228, 213, 0.95);
+		--dsml-color: #6a96c2;
+		--verdi-color: rgb(195, 161, 117);
+		--axc-color:rgba(191, 142, 153, 0.95);
+		--envsys-color:rgba(203, 202, 149, 0.95);
+		--dt4drs-color: darkgray;
+		--crgs-color: #9ab7ac;
+		--wdmd-color:  #d1d97f;
+		--forge-color:  #f3d36c;
+		--s2aim-color:  #55e43c;
+		--poster-color: rgb(240, 193, 163);
+		--tpc-color: rgb(204, 163, 180);
+		--sc-color: rgb(156, 151, 221);
+	}
+	.dsml_1 {
+		background: linear-gradient(to bottom, white 15%, var(--dsml-color) 15%, var(--dsml-color) 85%, white 85%);
+	}
+	.dsml_2 {
+		/* background: linear-gradient(to bottom, var(--dsml-color) 85%,white 100%); */
+		background: linear-gradient(to bottom, var(--dsml-color) 0%, var(--dsml-color) 85%, white 85%);
+	}
+	.dsml_3 {
+		/* background: linear-gradient(to bottom, var(--dsml-color) 85%,white 100%); */
+		background: linear-gradient(to bottom, var(--dsml-color) 0%, var(--dsml-color) 125%);
+	}
+	.dsml_4 {
+		/* background: linear-gradient(to bottom, var(--dsml-color) 85%,white 100%); */
+		background: linear-gradient(to bottom, white 15%, var(--dsml-color) 15%, var(--dsml-color) 95%, white 95%);
+	}
+	.dsml_5 {
+		/* background: linear-gradient(to bottom, var(--dsml-color) 85%,white 100%); */
+		background: linear-gradient(to bottom, white 27%, var(--dsml-color) 27%, var(--dsml-color) 100%);
+	}	
+	/* .awards-session,
+	.awards-rt-session,
+	.keynotes-session {
+		font-weight: 600;
+		font-size: 14px;
+	} */
+	.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between items as needed */
+	}
+
+	.legend-items span {
+		display: flex;
+		align-items: center;
+		gap: 5px; /* Space between the icon and the text */
+	}
+	.legend p {
+    margin-top: 5pt;    /* Removes top margin */
+    margin-bottom: 0; /* Removes bottom margin */
+	}
+
+	.TPC{
+		background-color:var(--tpc-color);
+	}
+
+	.SC{
+		background-color:var(--sc-color);
+	}
+
+	.envsys {
+		background-color:var(--envsys-color);
+	}
+	.axc {
+		background-color:var(--axc-color);
+	}
+	.dsml{
+		background-color:var(--dsml-color);
+	}
+	.verdi{
+		background-color:var(--verdi-color);
+	}
+	.dt4drs{
+		background-color:var(--dt4drs-color);
+	}
+	.crgs{
+		background-color:var(--crgs-color);
+	}
+	.wdmd{
+		background-color:var(--wdmd-color);
+	}
+	.forge{
+		background-color:var(--forge-color);
+	}
+	.s2aim{
+		background-color:var(--s2aim-color);
+	}
+	.poster{
+		background-color:var(--poster-color);
+	}	
+	.awards-session {
+		background-color: var(--awards-color);
+	}
+	.best-paper-session {
+		background-color: var(--awards-color);
+	}
+	.keynotes-session {
+		background-color: var(--keynotes-color);
+	}
+
+	.rt-session {
+		background-color: var(--rt-color);
+	}
+
+	.awards-rt-session {
+		background: linear-gradient(to right, var(--rt-color) 50%, var(--awards-color) 51%);
+	}
+
+	.it-session {
+		background-color: var(--it-color);
+	}
+
+	.disrupt {
+		background-color: var(--d23-color);
+	}
+
+	.df-session {
+		background-color: var(--df-color);
+	}
+
+	.tut-session {
+		background-color: var(--tut-color);
+	}
+
+	.cps-session {
+		background-color: var(--cps-color);
+	}
+
+	.social-session {
+		background-color: var(--social-color);
+		font-weight: 800;
+	}
+
+	.wk-session {
+		background-color: var(--workshop-color);
+	}
+
+	.bselse-session {
+		background-color: rgba(210, 95, 78, 0.95);
+	}
+
+	.valu3s-session {
+		background-color: rgba(243, 239, 71, 0.95);
+		font-weight: 800;
+	}
+
+	.table-prog {
+		width: 100%;
+		border: 1px solid gray;
+		table-layout: fixed;
+		border-collapse: collapse
+	}
+
+	.table-prog tr {
+		border: 1px solid gray;
+	}
+
+	.table-prog td {
+		text-align: center;
+		border: 1px solid gray;
+		padding: 5px;
+		width: auto; /* remove fixed widths */
+	}
+	/*
+	.table-prog td {
+		text-align: center;
+		border: 1px solid gray;
+		padding: 5px
+	}
+	*/
+	.td-right {
+		text-align: left !important;
+	}
+
+	.tdbg,
+	.void-session {
+		background-color: aliceblue;
+	}
+	.thd {
+		font-weight: 800;
+	}
+	
+	.td-1 {
+		width: 12%;
+		padding-left: 10px
+	}
+
+	.td-2 {
+		width: 22%;
+	}
+
+	.td-3 {
+		width: 11%;
+	}
+
+	.clickable-td {
+		cursor: pointer;
+	}
+
+	.clickable-td:hover {
+		color: #336699;
+		font-weight: 800;
+	}
+
+	.session-room {
+		background-color: lightblue;
+		font-weight: 800;
+		font-size: 12px;
+	}
+	.session h6 {
+            font-weight: bold;
+            color: rgb(12, 71, 173);
+        }
+	#program-content {
+		font-size: 13px;
+	}
+
+	.business-meeting {
+		font-weight: 800;
+		background-color: black;
+		color: white;
+	}
+	select {
+		padding: 10px;
+		font-size: 16px;
+		margin-bottom: 20px;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		width: 100%;
+		max-width: 300px;
+	}
+	.pdf-container {
+		width: 100%;
+		height: 900px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		overflow: hidden;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+	embed {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div w3-include-html="sidebar.html"></div>
-</nav>
+	<!-- Sidebar/menu -->
+	<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:300px;" id="mySidebar"><br>
+		<div w3-include-html="sidebar.html"></div>
+	</nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+		title="close side menu" id="myOverlay"></div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main" style="margin-left:300px">
 
-  <!-- Header -->
-  <header id="dsnHeader">
-    <div w3-include-html="header.html"></div>
-  </header>
-  
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
-    <h1><b>Program at a Glance</b></h1>
+		<!-- Header -->
+		<header id="dsnHeader">
+			<div w3-include-html="header.html"></div>
+		</header>
 
-	<!-- Day 1 -->
-	<h4><b>Monday June 27</b></h4>
-	<table style="width:100%; border:1px solid gray; border-collapse: collapse">
-    <!--
-		<tr style="border:1px solid gray">
-			<td width="15%" style="padding-left:10px">08:00 - 17:00</td>
-			<td colspan="3">Registration</td>
-		</tr>
-    -->
-		<tr style="border:1px solid gray;">
-			<td width="15%" style="padding-left:10px;">Room</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px">Baltimore Ballroom</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px">Maryland B</td>
-			<td width="29%" align="center" style="border:1px solid gray; padding: 5px">Maryland E</td>
-		</tr>
-		<tr style="border:1px solid gray;">
-			<td width="15%" style="padding-left:10px">8:30 AM - 5:00 PM</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="https://sites.google.com/view/ssiv/program">8th Workshop on Safety and Security of Intelligent Vehicles (SSIV 2022)</a>
-                <br><br><a href="cpaccepted_wkshp.html#ssiv">accepted papers and teaser videos</a></td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="https://dependablesecureml.github.io/program.html">5th Workshop on Dependable and Secure Machine Learning (DSML 2022)</a>
-                <br><br><a href="cpaccepted_wkshp.html#dsml">accepted papers and teaser videos</a></td>
-			<td width="29%" align="center" style="border:1px solid gray; padding: 5px"><a href="http://dcds.lasige.di.fc.ul.pt/program.html">4th Workshop on Data-Centric Dependability and Security (DCDS 2022)</a>
-                <br><br><a href="cpaccepted_wkshp.html#dcds">accepted papers and teaser videos</a></td>
-		</tr>
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">10:00 AM - 10:30 AM</td>
-			<td colspan="4">Coffee Break</td>
-		</tr>	
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">12:00 PM - 1:00 PM</td>
-			<td colspan="4">Lunch @ Baltimore Foyer</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">3:00 PM - 3:30 PM</td>
-			<td colspan="4">Coffee Break</td>
-		</tr>	
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="15%" style="padding-left:10px">5:00 PM - 7:00 PM</td>
-			<td colspan="3" align="center" style="border:1px solid gray; padding: 5px">Reception @ Watertable Ballroom</td>
-		</tr>
-	</table>
+		<div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
+			<h1><b>Conference Program (tentative)</b></h1>
 
-	</br>
-	<!-- Day 2 -->
-	<h4><b>Tuesday June 28</b></h4>
-	<table style="width:100%; border:1px solid gray; border-collapse: collapse">
-		<tr style="border:1px solid gray;">
-			<td width="15%" style="padding-left:10px;">Room</td>
-			<td colspan="3"align="center" style="border:1px solid gray; padding: 5px">Baltimore Ballroom</td>
-		</tr>
-		<tr style="border:1px solid gray">
-			<td width="15%" style="padding-left:10px">8:00 AM - 8:30 AM</td>
-			<td colspan="3">General Session: Welcome, <strong>W. Carter Award, Test-of-Time Award</strong></td>
-		</tr>
-		<tr style="border:1px solid gray">
-			<td width="15%" style="padding-left:10px">8:30 AM - 9:30 AM</td>
-			<td colspan="3"><strong><i>Keynote I:</i> Foundations of Transaction Fee Mechanism Design</strong><br> Elaine Shi, Carnegie Mellon University.</td>
-		</tr>
-		<tr style="border:1px solid gray">
-			<td width="15%" style="padding-left:10px">9:30 AM - 10:00 AM</td>
-			<td colspan="3">William C. Carter Award Talk</td>
-		</tr>
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="15%" style="padding-left:10px">10:00 AM - 10:30 AM</td>
-			<td colspan="3">Coffee Break</td>
-		</tr>	
-		<tr style="border:1px solid gray">
-			<td width="15%" style="padding-left:10px">10:30 AM - 11:30 AM</td>
-			<td colspan="3">In Memoriam Giles Muller</td>
-		</tr>		
-		<tr style="border:1px solid gray">
-			<td width="15%" style="padding-left:10px">11:30 AM - 1:00 PM</td>
-			<td colspan="3"><a href="cpresearch.html#session1">Research Track 1:</a> Best Paper Candidates</td>
-		</tr>		
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="15%" style="padding-left:10px">1:00 PM - 2:30 PM</td>
-			<td colspan="3">Lunch @ Maryland D</td>
-		</tr>
-		<tr style="border:1px solid gray;">
-			<td width="15%" style="padding-left:10px;">Room</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px">Baltimore Ballroom</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px">Maryland B</td>
-			<td width="29%" align="center" style="border:1px solid gray; padding: 5px">Maryland E</td>
-		</tr>
-		<tr style="border:1px solid gray;">
-			<td width="15%" style="padding-left:10px">2:30 PM - 4:00 PM</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session2">Research Track 2:</a><br> Blockchain</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session3">Research Track 3:</a><br> Autonomous Systems</td>
-			<td width="29%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session4">Research Track 4</a>:<br> Hardware<br></td>
-		</tr>		
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="15%" style="padding-left:10px">4:30 PM - 6:00 PM</td>
-			<td colspan="3" align="center" style="border:1px solid gray; padding: 5px">Sponsors' Event @ Watertable Ballroom</td>
-		</tr>
-	</table>
 
-	</br>
-	<!-- Day 3 -->
-	<h4><b>Wednesday June 29</b></h4>
-	<table style="width:100%; border:1px solid gray; border-collapse: collapse">
-		<tr style="border:1px solid gray;">
-			<td width="15%" style="padding-left:10px;">Room</td>
-			<td colspan="4"align="center" style="border:1px solid gray; padding: 5px">Baltimore Ballroom</td>
-		</tr>
-		<tr style="border:1px solid gray">
-			<td width="16%" style="padding-left:10px">8:30 AM - 9:00 AM</td>
-			<td colspan="4">Rising Star Award</td>
-		</tr>
-		<tr style="border:1px solid gray">
-			<td width="16%" style="padding-left:10px">9:00 AM - 10:00 AM</td>
-			<td colspan="4"><strong><i>Keynote II:</i> Machine learning is becoming less dependable</strong><br> Nicholas Carlini, Google Brain</td>
-		</tr>
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">10:00 AM - 10:30 AM</td>
-			<td colspan="4">Coffee Break</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px;">Room</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px">Baltimore Ballroom</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px">Maryland B</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px">Maryland E</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px">Maryland F</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">10:30 AM - 12:00 PM</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session5">Research Track 5</a>:<br> Resilient AI / AI for Dependability 1</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session6">Research Track 6</a>:<br> Models and Methodologies 1</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session7">Research Track 7</a>:<br> Networked Systems 1</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpindustry.html#session1">Industry Track 1</a>:<br> Security and Dependable Applications</td>
-		</tr>	
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">12:00 PM - 1:30 PM</td>
-			<td colspan="4">Lunch @ Maryland D</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">1:30 PM - 3:00 PM</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session8">Research Track 8</a>:<br> Resilient AI / AI for Dependability 2</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session9">Research Track 9</a>:<br> Models and Methodologies 2</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session10">Research Track 10</a>:<br> Networked Systems 2</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpselse.html#session1"> Best of SELSE</a></td>
-		</tr>	
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">3:00 PM - 3:30 PM</td>
-			<td colspan="4">Coffee Break</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">3:30 PM - 5:00 PM</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session11">Research Track 11</a>:<br> Resilient AI / AI for Dependability 3</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session12">Research Track 12</a>:<br> Edge / Cloud</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session13">Research Track 13</a>:<br> Cyber-Physical Systems</td>
-			<td width="21%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpindustry.html#session2">Industry Track 2</a>:<br> Scalable Safe Processing</td>
-		</tr>	
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">6:00 PM</td>
-			<td colspan="4"><a href="cvbanquet.html">Banquet, Best paper announcement @ Spirit of Baltimore</a></td>
-		</tr>	
-	</table>
+			<ul class="nav nav-tabs" id="program-tab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1"
+						type="button" role="tab" aria-controls="day1" aria-selected="true">Monday, June 23</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link " id="day2-tab" data-bs-toggle="tab" data-bs-target="#day2" type="button"
+						role="tab" aria-controls="day2" aria-selected="false">Tuesday, June 24</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link " id="day3-tab" data-bs-toggle="tab" data-bs-target="#day3" type="button"
+						role="tab" aria-controls="day3" aria-selected="false">Wednesday, June 25</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link " id="day4-tab" data-bs-toggle="tab" data-bs-target="#day4" type="button"
+						role="tab" aria-controls="day4" aria-selected="false">Thursday, June 26</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="program-content">
+				
+				<div class="tab-pane fade show active" id="day1" role="tabpanel" aria-labelledby="day1-tab">
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd" rowspan="1"><span class="">Local Time (UTC+10)</span></td>
+								<td class="td-3 thd session-room">Room 1</td>
+								<td class="td-3 thd session-room">Room 2</td>
+								<td class="td-3 thd session-room">Room 3</td>
+								<td class="td-3 thd session-room">Room 4</td>
+								<td class="td-3 thd session-room">Room 5</td>
+                                <td class="td-3 thd session-room">Room 6</td>
+                                <td class="td-3 thd session-room">Room 7</td>
+                                <td class="td-3 thd session-room">Room 8</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">8:30 - 9:00</span></td>
+								<td class="td-3 tdbg" colspan="8">Registration (all day)</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:00 - 9:30</span></td>
+								<td class="td-3 dsml" rowspan="3" data-bs-toggle="tooltip"><b><a href="cfworkshops.html">DSML 1</a></b></td>
+								<td class="td-3 verdi" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#VERDI_1">VERDI 1</a></b></td>
+								<td class="td-3 axc" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#AxC_1">AxC 1</a></b></td>
+								<td class="td-3 envsys" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#EnvSys_1">EnvSys 1</a></b></td>
+								<td class="td-3 dt4drs" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#DT4DRS_1">DT4DRS 1</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T1">Tutorial 1</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 3</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 5</a></b></td>
 
-	<!-- Day 4 -->
-	<h4><b>Thursday June 30</b></h4>
-	<table style="width:100%; border:1px solid gray; border-collapse: collapse">
-		<tr style="border:1px solid gray;">
-			<td width="15%" style="padding-left:10px;">Room</td>
-			<td colspan="3" align="center" style="border:1px solid gray; padding: 5px">Baltimore Ballroom</td>
-		</tr>
-		<tr style="border:1px solid gray">
-			<td width="16%" style="padding-left:10px">8:30 AM - 9:00 AM</td>
-			<td colspan="4">Jean-Claude Laprie Award</td>
-		</tr>
-		<tr style="border:1px solid gray">
-			<td width="16%" style="padding-left:10px">9:00 AM - 10:00 AM</td>
-			<td colspan="4"><strong><i>Keynote III:</i> Resilience and fault tolerance for extreme-scale scientific computing</strong><br> Franck Cappello, Argonne National Laboratory</td>
-		</tr>
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">10:00 AM - 10:30 AM</td>
-			<td colspan="4">Coffee Break</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px;">Room</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px">Baltimore Ballroom</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px">Maryland B</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px">Maryland E</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">10:30 AM - 12:00 PM</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session14">Research Track 14</a>:<br> Hardware and Software Security</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session15">Research Track 15</a>:<br> Software 1</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpabstracts.html#session1">Fast Abstracts 1</a>:<br> Attestation, Integrity, and Verification</td>
-		</tr>	
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">12:00 PM - 1:30 PM</td>
-			<td colspan="4">Lunch @ Maryland D</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">1:30 PM - 3:30 PM</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpdocforum.html#session1">Doctoral Forum</a></td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpresearch.html#session16">Research Track 16</a>:<br> Software 2</td>
-			<td width="28%" align="center" style="border:1px solid gray; padding: 5px"><a href="cpabstracts.html#session2">Fast Abstracts 2</a>:<br> Frameworks and Algorithms for Emerging Applications</td>
-		</tr>	
-		<tr style="border:1px solid gray; background-color: LightGray;">
-			<td width="16%" style="padding-left:10px">3:30 PM - 4:00 PM</td>
-			<td colspan="4">Coffee Break</td>
-		</tr>	
-		<tr style="border:1px solid gray;">
-			<td width="16%" style="padding-left:10px">4:00 PM - 5:00 PM</td>
-			<td colspan="4">General Session @ Baltimore Ballroom</td>
-		</tr>	
-	</table>
-</div>
+								
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:30 - 10:00</span></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:00 - 10:30</span></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="8">Coffee Break</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 11:30</span></td>
+								<td class="td-3 dsml" rowspan="3" data-bs-toggle="tooltip"><b><a href="#DSML_2">DSML 2</a></b></td>
+								<td class="td-3 verdi" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#VERDI_2">VERDI 2</a></b></td>
+								<td class="td-3 axc" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#AxC_2">AxC 2</a></b></td>
+								<td class="td-3 envsys" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#EnvSys_2">EnvSys 2</a></b></td>
+								<td class="td-3 dt4drs" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#DT4DRS_2">DT4DRS 2</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T1">Tutorial 1</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 3</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 5</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:30 - 12:00</span></td>
+							</tr>	
+							<tr>
+								<td class="td-1"><span class="">12:00 - 12:30</span></td>
+							</tr>													
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="8">Lunch</td>
+							</tr>
+                            
+							<!--
+                            <tr>
+								<td class="td-1"><span class="">13:30 - 14:00</span></td>
+								
+								</td>
+							</tr>
+                            -->
+							<tr>
+								<td class="td-1"><span class="">14:00 - 14:30</span></td>
+								<td class="td-3 dsml" rowspan="3" data-bs-toggle="tooltip"><b><a href="#DSML_3">DSML 3</a></b></td>
+								<td class="td-3 verdi" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#VERDI_3">VERDI 3</a></b></td>
+								<td class="td-3 axc" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#AxC_3">AxC 3</a></b></td>
+								<td class="td-3 crgs" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#CRGS_1">CRGS 1</a></b></td>
+								<td class="td-3 void-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T1">Tutorial 2</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 4</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 6</a></b></td>
+								
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">14:30 - 15:00</span></td>
+								
+							</tr>
+                            <tr>
+								<td class="td-1"><span class="">15:00 - 15:30</span></td>
+								<!--
+                                <td class="td-3 tdbg" colspan="5" id="dcds4" data-bs-toggle="tooltip">Coffee Break</td>
+                                -->
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:00</span></td>
+                                <td class="td-3 tdbg" colspan="8" id="dcds4" data-bs-toggle="tooltip">Coffee Break</td>
+                                <!--
+								<td class="td-3" id="dcds4" data-bs-toggle="tooltip"></td>
+								<td class="td-3 tut-session" rowspan="3" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 3</a></b>
+								<td class="td-3 cps-session" rowspan="3" data-bs-toggle="tooltip"><b><a href="#CPS">CPS Security Workshop</a></b>
+								<td class="td-3 tut-session" rowspan="3" data-bs-toggle="tooltip"><b><a href="#T4">Tutorial 4</a></b>
+								</td>
+                                -->
+							</tr>														
+							<tr>
+								<td class="td-1"><span class="">16:00 - 16:30</span></td>
+								<td class="td-3 dsml" rowspan="3" data-bs-toggle="tooltip"><b><a href="#DSML_4">DSML 4</a></b></td>
+								<td class="td-3 verdi" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#VERDI_4">VERDI 4</a></b></td>
+								<td class="td-3 axc" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#AxC_4">AxC 4</a></b></td>
+								<td class="td-3 crgs" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#CRGS_2">CRGS 2</a></b></td>
+								<td class="td-3 void-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T1">Tutorial 2</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 4</a></b></td>
+								<td class="td-3 tut-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"><b><a href="#T3">Tutorial 6</a></b></td>
+							</tr>								
+							<tr>
+								<td class="td-1"><span class="">16:30 - 17:00</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">17:00 - 17:30</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">17:30 - 19:00</span></td>
+								<td class="td-2 social-session" colspan="8">Welcome Reception</td>
+							</tr>
+						</tbody>
+					</table>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-light-grey">
-    <div class="w3-row-padding">
-      <h3>Sponsors</h3>
-      <div class="w3-quarter	">
-        <img src="images/logoIEEE2.png" alt="IEEE Logo" style="width:80%">
-      </div>
-      <div class="w3-quarter	">
-        <img src="images/logoIFIP.png" alt="IFIP Logo" style="width:80%">
-      </div>
-      <div class="w3-quarter	">
-        <img src="images/sponsors/DIETI_logo.png" alt="DIETI Logo" style="width:80%">
-      </div>
-      <div class="w3-quarter	">
-        <img src="images/sponsors/[LOGO] GoGrowing_per-sfondi-chiari.svg" alt="DIETI Logo" style="width:80%">
-      </div>
+
+					<div class="legend">
+						<p class="fw-bold">Legend:</p>
+						<div class="legend-items">
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--dsml-color);stroke-width:3;stroke:var(--dsml-color)" width="15"></rect></svg> DSML</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--verdi-color);stroke-width:3;stroke:var(--verdi-color)" width="15"></rect></svg> VERDI</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--axc-color);stroke-width:3;stroke:var(--axc-color)" width="15"></rect></svg> AxC</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--envsys-color);stroke-width:3;stroke:var(--envsys-color)" width="15"></rect></svg> EnvSys</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--crgs-color);stroke-width:3;stroke:var(--crgs-color)" width="15"></rect></svg> CRGS</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--tut-color);stroke-width:3;stroke:var(--tut-color)" width="15"></rect></svg> Tutorial</span>
+							
+				
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--dt4drs-color);stroke-width:3;stroke:var(--dt4drs-color)" width="15"></rect></svg> DT4DRS</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--social-color);stroke-width:3;stroke:var(--social-color)" width="15"></rect></svg> Social Events</span>
+						</div>
+					</div>
+
+                    <!--
+					<hr>
+					<div class="session" id="DSML_1">
+						<h6>DSML 1: Keynote Talk, at <i>Room 1, 9:15 - 10:30, June 24</i></h6>
+						<ul>
+							<li>DSML Opening</li>
+							<li>DSML Keynote: <b>From Neural Network Verification to Formal Verification for Neuro-Symbolic Artificial Intelligence (AI)</b> by Taylor Johnson, Vanderbilt University</li>
+						</ul>
+					</div>
+					<div class="session" id="DSML_2">
+						<h6>DSML 2: Defense Mechanisms for Secure ML Systems, at <i>Room 1, 11:00 - 12:15, June 24</i></h6>
+						<ul>
+							<li><b>Adversarial Patch Detection: Leveraging Depth Contrast for Enhanced Threat Visibility</b> by Niklas Bunzel, Jannis Hamborg</li>
+							<li><b>Unlearning Backdoor Attacks through Gradient-Based Model Pruning</b> by Kealan Dunnett, Reza Arablouei, Dimity Miller, Volkan Dedeoglu, Raja Jurdak</li>
+							<li><b>Universal Soldier: Using Universal Adversarial Perturbations for Detecting Backdoor Attacks</b> by Xiaoyun Xu, Oguzhan Ersoy, Hamidreza Tajalli, Stjepan Picek</li>
+						</ul>
+					</div>
+					<div class="session" id="DSML_3">
+						<h6>DSML 3: Keynote Talk, at <i>Room 1, 13:30 - 14:45, June 24</i></h6>
+						<ul>
+							<li>DSML Keynote: <b>Machine Learning for Privacy Compliance in Software Ecosystems</b> by Guangdong Bai, The University of Queensland</li>
+						</ul>
+					</div>
+					<div class="session" id="DSML_4">
+						<h6>DSML 4: Dependable and Reliable ML Systems, at <i>Room 1, 14:45 - 15:50, June 24</i></h6>
+						<ul>
+							<li><b>TrustDDL: A Privacy-Preserving Byzantine-Robust Distributed Deep Learning Framework</b> by René Klaus Nikiel, Meghdad Mirabi, Carsten Binnig</li>
+							<li><b>Measuring the effects of environmental influences on Object Detection</b> by Niklas Bunzel, Michael Geißler, Gerrit Klause</li>
+							<li><b>Hybrid Convolutional Neural Networks with Reliability Guarantee</b> by Hans Dermot Doran, Suzana Veljanovska</li>
+							<li>Discussion and Closing Remarks</li>
+						</ul>
+					</div>
+					<div class="session" id="DSML_5">
+						<h6>DSML 5: ML Systems for Security and Beyond, at <i>Room 1, 16:20 - 17:00, June 24</i></h6>
+						<ul>
+							<li><b>Intrusion Detection Systems using Quantum-Inspired Density Matrix Encodings</b> by Larry Huynh, Jin B. Hong, Hajime Suzuki, Ajmal Mian, Seyit Camtepe</li>
+							<li><b>A Fault Diagnosis Method for Analog Circuits Based on Task Transfer Learning</b> by Zhongyu Gao, Xiaoqing Wen, Aibin Yan</li>
+							<li>Discussion and Closing Remarks</li>
+						</ul>
+					</div>					
+					
+					<div class="session" id="VERDI_1">
+						<h6>VERDI 1: at <i>Room 2, 9:00 - 10:30, June 24</i></h6>
+						<ul>
+							<li>VERDI Opening</li>
+							<li>VERDI Keynote: <b>On Improving the Robustness of Convolutional Neural Networks Using In-Parameter Zero-Space Error Correction Codes</b> by Juan Carlos Ruiz</li>
+						</ul>
+					</div>
+					<div class="session" id="VERDI_2">
+						<h6>VERDI 2: at <i>Room 2, 11:00 - 12:30, June 24</i></h6>
+						<ul>
+							<li><b>Hybrid Hardware/Software Detection of Multi-Bit Upsets in Memory</b> by Robin Thunig, Christoph Borchert, Urs Kober, Horst Schirmeier</li>
+							<li><b>Highly Comprehensive and Efficient Memory Safety Enforcement with Pointer Tagging</b> by Xiaolei Wang, Bin Zhang, Chaojing Tang, Long Zhang</li>
+							<li><b>Enhancing Continuous Risk Assessment: The Role of Safety Engineers in Early Hazard Identification</b> by Anil Ranjitbhai Patel, Peter Liggesmeyer</li>
+						</ul>
+					</div>
+					<div class="session" id="VERDI_3">
+						<h6>VERDI 3: at <i>Room 2, 13:30 - 15:00, June 24</i></h6>
+						<ul>
+							<li><b>Cybersecurity Pathways towards CE-Certified Autonomous Forestry Machines</b> by Mazen Mohamad, Ramana Reddy Avula, Peter Folkesson, Pierre Kleberger, Aria Mirzai, Martin Skoglund, Marvin Damschen</li>
+							<li><b>Virtual Evaluation of Dependability Attributes for Mission-Critical Cyber-Physical Systems</b> by Adam Bachorek, Benedikt Lüken-Winkels, Iron Prando Da Silva, Stefan Schwenk, Markus Damm, Pablo Oliveira Antonino</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="T1">
+						<h6>Tutorial 1: at <i>Room 3, 9:00 - 12:30, June 24</i></h6>
+						<ul>
+							<li><b>Zero-Knowledge Proofs for Blockchains</b> by Sushmita Ruj</li>
+						</ul>
+					</div>
+					<div class="session" id="T2">
+						<h6>Tutorial 2: at <i>Room 4, 9:00 - 12:30, June 24</i></h6>
+						<ul>
+							<li><b>Evaluating Performance and Dependability of Blockchain Protocols with Diablo</b> by Andrei Lebedev, Vincent Gramoli</li>
+						</ul>
+					</div>
+					<div class="session" id="T3">
+						<h6>Tutorial 3: at <i>Room 3, 13:30 - 17:00, June 24</i></h6>
+						<ul>
+							<li><b>Safe, Secure, and Trustworthy Artificial Intelligence (AI) via Formal Verification of Neural Networks and Autonomous Cyber-Physical Systems (CPS) with NNV</b> by Taylor T. Johnson, Diego Manzanas Lopez, Hoang-Dung Tran</li>
+						</ul>
+					</div>
+					<div class="session" id="T4">
+						<h6>Tutorial 4: at <i>Room 5, 13:30 - 17:00, June 24</i></h6>
+						<ul>
+							<li><b>LLTFI and the Art of Fault Injection</b> by Karthik Pattabiraman, Abraham Chan</b></li>
+						</ul>
+					</div>
+					<div class="session" id="DCCS_1">
+						<h6>DCCS 1: at <i>Room 5, 9:00 - 10:40, June 24</i></h6>
+						<ul>
+							<li>DCCS Opening</li>
+							<li>(9:00 - 9:55) DCCS keynote: <b>Advanced Techniques for Deep Neural Network Repair</b> by Paolo Arcaini</b></li>
+							<li>(9:55 - 10:20) <b>DDOSHIELD-IoT: A Testbed for Simulating and Lightweight Detection of IoT Botnet DDoS Attacks</b> by Simona De Vivo, Islam Obaidat, Dong Dai, Pietro Liguori</b></li>
+							<li>(10:20 - 10:40) <b>Caching and Prefetching for Improving ORAM Performance</b> by Naohiro Hayashibara, Kazuaki Kawabata</b></li>
+						</ul>
+					</div>
+					<div class="session" id="DCCS_2">
+						<h6>DCCS 2: at <i>Room 5, 10:50 - 12:35, June 24</i></h6>
+						<ul>
+							<li>(10:50 - 11:45) DCCS Keynote: <b>On Perfect Sampling for Stochastic Petri Nets</b> by Hiroyuki Okamura</b></li>
+							<li>(11:45 - 12:10) <b>On Predicting Software Intensity Using Wavelets and Nonlinear Regression</b> by Kaoru Matsui, Xiao Xiao</b></li>
+							<li>(12:10 - 12:35) <b>Performance Comparison of Bayesian Estimations on the Residual Number of Software Bugs</b> by Yuki Hagiwara, Tadashi Dohi, Hiroyuki Okamura</b></li>
+						</ul>
+					</div>					
+                    -->
+				</div>
+				
+				
+				<div class="tab-pane fade " id="day2" role="tabpanel" aria-labelledby="day2-tab">
+				
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd" rowspan="1"><span class="">Local Time (UTC+10)</span></td>
+								<td class="td-3 thd session-room">Room 1</td>
+								<td class="td-3 thd session-room">Room 2</td>
+								<td class="td-3 thd session-room">Room 3</td>
+								<td class="td-3 thd session-room">Room 4</td>
+								<td class="td-3 thd session-room">Room 5</td>
+                                
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">8:30 - 9:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Registration (all day)</td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">9:00 - 9:30</span></td>
+								<td class="td-2 tdbg" colspan="5"><b><a href="#opening">Opening + Test of Time Award</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:30 - 10:00</span></td>
+								<td class="td-2 keynotes-session" rowspan="2" colspan="5"><b><a href="#keynote1">Keynote 1</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:00 - 10:30</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 11:30</span></td>
+								<td class="td-2 best-paper-session" rowspan="3" colspan="5"><b><a href="#Best_Paper">Best Paper Session</a></b>
+								</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:30 - 12:00</span></td>
+							</tr>								
+							<tr>
+								<td class="td-1"><span class="">12:00 - 12:30</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Lunch</td>
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">14:00 - 14:30</span></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R2">Research 2</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R3">Research 3</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R4">Research 4</a></b></td>
+								<td class="td-2 disrupt" rowspan="3"><b><a href="#DISRUPT_1">Disrupt 1</a></b></td>
+								<td class="td-2 poster" rowspan="3"><b><a href="#POSTER_PITCH_1">Poster pitch</a></b></td>
+			
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">14:30 - 15:00</span></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">15:00 - 15:30</span></td>
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:30</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:00</span></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R5">Research 5</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R6">Research 6</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R7">Research 7</a></b></td>
+								<td class="td-2 it-session" rowspan="3"><b><a href="#I1">Industry 1</a></b></td>
+								<td class="td-3 void-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"></td>
+								
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">16:00 - 16:30</span></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">16:30 - 17:00</span></td>
+							</tr>							
+						</tbody>
+					</table>
+					<div class="legend">
+						<p class="fw-bold">Legend:</p>
+						<div class="legend-items">
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--keynotes-color);stroke-width:3;stroke:var(--keynotes-color)" width="15"></rect></svg> Keynotes</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--rt-color);stroke-width:3;stroke:var(--rt-color)" width="15"></rect></svg> Research</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--it-color);stroke-width:3;stroke:var(--it-color)" width="15"></rect></svg> Industry</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--poster-color);stroke-width:3;stroke:var(--poster-color)" width="15"></rect></svg> Poster</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--awards-color);stroke-width:3;stroke:var(--awards-color)" width="15"></rect></svg> Awards</span>
+						</div>
+					</div>
+                    <!--
+					<hr>
+					<div class="session" id="opening">
+						<h6>Opening,<i> 9:00 - 9:30, June 25</i></h6>
+						<p><b>Session Chairs:</b> Domenico Cotroneo (Università di Napoli Federico II) and Dan Kim (The University of Queensland)</p>
+					</div>
+
+					<div class="session" id="keynote1">
+						<h6>Keynote 1,<i> 9:30 - 10:30, June 25</i></h6>
+						<p><b>Session Chair:</b> Julia Lawall (Inria-Paris)</p>
+						<ul>
+							<li><b>Lions OS: Towards a truly dependable operating system</b> by Prof. Gernot Heiser, UNSW Sydney</li>
+						</ul>
+					</div>
+
+					<div class="session" id="Best_Paper">
+						<h6>Best Paper Session,<i> 11:00 - 12:30, June 25</i></h6>
+						<p><b>Session Chair:</b> Domenico Cotroneo (Università di Napoli Federico II)</p>
+						<ul>
+							<li><b>On the Correctness of Metadata-based SBOM Generation: A Differential Analysis Approach (PER)</b> by Sheng Yu, Wei Song, Xunchao Hu, Heng Yin</li>
+							<li><b>ZLB: A Blockchain to Tolerate Colluding Majorities</b> by Alejandro Ranchal-Pedrosa, Vincent Gramoli</li>
+							<li><b>JITBULL: Securing JavaScript Runtime with a Go/No-Go policy for JIT Engine</b> by Jean-Baptiste Decourcelle, Boris Teabe, Daniel Hagimont</li>
+						</ul>
+					</div>
+					<div class="session" id="WC_Award">
+						<h6>WC Award,<i> 13:30 - 14:30, June 25</i></h6>
+						<p><b>Session Chair:</b> Domenico Cotroneo (Università di Napoli Federico II)</p>
+						<ul>
+							<li><b>Offensive and defensive approaches for wireless communication protocols security in IoT</b> by Romain Cayre</li>
+						</ul>
+					</div>										
+					<div class="session" id="R1">
+						<h6>Research 1: Decentralized Finance, at<i> Room 1, 15:30 - 17:00, June 25</i></h6>
+						<p><b>Session Chair:</b> Jiangshan Yu (University of Sydney)</p>
+						<ul>
+							<li><b>BFTRAND: Low-latency Random Number Provider for BFT Smart Contracts (Reg)</b> by Jinghui Liao, Borui Gong, Wenhai Sun, Fengwei Zhang, Zhenyu Ning, Man Ho Allen Au, Weisong Shi</li>
+							<li><b>Byzantine Attacks Exploiting Penalties in Ethereum PoS (Reg)</b> by Ulysse Pavloff, Yackolley Amoussou-Guenou, Sara Tucci-Piergiovanni</li>
+							<li><b>AOAB: Optimal and Fair Ordering of Financial Transactions (Reg)</b> by Vincent Gramoli, Zhenliang Lu, Qiang Tang, Pouriya Zarbafian</li>
+						</ul>
+					</div>					
+
+					<div class="session" id="R2">
+						<h6>Research 2: Security 1, at<i> Room 2, 15:30 - 17:00, June 25</i></h6>
+						<p><b>Session Chair:</b> Hung Nguyen (University of Adelaide and UNSW)</p>
+						<ul>
+							<li><b>ChatScam: Unveiling the Rising Impact of ChatGPT on Domain Name Abuse (Reg)</b> by Mingxuan Liu, Zhenglong Jin, Jiahai Yang, Baojun Liu, Haixin Duan, Ying Liu, Ximeng Liu, Shujun Tang
+							</li>
+							<li><b>Real Time Intrusion Detection and Flow Control with Neural Network in Kernel using eBPF (Reg)</b> by Junyu Zhang, Pengfei Chen, Zilong He, Hongyang Chen, Xiaoyun Li</li>
+							<li><b>PagPassGPT: Pattern Guided Password Guessing via Generative Pretrained Transformer (Reg)</b> by Xingyu Su, Xiaojie Zhu, Yang Li, Yong Li, Chi Chen, Paulo Esteves-Veríssimo</li>
+						</ul>
+					</div>	
+
+					<div class="session" id="R3">
+						<h6>Research 3: Memory, at<i> Room 3, 15:30 - 17:00, June 25</i></h6>
+						<p><b>Session Chair:</b> Elmootazbellah Elnozahy (UT Austin)</p>
+						<ul>
+							<li><b>Simultaneous Many-Row Activation in DRAM: An Experimental Characterization and Analysis of Off-the-Shelf DRAM Chips (Reg)</b> by Ismail Emir Yuksel, Yahya Can Tuğrul, Nisa Bostanci, Geraldo Francisco de Oliveira Junior, Giray Yaglikci, Ataberk Olgun, Melina Soysal, Haocong Luo, Juan Gómez Luna, Mohammad Sadrosadati, Onur Mutlu</li>
+							<li><b>Read Disturbance in High Bandwidth Memory: A Detailed Experimental Study on HBM2 DRAM Chips (Reg)</b> by Ataberk Olgun, Majd Osseiran, Giray Yaglikci, Yahya Can Tuğrul, Haocong Luo, Steve Rhyner, Behzad Salami, Juan Gómez Luna, Onur Mutlu</li>
+							<li><b>SPP: Safe Persistent Pointers for Memory Safety (Reg)</b> by Dimitrios Stavrakakis, Alexandra Panfill, MJin Nam, Pramod Bhatotia</li>
+						</ul>
+					</div>
+
+					<div class="session" id="I1">
+						<h6>Industry 1: Security, at<i> Room 4, 15:30 - 17:00, June 25</i></h6>
+						<p><b>Session Chair:</b> Catello Di Martino</p>
+						<ul>
+							<li><b>Intrusion Detection at Scale with the Assistance a Command-line Language Model</b> by Jiongliang Lin, Yiwen Guo, Hao Chen</li>
+							<li><b>Sensitive information leakage prevention in DNSSEC Zone-Walking - A Practical Solution</b> by Fatema Bannat Wala, Stephan Bohacek</li>
+							<li><b>Road Decals as Trojans: Disrupting Autonomous Vehicle Navigation with Adversarial Patterns</b> by Wei-Jia Chen, Chia-Yi Hsu, Chia-Mu Yu, Chun-Ying Huang, Wei-Bin Lee</li>
+						</ul>
+					</div>				
+                    -->	
+				</div>
+				<div class="tab-pane fade " id="day3" role="tabpanel" aria-labelledby="day3-tab">
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd" rowspan="1"><span class="">Local Time (UTC+10)</span></td>
+								<td class="td-3 thd session-room">Room 1</td>
+								<td class="td-3 thd session-room">Room 2</td>
+								<td class="td-3 thd session-room">Room 3</td>
+								<td class="td-3 thd session-room">Room 4</td>
+                                <td class="td-3 thd session-room">Room 5</td>
+                                
+							</tr>	
+							<tr>
+								<td class="td-1"><span class="">8:30 - 9:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Registration (all day)</td>
+							</tr>														
+							<tr>
+								<td class="td-1"><span class="">9:00 - 9:30</span></td>
+								<td class="td-2 awards-session" rowspan="1" colspan="4"><b><a href="#JCL">Awards (JCL + WC)</a></b></td>
+								<td class="td-3 wdmd" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#WDMD_1">WDMD 1</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:30 - 10:00</span></td>
+								<td class="td-2 keynotes-session" rowspan="2" colspan="4"><b><a href="#keynote2">Keynote 2</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:00 - 10:30</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 11:30</span></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R8">Research 8</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R9">Research 9</a></b></td>
+								<td class="td-2 disrupt" rowspan="3"><b><a href="#DISRUPT_2">Disrupt 2</a></b></td>
+								<td class="td-2 df-session" rowspan="3"><b><a href="#doctoral">Doctoral</a></b></td>
+								<td class="td-3 wdmd" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#WDMD_2">WDMD 2</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:30 - 12:00</span></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">12:00 - 12:30</span></td>
+							</tr>														
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Lunch</td>
+								
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">14:00 - 14:30</span></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R10">Research 10</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R11">Research 11</a></b></td>
+								<td class="td-2 it-session" rowspan="3"><b><a href="#I2">Industry 2</a></b></td>
+								<td class="td-2 df-session" rowspan="3"><b><a href="#doctoral">Doctoral</a></b></td>
+								<td class="td-3 wdmd" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#WDMD_3">WDMD 3</a></b></td>
+								
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">14:30 - 15:00</span></td>
+							</tr>													
+							<tr>
+								<td class="td-1"><span class="">15:00 - 15:30</span></td>
+							</tr>	
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">16:00 - 16:30</span></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R12">Research 12</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R13">Research 13</a></b></td>
+								<td class="td-2 it-session" rowspan="3"><b><a href="#I3">Industry 3</a></b></td>
+								<td class="td-3 void-session" rowspan="3" id="ssiv1" data-bs-toggle="tooltip"></td>				
+								<td class="td-3 wdmd" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#WDMD_4">WDMD 4</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">16:30 - 17:00</span></td>
+							</tr>	
+							<tr>
+								<td class="td-1"><span class="">17:00 - 17:30</span></td>
+							</tr>	
+							<tr>
+								<td class="td-1"><span class="">17:30 - 19:00</span></td>
+								<td class="td-2 social-session" colspan="5">Excursion (To be confirmed)</td>
+							</tr>			
+							<tr>
+								<td class="td-1"><span class="">19:00 - 22:00</span></td>
+								<td class="td-2 social-session" colspan="5">Banquet (To be confirmed)</td>
+							</tr>																									
+						</tbody>
+					</table>
+					<div class="legend">
+						<p class="fw-bold">Legend:</p>
+						<div class="legend-items">
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--keynotes-color);stroke-width:3;stroke:var(--keynotes-color)" width="15"></rect></svg> Keynotes</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--rt-color);stroke-width:3;stroke:var(--rt-color)" width="15"></rect></svg> Research</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--it-color);stroke-width:3;stroke:var(--it-color)" width="15"></rect></svg> Industry</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--d23-color);stroke-width:3;stroke:var(--d23-color)" width="15"></rect></svg> Disrupt</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--df-color);stroke-width:3;stroke:var(--df-color)" width="15"></rect></svg> Doctoral Forum</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--awards-color);stroke-width:3;stroke:var(--awards-color)" width="15"></rect></svg> Awards</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--social-color);stroke-width:3;stroke:var(--social-color)" width="15"></rect></svg> Social Events</span>
+						</div>
+					</div>
+                    <!--
+					<hr>
+					<div class="session" id="JCL">
+						<h6>Jean-Claude Laprie (JCL) Award<i>, 8:30 - 9:30, June 26</i></h6>
+						<p><b>Session Chair:</b> Marco Vieira (University of North Carolina at Charlotte)</p>
+						<ul>
+							<li><b>(Recording only, download from <a href="https://drive.google.com/drive/folders/1D5RkM0BdEXVu8N3FuEjZ8HfRGi566JYi">here</a>) A Methodology for Detection and Estimation of Software Aging</b> by Sachin Garg, Aad van Moorsel, Kalyanaraman Vaidyanathan, Kishor S. Trivedi</li>
+							<li><b>Flipping Bits in Memory without Accessing Them: An Experimental Study of DRAM Disturbance Errors</b> by Yoongu Kim, Ross Daly, Jeremie Kim, Chris Fallin, Ji Hye Lee, Donghyuk Lee, Chris Wilkerson, Konrad Lai, Onur Mutlu</li>
+						</ul>
+					</div>						
+					<div class="session" id="keynote2">
+						<h6>Keynote 2<i>, 9:30 - 10:30, June 26</i></h6>
+						<p><b>Session Chair:</b> Jin Hong (The University of Western Australia)</p>
+						<ul>
+							<li><b>Verifying the results of complex elections</b> by A/Prof. Vanessa Teague, Australian National University</li>
+						</ul>
+					</div>					
+					<div class="session" id="R4">
+						<h6>Research 4: Blockchain and BFT, at<i> Room 1, 11:00 - 12:30, June 26</i></h6>
+						<p><b>Session Chair:</b> Xiaojie Zhu (KAUST)</p>
+						<ul>
+							<li><b>Moonshot: Optimizing Block Period and Commit Latency in Chain-Based Rotating Leader BFT (Reg)</b> by Isaac Doidge, Raghavendra Ramesh, Nibesh Shrestha, Joshua Tobkin</li>
+							<li><b>Decentagram: Highly-Available Decentralized Publish/Subscribe Systems (Reg)</b> by Haofan Zheng, Tuan Tran, Roy Shadmon, Owen Arden</li>
+							<li><b>PAROLE: Profitable Arbitrage in Optimistic Rollup with ERC-721 Token Transactions (Reg)</b> by Alvi Ataur Khalil, Mohammad Ashiqur Rahman</li>
+						</ul>
+					</div>
+					<div class="session" id="R5">
+						<h6>Research 5: Hardware, at<i> Room 2, 11:00 - 12:30, June 26</i></h6>
+						<p><b>Session Chair:</b> Saurabh Hukerikar (NVIDIA)</p>
+						<ul>
+							<li><b>FIRMRES: Exposing Broken Device-Cloud Access Control in IoT Through Static Firmware Analysis (Reg)</b> by Yuting Xiao, Jiongyi Chen, Yupeng Hu, Jing Huang</li>
+							<li><b>Stealthy Peers: Understanding Security and Privacy Risks of Peer-Assisted Video Streaming (Reg)</b> by Siyuan Tang, Eihal Alowaisheq, Xianghang Mi, Yi Chen, XiaoFeng Wang, Yanzhi Dou</li>
+							<li><b>OffRAMPS: An FPGA-based Intermediary for Analysis and Modification of Additive Manufacturing Control Systems (Tool)</b> by Jason Blocklove, Md Raz, Prithwish Basu Roy, Hammond Pearce, Prashanth Krishnamurthy, Farshad Khorrami, Ramesh Karri</li>
+						</ul>
+					</div>
+					<div class="session" id="DISRUPT_1">
+						<h6>Disrupt 1: at <i>Room 3, 11:00 - 12:30, June 26</i></h6>
+						<p><b>Session Chair:</b> Lelio Di Martino (Nokia Bell Labs)</p>
+						<ul>
+							<li><b>Neural Fault Injection: Generating Software Faults from Natural Language</b> by Domenico Cotroneo and Pietro Liguori</li>
+							<li><b>Harnessing Explainability to Improve ML Ensemble Resilience</b> by Abraham Chan, Arpan Gujarati, Karthik Pattabiraman and Sathish Gopalakrishnan</li>
+							<li><b>When Green Computing Meets Performance and Resilience SLOs</b> by Haoran Qiu, Weichao Mao, Chen Wang, Saurabh Jha, Hubertus Franke, Chandra Narayanaswami, Tamer Başar, Zbigniew Kalbarczyk and Ravishankar Iyer</li>
+							<li><b>AuSSE: A Novel Framework for Security and Safety Evaluation in Autonomous Vehicles</b> by Nhung Nguyen, Jin-Hee Cho, Terrence J. Moore, Seunghyun Yoon, Hyuk Lim, Frederica Nelson, Guangdong Bai and Dan Kim</li>
+						</ul>
+					</div>
+					<div class="session" id="poster">
+						<h6>Poster: at <i>Room 4, 11:00 - 12:30, June 26</i></h6>
+						<ul>
+							<li><b>Federated Anomaly Detection</b> by Chunjiong Zhang, Byeong-Hee Roh, Gaoyang Shan</li>
+							<li><b>Mitigating False Positives in DGA Detection for Non-English Domain Names</b> by Huiju Lee, Huy Kang Kim</li>
+							<li><b>Cryptography-Based Bootstrapping Scheme for Permissionless Sharding Blockchain</b> by Ziqiang Xu, Ahmad Salehi Shahraki, Naveen Chilamkurti</li>
+							<li><b>Optimizing Tree-based Quorum Certification for BFT Systems at Planetary-Scale</b> by Christian Berger, Hans P. Reiser</li>
+							<li><b>Boosting Communication Efficiency of Federated Learning's Secure Aggregation</b> by Niousha Nazemi, Omid Tavallaie, Shuaijun Chen, Albert Y. Zomaya, Ralph Holz</li>
+							<li><b>Balancing Privacy and Attack Utility: Calibrating Sample Difficulty for Membership Inference Attacks in Transfer Learning</b> by Shuwen Liu, Yongfeng Qian, Yixue Hao</li>
+							<li><b>Synergizing GCN and GAT for Hardware Trojan Detection and Localization</b> by Yu-Chen Hsiao, Chia-Heng Yen, Bo-Yang Ke, Kai-Chiang Wu</li>
+						</ul>
+					</div>					
+					<div class="session" id="R6">
+						<h6>Research 6: Software Design, at<i> Room 1, 13:30 - 15:00, June 26</i></h6>
+						<p><b>Session Chair:</b> Lishan Yang (George Mason University)</p>
+						<ul>
+							<li><b>System Call Interposition Without Compromise (Tool)</b> by Adriaan Jacobs, Merve Gülmez, Alicia Andries, Stijn Volckaert, Alexios Voulimeneas</li>
+							<li><b>A Fast Low-Level Error Detection Technique (PER)</b> by Zhengyang He, Hui Xu, Guanpeng Li</li>
+							<li><b>ChainNet: A Customized Graph Neural Network Model for Loss-aware Edge AI Service Deployment (Reg)</b> by Zifeng Niu, Manuel Roveri, Giuliano Casale</li>
+						</ul>
+					</div>
+					<div class="session" id="R7">
+						<h6>Research 7: Autonomous Systems, at<i> Room 2, 13:30 - 15:00, June 26</i></h6>
+						<p><b>Session Chair:</b> Naohiro Hayashibara (Kyoto Sangyo University)</p>
+						<ul>
+							<li><b>iPrism: Characterize and Mitigate Risk by Quantifying Change in Escape Routes (Reg)</b> by Shengkun Cui, Saurabh Jha, Ziheng Chen, Zbigniew T. Kalbarczyk, Ravishankar K. Iyer</li>
+							<li><b>RABIT, a Robot Arm Bug Intervention Tool for Self-Driving Labs (PER)</b> by Zainab Saeed Wattoo, Petal Vitis, Ruizhe Zhu, Noah Depner, Ivory Zhang, Jason Hein, Arpan Gujarati, Margo Seltzer</li>
+							<li><b>A comprehensive study on drones resilience in the presence of Inertial Measurement Unit faults (PER)</b> by Anamta Khan, Naghmeh Ivaki, Henrique Madeira</li>
+						</ul>
+					</div>					
+					<div class="session" id="DISRUPT_2">
+						<h6>Disrupt 2: at <i>Room 3, 13:30 - 15:00, June 26</i></h6>
+						<p><b>Session Chair:</b> Paulo Verissimo (KAUST)</p>
+						<ul>
+							<li><b>An Experimental Analysis of Combined RowHammer and RowPress Read Disturbance in Modern DRAM Chips</b> by Haocong Luo, İsmail Emir Yüksel, Ataberk Olgun, Giray Yaglikci, Mohammad Sadrosadati and Onur Mutlu</li>
+							<li><b>PANDA: Practical Adversarial Attacks Against Intrusion Detection Applications</b> by Subrat Kumar Swain, Vireshwar Kumar, Guangdong Bai and Dan Dongseong Kim</li>
+							<li><b>Exploring Use of Symbolic Execution for Service Analysis</b> by Yang Zhang, Long Wang, Zhengang Wang and Dongdong Shangguan</li>
+							<li><b>On the Design of Coordination Services for IoT</b> by Tiago Carvalho, Antonio Casimiro and Alysson Bessani</li>
+						</ul>
+					</div>
+					<div class="session" id="I2">
+						<h6>Industry 2: AI and Machine Learning, at <i>Room 4, 13:30 - 15:00, June 26</i></h6>
+						<p><b>Session Chair:</b> Dan Kim</p>
+						<ul>
+							<li><b>(Recording only, download from <a href="https://drive.google.com/drive/u/0/folders/1IklJQlBYK0NUCPn6Bh5ySETsNRBx8wqk">here</a>) Bridging the Gap: A Study of AI-based Vulnerability Management between Industry and Academia</b> by Shengye Wan, Joshua Saxe, Craig Gomes, Sahana Chennabasappa, Avilash Rath, Xinda Wang, Kun Sun</li>
+							<li><b>Federated Unlearning in the Internet of Vehicles</b> by Guofeng Li, Liangmin Wang, Xia Feng, Haiqin Wu, Boris Düdder</li>
+							<li><b>Active Learning Omnivariate Decision Trees for Fault Diagnosis in Robotic Systems</b> by Casidhe Hutchison, David Guttendorf, Milda Zizyte, Philip Koopman, Claire Le Goues</li>
+							<li><b>(Recording only, download from <a href="https://drive.google.com/drive/folders/1bmiVyb9FMqNsjA9WCCxJBDwf2o8E41Lp">here</a>) Empowering Data Centers with Computational Storage Drive-Based Deep Learning Inference Functionality to Combat Ransomware</b> by Kurt Friday, Elias Bou-Harb, Ron Lee, Pramod Peethambaran, Mayank Saxena</li>
+						</ul>
+					</div>					
+                    -->
+				</div>
+				<div class="tab-pane fade " id="day4" role="tabpanel" aria-labelledby="day4-tab">
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd" rowspan="1"><span class="">Local Time (UTC+10)</span></td>
+								<td class="td-3 thd session-room">Room 1</td>
+								<td class="td-3 thd session-room">Room 2</td>
+								<td class="td-3 thd session-room">Room 3</td>
+								<td class="td-3 thd session-room">Room 4</td>
+                                <td class="td-3 thd session-room">Room 5</td>
+                                
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">8:30 - 9:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Registration (all day)</td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">9:00 - 9:30</span></td>
+								<td class="td-2 awards-session" rowspan="1" colspan="4"><b><a href="#RS">Awards (Rising Star)</a></b></td>
+								<td class="td-3 forge" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#FORGE_1">FORGE 1</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:30 - 10:00</span></td>
+								<td class="td-2 keynotes-session" rowspan="2" colspan="4"><b><a href="#keynote3">Keynote 3</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:00 - 10:30</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 11:30</span></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R8">Research 14</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R9">Research 15</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R10">Research 16</a></b></td>
+								<td class="td-2 it-session" rowspan="3"><b><a href="#I4">Industry 4</a></b></td>
+								<td class="td-3 forge" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#FORGE_2">FORGE 2</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:30 - 12:00</span></td>
+							</tr>								
+							<tr>
+								<td class="td-1"><span class="">12:00 - 12:30</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Lunch</td>
+								
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">14:00 - 14:30</span></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R11">Research 17</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R12">Research 18</a></b></td>
+								<td class="td-2 rt-session" rowspan="3"><b><a href="#R13">Research 19</a></b></td>
+								<td class="td-2 it-session" rowspan="3"><b><a href="#I5">Industry 5</a></b></td>
+								<td class="td-3 s2aim" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#S2AIM_1">S2AIM 1</a></b></td>
+								
+							</tr>													
+							<tr>
+								<td class="td-1"><span class="">14:30 - 15:00</span></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">15:00 - 15:30</span></td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">16:00 - 16:30</span></td>
+								<td class="td-2 social-session" rowspan="2" colspan="4">Business Meeting</td>
+								<td class="td-3 s2aim" rowspan="3" colspan="1" data-bs-toggle="tooltip"><b><a href="#S2AIM_2">S2AIM 2</a></b></td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">16:30 - 17:00</span></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">17:00 - 17:30</span></td>
+								<td class="td-3 void-session" rowspan="1" id="ssiv1" colspan="4" data-bs-toggle="tooltip"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="legend">
+						<p class="fw-bold">Legend:</p>
+						<div class="legend-items">
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--keynotes-color);stroke-width:3;stroke:var(--keynotes-color)" width="15"></rect></svg> Keynotes</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--rt-color);stroke-width:3;stroke:var(--rt-color)" width="15"></rect></svg> Research</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--it-color);stroke-width:3;stroke:var(--it-color)" width="15"></rect></svg> Industry</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--forge-color);stroke-width:3;stroke:var(--forge-color)" width="15"></rect></svg> FORGE</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--s2aim-color);stroke-width:3;stroke:var(--s2aim-color)" width="15"></rect></svg> S2AIM</span>
+							<span><svg height="15" width="15"><rect height="15" style="fill:var(--social-color);stroke-width:3;stroke:var(--social-color)" width="15"></rect></svg> Social Events</span>
+						</div>
+					</div>	
+					<hr>
+                    <!--
+					<div class="session" id="RS_ToT">
+						<h6>Awards (Rising Star and Test-of-Time)<i>, 9:00 - 9:30, June 27</i></h6>
+						<p><b>Session Chair:</b> Domenico Cotroneo (Università di Napoli Federico II)</p>
+						<ul>
+							<li><b>Pramod Bhatotia</b>, TU Munich, Germany</li>
+							<li><b>Lessons Learned from the Analysis of System Failures at Petascale: The Case of Blue Waters</b> by Catello Di Martino, Zbigniew Kalbarczyk, Ravishankar K. Iyer, Fabio Baccanico, Joseph Fullop, William Kramer</li>
+							<li><b>State Machine Replication for the Masses with BFT-SMaRt</b> by Alysson Bessani, João Sousa, Eduardo Alchieri</li>
+						</ul>
+					</div>	
+
+					<div class="session" id="keynote3">
+						<h6>Keynote 3<i>, 9:30 - 10:30, June 27</i></h6>
+						<p><b>Session Chair:</b> Karthik Pattabiraman (University of British Columbia)</p>
+						<ul>
+							<li><b>Critical Technologies and Cybersecurity Research: the next 10 years</b>, by Dr. Surya Nepal, CSIRO Data61</li>
+						</ul>
+					</div>	
+
+					<div class="session" id="R8">
+						<h6>Research 8: Distributed Agreement Protocols, at<i> Room 1, 11:00 - 12:30, June 27</i></h6>
+						<p><b>Session Chair:</b> Mohammad Ashiqur Rahman (Florida International University)</p>
+						<ul>
+							<li><b>Delphi: Efficient Asynchronous Approximate Agreement for Distributed Oracles (Reg)</b> by Akhil Bandarupalli, Adithya Bhat, Saurabh Bagchi, Aniket Kate, Chen-Da Liu-Zhang, Michael K. Reiter</li>
+							<li><b>Verifying Randomized Consensus Protocols with Common Coins (Reg)</b> by Song Gao, Bohua Zhan, Zhilin Wu, Lijun Zhang</li>
+							<li><b>Iniva: Inclusive and Incentive-compatible Vote Aggregation (Reg)</b> by Arian Baloochestani Asl, Hanish Gogada, Leander Jehl, Hein Meling</li>
+						</ul>
+					</div>	
+					<div class="session" id="R9">
+						<h6>Research 9: Networking, at<i> Room 2, 11:00 - 12:30, June 27</i></h6>
+						<p><b>Session Chair:</b> Patrick P. C. Lee (The Chinese University of Hong Kong)</p>
+						<ul>
+							<li><b>Towards Shielding 5G Control Plane Functions (Reg)</b> by Sudip Maitra, Tolga Atalay, Angelos Stavrou, Haining Wang</li>
+							<li><b>Intrusion Tolerance for Networked Systems Through Two-Level Feedback Control (Reg)</b> by Kim Hammar, Rolf Stadler</li>
+							<li><b>SyRep: Efficient Synthesis and Repair of Fast Re-Route Forwarding Tables for Resilient Networks (Reg)</b> by Csaba Györgyi, Kim Larsen, Stefan Schmid, Jiri Srba</li>
+						</ul>
+					</div>	
+					<div class="session" id="R10">
+						<h6>Research 10: Security 2, at<i> Room 3, 11:00 - 12:30, June 27</i></h6>
+						<p><b>Session Chair:</b> Baojun Liu (Tsinghua University)</p>
+						<ul>
+							<li><b>IPMES: A Tool for Incremental TTP Detection over the System Audit Event Stream (Tool)</b> by Hong-Wei Li, Ping-Ting Liu, Bo-Wei Lin, Yi-Chun Liao, Yennun Huang</li>
+							<li><b>ADSynth: Synthesizing Realistic Active Directory Attack Graphs (Tool)</b> by Nhu Long Nguyen, Nick Falkner, Hung Nguyen</li>
+							<li><b>Grunt Attack: Exploiting Execution Dependencies in Microservices (Reg)</b> by Xuhang Gu, Qingyang Wang, Jianshu Liu, Jinpeng Wei</li>
+						</ul>
+					</div>	
+
+					<div class="session" id="doctoral">
+						<h6>Doctoral: at <i>Room 4, 11:00 - 12:30, June 27</i></h6>
+						<ul>
+							<li><b>Patching the Cracks: Detecting and Addressing Adversarial Examples in Real-World Applications</b> by Niklas Bunzel</li>
+							<li><b>(Recording only, watch from <a href="https://youtu.be/jS_y7QkxHww">here</a>) Reducing the gap between theory and practice in real-time system with MARS</b> by Giann Nandi, David Pereira, José Proença, Eduardo Tovar, Luis Nogueira</li>
+							<li><b>MTD in Plain Sight: Hiding Network Behavior in Moving Target Defenses</b> by Tina Moghaddam, Guowei Yang, Chandra Thapa, Seyit Camtepe, Dan Dongseong Kim</li>
+							<li><b>Advancing NDN Security for IoT: Harnessing Machine Learning to Detect Attacks</b> by Sai Gautam Mandapati, Chathurika Ranaweera, Robin Doss</li>
+							<li><b>Novel CAN Bus Fuzzing Framework for Finding Vulnerabilities in Automotive Systems</b> by Manu Jo Varghese, Frank Jiang, Robin Doss, Adnan Anwar</li>
+							<li><b>Secure Data Provenance in Internet of Vehicles with Verifiable Credentials for Security and Privacy</b> by Anuj Nepal, Robin Doss, Frank Jiang</li>
+							<li><b>(Re)-envisioning Approximate Agreement for Distributed Cryptography and Oracles</b> by Akhil Bandarupalli, Saurabh Bagchi, Aniket Kate</li>
+						</ul>
+					</div>
+
+					<div class="session" id="R11">
+						<h6>Research 11: Federated Learning, at<i> Room 1, 13:30 - 15:00, June 27</i></h6>
+						<p><b>Session Chair:</b> Angelos Stavrou (Virginia Tech)</p>
+						<ul>
+							<li><b>Privacy Leakage from Logits Attack and Its Defense in Federated Distillation (Reg)</b> by Danyang Xiao, Diying Yang, Jialun Li, Xu Chen, Weigang Wu</li>
+							<li><b>Goldfish: an Efficient Federated Unlearning Framework (Reg)</b> by Houzhe Wang, Xiaojie Zhu, Chi Chen, Paulo Esteves-Veríssimo</li>
+							<li><b>Toward Evaluating Robustness of Reinforcement Learning with Adversarial Policy (Reg)</b> by Xiang Zheng, Xingjun Ma, Shengjie Wang, Xinyu Wang, Chao Shen, Cong Wang</li>
+						</ul>
+					</div>	
+					<div class="session" id="R12">
+						<h6>Research 12: Virtualization, at<i> Room 2, 13:30 - 15:00, June 27</i></h6>
+						<p><b>Session Chair:</b> Marco Vieira (University of North Carolina)</p>
+						<ul>
+							<li><b>SEDSpec: Securing Emulated Devices by Enforcing Execution Specification (Reg)</b> by Yang Chen, Shengzhi Zhang, Qihang Zhou, Xiaoqi Jia, Heqing Huang, Shaowen Xu, Haichao Du</li>
+							<li><b>Mutiny! How does Kubernetes fail, and what can we do about it? (Reg)</b> by Marco Barletta, Marcello Cinque, Catello Di Martino, Zbigniew Kalbarczyk, Ravishankar K. Iyer</li>
+							<li><b>Reboot-based Recovery of Unikernels at the Component Level (Reg)</b> by Takeru Wada, Hiroshi Yamada</li>
+						</ul>
+					</div>	
+
+					<div class="session" id="R13">
+						<h6>Research 13: Side Channel, at<i> Room 3, 13:30 - 15:00, June 27</i></h6>
+						<p><b>Session Chair:</b> Xianghang Mi (USTC)</p>
+						<ul>
+							<li><b>Protecting Confidential Virtual Machines from Hardware Performance Counter Side Channels (Reg)</b> by Xiaoxuan Lou, Kangjie Chen, Guowen Xu, Han Qiu, Guo Shangwei, Tianwei Zhang</li>
+							<li><b>ZipChannel: Cache Side-Channel Vulnerabilities in Compression Algorithms (Reg)</b> by Marina Minkin, Baris Kasikci</li>
+							<li><b>Owl: Differential-based Side-Channel Leakage Detection for CUDA Applications (Reg)</b> by Yu Zhao, Wenjie Xue, Weijie Chen, Weizhong Qiang, Deqing Zou, Hai Jin</li>
+						</ul>
+					</div>	
+					<div class="session" id="I3">
+						<h6>Industry 3: Fault Location/Injection/Prediction, at <i>Room 4, 13:30 - 15:00, June 27</i></h6>
+						<p><b>Session Chair:</b> MengMeng Ge</p>
+						<ul>
+							<li><b>Investigating Memory Failure Prediction Across CPU Architectures</b> by Qiao Yu Huawei, Wengui Zhang, Min Zhou, Jialiang Yu, Zhenli Sheng, Jorge Cardoso, Jasmin
+								Bogatinovski, Odej Kao</li>
+							<li><b>Optimizing Large-Scale Fault Injection Experiments through Martingale Hypothesis: A Systematic Approach for Reliability Assessment of Safety-Critical Systems</b> by Saurabh Hukerikar, Atieh Lotfi, Yanxiang Huang, Nirmal Saxena</li>
+							<li><b>Fault Localization Using Interventional Causal Learning for Cloud-Native Applications</b> by Saurabh Jha, Jesus Rios, Frank Bagehorn, Larisa Shwartz, Naoki Abe</li>
+						</ul>
+					</div>
+                    -->
+				</div>
+			</div>
+		</div>
+
+		<hr>
+		<div class="session w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
+			<h6>CONFERENCE ROOMS:</h6>
+			<li>Room 1 </li>
+			<li>Room 2 </li>
+			<li>Room 3 </li>
+			<li>Room 4 </li>
+			<li>Room 5 </li>
+            <li>Room 6 </li>
+            <li>Room 7 </li>
+            <li>Room 8 </li>
+			<br>
+            <!--
+			<h6>CATERING</h6>
+			<li>Lunches in KG Bar (<b>Ground Level - Opposite Goldfinch Restaurant</b>)</li>
+			<li>Arrival TC / Coffee Break / Coffee Break in <b>Grand Windsor Ballroom</b></li>
+			<li>Banquet Dinner in Lincoln & Roosevelt (<b>Level 2 Pullman Tower</b>)</li>
+            -->
+		</div>
+
+        <!--
+		<div id="venue_map" style='text-align: center;'>
+			<h3 class="page-header">Venue Floor Plan</h3>
+			<select id="pdfSelector">
+				<option value="./floorplan/Grand_Windsor_Ballroom.pdf">Grand Windsor Ballroom</option>
+				<option value="./floorplan/Room 2.pdf">Room 2</option>
+				<option value="./floorplan/King_George_Room.pdf">Room 3</option>
+				<option value="./floorplan/Room 1.pdf">Room 1</option>
+				<option value="./floorplan/Olivers_Room.pdf">Room 4 Room</option>
+			</select>
+			<div class="pdf-container">
+				<embed id="pdfViewer" src="./floorplan/Grand_Windsor_Ballroom.pdf" type="application/pdf" width="100%" height="100%">
+			</div>
+		</div>
+        -->
+
+        <footer class="w3-container w3-padding-32 w3-light-grey" style="padding-left:100px;">
+            <div class="w3-row-padding">
+              <h3>Sponsors</h3>
+              <div class="w3-third">
+                <img src="images/logoIEEE2.png" alt="IEEE Logo" style="width:50%">
+              </div>
+              <div class="w3-third">
+                <img src="images/logoIFIP.png" alt="IFIP Logo" style="width:50%">
+              </div>
+              <div class="w3-third">
+                <img src="images/sponsors/DIETI_logo.png" alt="DIETI Logo" style="width:50%">
+              </div>
+              <div class="w3-half">
+                <img src="images/sponsors/[LOGO] GoGrowing_per-sfondi-chiari.svg" alt="GoGrowing Logo" style="width:50%">
+              </div>
+              <div class="w3-half">
+                <img src="images/sponsors/micron-logo-blk-rgb.png" alt="Micron Logo" style="width:50%">
+              </div>
+            </div>
+          </footer>
+            
+          <div class="w3-white w3-center w3-padding-24" id="acknowledgments">
+            Supported by <a href="https://www.critiware.com/" title="Critiware" target="_blank" class="w3-hover-opacity">
+                <img src="images/sponsors/logo-critiware.png" alt="IEEE Logo" style="width:20%">
+              </a>
+          </div>
+
     </div>
-  </footer>
-    
-  <div class="w3-white w3-center w3-padding-24" id="acknowledgments" style="padding-left: 320px;">
-    Supported by <a href="https://www.critiware.com/" title="Critiware" target="_blank" class="w3-hover-opacity">
-        <img src="images/sponsors/logo-critiware.png" alt="IEEE Logo" style="width:20%">
-      </a>
-  </div>
+	<!-- End page content -->
 
-<!-- End page content -->
-</div>
+	<script>
+		// Script to open and close sidebar
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+			document.getElementById("myOverlay").style.display = "block";
+		}
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+			document.getElementById("myOverlay").style.display = "none";
+		}
 
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /* Loop through a collection of all HTML elements: */
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /* Make an HTTP request using the attribute value as the file name: */
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /* Remove the attribute, and call this function once more: */
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      }
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /* Exit the function: */
-      return;
-    }
-  }
-}
-includeHTML();
+		function includeHTML() {
+			var z, i, elmnt, file, xhttp;
+			/* Loop through a collection of all HTML elements: */
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain atrribute:*/
+				file = elmnt.getAttribute("w3-include-html");
+				if (file) {
+					/* Make an HTTP request using the attribute value as the file name: */
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4) {
+							if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+							if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("w3-include-html");
+							includeHTML();
+						}
+					}
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					/* Exit the function: */
+					return;
+				}
+			}
+		}
+		includeHTML();
 
-function accordianFunc(id) {
-  var x = document.getElementById(id);
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
+		function accordianFunc(id) {
+			var x = document.getElementById(id);
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+
+
+        document.getElementById('pdfSelector').addEventListener('change', function() {
+            var selectedPDF = this.value;
+            document.getElementById('pdfViewer').src = selectedPDF;
+        });
+
+	</script>
+
+	<script src="js/common.js"></script>
+
+	<script>
+		session_ids = ["dcds", "ssiv", "dsml", "axc", "verdi", "dcds1", "ssiv1", "dsml1", "axc1", "verdi1", "tut1", "tut2", "tut3", "tut4", "tut11", "tut31", "tut41", "dcds2", "ssiv2", "dsml2", "axc2", "verdi2", "tut12", "tut32", "tut42", "dcds3", "ssiv3", "dsml3", "axc3", "verdi3", "tut21", "dcds4", "ssiv4", "dsml4", "axc4", "verdi4", "tut22", "values_cell"];
+		window.onload = function (event) {
+			//Enabling the tooltip
+			for (let id in session_ids) {
+				bootstrap.Tooltip.getOrCreateInstance("#" + session_ids[id]);
+			}
+		};
+	</script>
 
 </body>
+
 </html>
