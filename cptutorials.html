@@ -9,6 +9,69 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+.info-button {
+    background-color: #2196F3;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  .info-button:hover {
+    background-color: #0b7dda;
+  }
+  .info-box {
+    display: none;
+    margin-top: 10px;
+    background-color: #d1cdcd92;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  .speaker {
+    color: #2196F3;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  /* Modal styling */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+  }
+
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: black;
+  }
+
 </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
@@ -32,18 +95,238 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h1><b>DSN-2025: Accepted Tutorials</b></h1>
 
     
-    <ul class="w3-ul">
-        
-      <li class="w3-padding-large"><b>Generative AI in Cybersecurity: Generating Offensive Code from Natural Language</b><br>Speakers: Pietro Liguori, Roberto Natella, Domenico Cotroneo (Università degli Studi di Napoli Federico II)<br></li>
-      <li class="w3-padding-large"><b>Quantum Computing and Post-Quantum Cryptography: Preparing for the Next Era of Cybersecurity</b><br>Speakers: Hazel Murray, George O’Mahony and Anila Mjeda<br></li>
-      <li class="w3-padding-large"><b>Benchmarking of AI Agents for IT Automation Tasks using ITBench</b><br>Speakers: Rohan Arora, Saurabh Jha<br></li>
-      <li class="w3-padding-large"><b>Decentralized Federated Learning: Enhancing Reliability with Blockchain</b><br>Speakers: Antonella Del Pozzo and Maxence Perion<br></li>
-      <li class="w3-padding-large"><b>Evaluating Blockchain Fault Tolerance with STABL</b><br>Speakers: Vincent Gramoli, Rachid Guerraoui, Andrei Lebedev, and Gauthier Voron<br></li>
-      <li class="w3-padding-large"><b>Model-based Qualitative Dependability and Security Evaluation</b><br>Speakers: András Földvári, András Pataricza<br></li>
     
+    <ul class="w3-ul">
+      <li class="w3-padding-large">
+        <b>Title: Generative AI in Cybersecurity: Generating Offensive Code from Natural Language</b><br>
+        Speakers: 
+        <span class="speaker" onclick="showBio('Pietro Liguori')">Pietro Liguori</span>,
+        <span class="speaker" onclick="showBio('Roberto Natella')">Roberto Natella</span>,
+        <span class="speaker" onclick="showBio('Domenico Cotroneo')">Domenico Cotroneo</span>
+        (Università degli Studi di Napoli Federico II, Italy)
+        <br><button class="info-button" onclick="toggleInfo('info1')">More details</button>
+        <div id="info1" style="display:none; margin-top:10px;" class="info-box">
+          <h4>Overview</h4>
+          This tutorial we introduce recent advances and open challenges in Generative AI for Cybersecurity, focusing on AI Code Generators. The presentation will highlight practical applications of AI in cybersecurity, demonstrating how AI-generated code can be used in the generation of code for o5ensive security purposes.
+          <br><br>
+            We will examine datasets to illustrate the generation of security exploits. Then, we will discuss evaluation methodologies for AI Code Generators, with focus on the assessment of AI-generated code using automated techniques. We will then consider prompt engineering techniques for optimizing AI Code Generators. Finally, we will analyze the role of data processing and data augmentation, showcasing how these methods enhance the accuracy of AI Code Generators in security contexts.
+            <br><br>
+            By providing a comprehensive overview of AI's role in cybersecurity, participants will gain valuable insights into the future of automated o5ensive security practices and the critical importance of thorough assessment to ensure the reliability of AI-generated code.</i>
+            <br><br>
 
+            <h4>Outline</h4>
+            <b>First part (1.5 hours):</b>
+            <ul>
+              <li>Introduction to AI Code Generators and applications to cybersecurity (15 min)
+              <li>Basic concepts on Large Language Models (15 min)
+              <li>Datasets for AI Code Generators (20 min)
+              <li>Metrics and techniques for the evaluation of AI-generated code (40 min)
+            </ul>
+            
+            <b>Break (0.5 hours)</b>
+            <br>
+            <b>Second part (1.5 hours)</b>
+            <ul>
+              <li>Prompt Engineering for O5ensive Code Generation (20 min)
+              <li>Data Augmentation for O5ensive Code Generation (20 min)
+              <li>Practical experiments with O5ensive Code Generation (40 min)
+            </ul>
+
+        </div>
+      </li>
+
+      <li class="w3-padding-large">
+        <b>Title: Quantum Computing and Post-Quantum Cryptography: Preparing for the Next Era of Cybersecurity</b><br>
+        Speakers:
+        <span class="speaker" onclick="showBio('Hazel Murray')">Hazel Murray</span>,
+        <span class="speaker" onclick="showBio('George O’Mahony')">George O’Mahony</span>,
+        <span class="speaker" onclick="showBio('Anila Mjeda')">Anila Mjeda</span>
+        (Department of Computer Science Munster Technological University Cork, Ireland)
+        <br><button class="info-button" onclick="toggleInfo('info2')">More details</button>
+        <div id="info2" style="display:none; margin-top:10px;" class="info-box">
+          <h4>Overview</h4>
+          Quantum computing is emerging as a disruptive force in cybersecurity, offering both new opportunities and substantial threats. While quantum systems hold the promise of solving computational problems far beyond the capabilities of classical computers, they also pose existential risks to modern cryptographic protocols. The ability of quantum algorithms, such as Shor’s and Grover’s algorithms, to break widely used encryption schemes necessitates an urgent shift towards post-quantum cryptography (PQC).
+          <br><br>
+          This half-day tutorial will begin with an introductory lecture on the fundamentals of quantum computing, its implications for cybersecurity, and the challenges posed by quantum algorithms to classical cryptographic systems. This will be followed by an exploration of the current state of quantum software, including its pain points, development environments, programming frameworks, and providing an interactive demonstration of quantum programming. Finally, the tutorial will conclude with an in-depth discussion of post-quantum cryptography (PQC), its emerging standards, and strategies for transitioning security infrastructures to quantum-resistant cryptographic algorithms.
+          <br><br>
+          Attendees will gain a practical understanding of quantum computing’s capabilities, limitations, and impact on cybersecurity.
+
+          <h4>Outline</h4>
+            <b>Introduction to quantum computing - 30 minutes</b>
+            <ul>
+              <li> The tutorial will introduce the foundational principles of quantum computing, explaining key concepts such as qubits, superposition, entanglement, and quantum gates in an accessible way. This session will also outline the computational advantages of quantum computing over classical systems, highlighting its ability to solve problems exponentially faster than conventional hardware.
+            </ul>
+            
+            <b>Impact of quantum computing on cybersecurity - 40 minutes</b>
+            <ul>
+              <li> Quantum computing presents both risks and opportunities for cybersecurity. On the one hand, quantum algorithms like Shor’s and Grover’s threaten classical cryptographic systems by breaking public-key encryption and weakening symmetric encryption, necessitating the shift to post-quantum cryptography. On the other hand, quantum principles offer new security mechanisms, such as Quantum Key Distribution (QKD), which ensures secure communication through the no-cloning theorem, and zero-knowledge proofs, which enhance authentication without exposing sensitive data. This session will explore both the cybersecurity challenges posed
+                by quantum computing and the potential strengths of quantum cryptographic techniques, providing a strategic perspective on securing systems in the quantum era.                
+            </ul>
+            
+            <b>Quantum software engineering - 40 minutes</b>
+            <ul>
+              <li> 
+                This session will explore the landscape of quantum software development, focusing on quantum software engineering quality issues, the latest advancements in quantum software testing, and the tools and frameworks that enable quantum computing applications. Participants will be introduced to quantum programming languages such as Qiskit and Cirq, which provide the foundation for designing and executing quantum algorithms as well as quantum software in general. The session will also examine quantum development environments (IDEs), including Jupyter-based tools and emerging commercial quantum IDEs, which facilitate coding, visualization, and debugging of quantum programs.
+                Finally, the session will address the challenges of quantum software quality and verification, discussing the state of the art in quantum software testing. Given the inherent noise and instability in quantum hardware, ensuring reliable computation remains a major challenge, and ongoing research is focused on improving error correction and sound software engineering approaches.
+            </ul>
+            
+            <b>Demonstration of quantum programming - 40 minutes</b>
+            <ul>
+              <li> 
+                Through a live demonstration, we will explore quantum programming concepts, highlighting key differences and commonalities between quantum and classical computation. The session will showcase the process of writing and executing basic quantum programs, constructing quantum circuits, and applying fundamental quantum gates to illustrate superposition and entanglement in action. This demonstration will provide an intuitive understanding of how quantum algorithms operate.
+            </ul>
+            
+            <b>Demonstration of quantum programming - 30 minutes</b>
+            <ul>
+              <li> 
+                As quantum computing advances, the urgency for quantum-resistant cryptographic methods grows. This session will explore post-quantum cryptography (PQC), introducing key algorithms such as lattice-based, hash-based, code-based, and multivariate cryptographic approaches, focusing on those selected in the NIST PQC standardization process. This session will examine the challenges of PQC adoption, including performance trade-offs, system compatibility, and migration risks, as well as the role of hybrid cryptographic models in easing the transition. The session will also highlight real-world efforts by governments and industries to implement quantum-safe encryption providing insight into how organizations can future-proof the security and dependability of infrastructures for a post-quantum future.
+            </ul>
+        </div>
+      </li>
+
+      <li class="w3-padding-large">
+        <b>Title: Benchmarking of AI Agents for IT Automation Tasks using ITBench</b><br>
+        Speakers:
+        <span class="speaker" onclick="showBio('Rohan Arora')">Rohan Arora</span>,
+        <span class="speaker" onclick="showBio('Saurabh Jha')">Saurabh Jha</span>,
+        (IBM Research, Yorktown Heights, USA)
+        <br><button class="info-button" onclick="toggleInfo('info3')">More details</button>
+        <div id="info3" style="display:none; margin-top:10px;" class="info-box">
+          <h4>Overview</h4>
+            This tutorial will introduce attendees to ITBench, primarily focusing on site reliability engineering (SRE). Participants will learn how to use ITBench to benchmark and improve AI agents for site reliability engineering (SRE), compliance and security operations (CISO), and financial operations (FinOps) tasks. The hands-on tutorial will guide participants through the fundamentals of modern IT management challenges, explore how large language models (LLMs) and AI agents can transform IT operations, and provide practical experience with ITBench. Through guided exercises, attendees will be able to contribute SRE scenarios into ITBench and build effective AI agents capable of handling such scenarios. This exercise of deploying AI agents will help participants uncover limitations of current agentic AI approaches to advance the state-of-the-art in automated IT operations. The tutorial targets researchers and practitioners in dependable systems with basic knowledge of AI/LLM technologies. We also look forward to feedback on improving ITBench to help us enable community contributions at scale.
+            <br>
+            Attendees will learn:
+            <ul>
+              <li>Real-world challenges in IT automation and how to address them
+              <li>Building AI agents for IT automation and evaluating them
+              <li>Creating realistic scenarios for IT automation tasks
+            </ul>
+          <h4>Outline</h4>
+          
+          <b>IT Automation Challenges—30 minutes</b>
+          <ul>
+              <li>Complexity of modern IT systems
+              <li>Domain-specific (SRE, CISO, FinOps) challenges
+              <li>State-of-the-art approaches: AI and heuristics
+          </ul>
+          <b>ITBench: Overview, Architecture, and Principles—30 minutes</b>
+          <ul>
+            <li>Framework architecture: open and extensible
+            <li>Benchmark scenarios
+            <li>Evaluation methodologies
+          </ul>
+
+          <b>Large Language Models (LLMs) and Agents—45 minutes</b>
+          <ul>
+            <li>LLMs: overview
+            <li>Agents: overview
+            <li>Leveraging SREAgent, an existing open-source agent
+          </ul>
+
+          <b>Break—15 minutes</b>
+
+          <b>Hands-On Session—75 minutes</b>
+          <ul>
+            <li>Environment setup
+            <li>Running an existing scenario, with an agent attempting to resolve it
+            <li>Contributing a *new* scenario
+          </ul>
+
+          <b>Community Contributions and Feedback—15 minutes</b>
+          <ul>
+            <li>Q&A session
+          </ul>
+
+        </div>
+      </li>
+
+      <li class="w3-padding-large">
+        <b>Title: Decentralized Federated Learning: Enhancing Reliability with Blockchain</b><br>
+        Speakers:
+        <span class="speaker" onclick="showBio('Antonella Del Pozzo')">Antonella Del Pozzo</span>,
+        <span class="speaker" onclick="showBio('Maxence Perion')">Maxence Perion</span>,
+        (Universite ́ Paris-Saclay, CEA, List, France)
+
+        <br><button class="info-button" onclick="toggleInfo('info4')">More details</button>
+        <div id="info4" style="display:none; margin-top:10px;" class="info-box">
+          
+          <h4>Overview</h4>
+            The goal of this tutorial is to help attendees gain a clear understanding of when and how to use blockchain, what it can truly offer, and at what cost. Blockchain is often viewed as either a universal solution to all problems or an inefficient, energy-consuming technology with limited real-world applications. This tutorial aims to move beyond these extremes by offering a structured discussion on its actual strengths, trade-offs, and limitations.
+            An essential part of this exploration is considering the role blockchain plays in solving specific problems. By examining Federated Learning (FL) as a use case, we will also explore whether, depending on the situation, blockchain is the best fit, or if alternatives can be used to achieve similar objectives with fewer trade-offs. This perspective will enable participants to understand how decentralization can enhance reliability and trust in FL, while also considering other approaches that may better address scalability, efficiency, and resource consumption.
+          
+          <h4>Outline</h4>
+          The tutorial is structured as follows:
+          <ul>
+            <li><b>Federated Learning (FL), introduction and limitations.</b> Basic overview of the FL paradigm with a focus on its main limitations. (15 min)
+            <li><b>Blockchain Introduction.</b> Basic overview of blockchain technology—what it is, its components, limitations, and how it can be applied in distributed systems beyond cryptocurrencies. (25 min)
+            <li><b>Initial Integration Attempt: Challenges and Inefficiencies.</b> Discussion on challenges and inefficiencies (25 min)
+            <li><b>External storage.</b> Exploration of how external storage can be integrated into FL-blockchain systems to improve efficiency and performance. We also discuss their limitations, particularly in terms of data availability and computational integrity. (25 min)
+            <li><b>Final Solution with External Storage and Certificates.</b> Discussion on how integrating certificates and additional mechanisms can address the shortcomings of the previous approach (25 min)
+            <li><b>Implementation: Technology Discussion.</b> Discussion of why we chose Cosmos for the blockchain framework and Cosmos ABCI for custom blockchain applications and how does it work. We also discuss our use of Zenoh for pub/sub communication (40 min)
+            <li><b>Final Discussion.</b> Discussion to reflect on the lessons learned, the role of blockchain in solving real-world problems, and the trade-offs involved. We will specifically explore whether blockchain is always necessary in the context of FL or if, depending on the situation, alternative solutions might be more efficient and effective. (20 min)
+          </ul>
+        </div>
+      </li>
+
+      <li class="w3-padding-large">
+        <b>Title: Evaluating Blockchain Fault Tolerance with STABL</b><br>
+        Speakers: 
+
+        <span class="speaker" onclick="showBio('Vincent Gramoli')">Vincent Gramoli</span> (University of Sydney and Redbelly Network Australia),
+        <span class="speaker" onclick="showBio('Rachid Guerraoui')">Rachid Guerraoui</span> (EPFL, Switzerland),
+        <span class="speaker" onclick="showBio('Andrei Lebedev')">Andrei Lebedev</span> (University of Sydney, Australia),
+        <span class="speaker" onclick="showBio('Gauthier Voron')">Gauthier Voron</span> (EPFL Switzerland)
+        
+        <br><button class="info-button" onclick="toggleInfo('info5')">More details</button>
+        <div id="info5" style="display:none; margin-top:10px;" class="info-box">
+          <h4>Overview</h4>
+            Blockchains are often assumed to be fault tolerant due to their decentralized nature, yet real-world failures repeatedly challenge this assumption. Outages lasting days have been observed across major blockchain networks. Some could not even recover from transient isolated failures. Unlike traditional distributed systems, where well-established fault tolerance mechanisms exist, blockchains vary significantly in their consensus protocols, network structures, and failure handling approaches, making dependability evaluation particularly challenging. Despite the critical importance of fault tolerance, most blockchain benchmarking efforts focus primarily on performance metrics such as throughput and latency, often under ideal conditions that fail to account for real-world failure scenarios.
+            <br><br>
+            Evaluating fault tolerance requires a systematic approach to fault injection and measurement, enabling researchers and practitioners to analyze blockchain resilience, recoverability, and failure impact. This tutorial focuses on dependability assessment, covering practical methods for introducing faults, observing their effects, and quantifying blockchain sensitivity to failures, providing a different perspectives on blockchain performance evaluation compared to our tutorial on performance benchmarking with DIABLO.
+            <br><br>
+            In this half-day tutorial, we will evaluate the fault tolerance of one of the six blockchains, Algorand, Avalanche, Aptos, Ethereum, Redbelly and Solana with the recent STABL benchmark suite. We will look at the sensitivity score and extend the observer node with another fault type.
+          <h4>Outline</h4>
+          The tutorial will have the following structure:
+          <ul>
+            <li><b>Introduction (20 min). What is blockchain, transaction throughput and latency, DIABLO and STABL benchmarking frameworks.
+            <li><b>Simple Demo (30 min).</b> Using the virual machine image, members of the audience will run a local experiment on their own machines.
+            <li><b>Fault Tolerance and Dependability (20 min).</b> Explanation of crash faults and network partitioning, and packet loss.
+            <li><b>Fault Tolerance Demo (30 min).</b> We will introduce crash faults in the scenario and observe performance and sensitivity score under new conditions.
+            <li><b>Benchmarking Details (20 min).</b> Explanation of metrics, workload types, and emulating various network conditions.
+            <li><b>Advanced Demo (30 min).</b> We will explain the fault scenario implementation in STABL observer node and how to extend it with a new fault type.
+            <li><b>Discussion (30 min).</b> Implications of design decisions, metrics and aspects to be evaluated.
+        </ul>
+        </div>
+      </li>
+
+      <li class="w3-padding-large">
+        <b>Model-based Qualitative Dependability and Security Evaluation</b><br>
+        Speakers: 
+        <span class="speaker" onclick="showBio('András Földvári')">András Földvári</span>,
+        <span class="speaker" onclick="showBio('András Pataricza')">András Pataricza</span>       
+        (Budapest University of Technology and Economics Department of Artificial Intelligence and Systems Engineering Budapest, Hungary)
+
+        <br><button class="info-button" onclick="toggleInfo('info6')">More details</button>
+        <div id="info6" style="display:none; margin-top:10px;" class="info-box">
+          <h4>Overview</h4>
+          The tutorial provides participants with a comprehensive understanding of Error Propagation Analysis (EPA), Qualitative Modeling [1], and their combinations for assessing dependability and security objectives in a Model-Based Systems Engineering (MBSE) approach. By integrating logic reasoning with qualitative evaluation, the tutorial aims to equip attendees with practical skills for applying qualitative EPA for system security and dependability assessment.
+          <br><br>
+          Through discussions on qualitative engineering models, logic-based reasoning, risk assessment, and security frameworks, participants will learn how the presented methodologies can contribute to systematic fault dynamics analysis, dependability evaluation, and reinforcement of security strategies. Additionally, applications and case studies will demonstrate how these methods can be applied to practical engineering challenges, enabling more resilient and validated system designs.
+          <br><br>
+          The goal of the tutorial is to provide an overview of state-of-the-art EPA solutions and present a qualitative logic reasoning-based MBSE approach, discussing its usage, advantages, open issues, and limitations.
+          <h4>Outline</h4>
+          The tutorial is divided into 4 main sections:
+          <ul>
+            <li><b>Section 1 - Error Propagation Analysis.</b> This section provides an overview of state-of-the-art solutions for EPA in complex systems. Participants will gain insights into existing EPA methodologies, their strengths and limitations, and the challenges associated with propagation modeling in engineering applications.
+            <li><b>Section 2 - Qualitative Modeling.</b> This section introduces Qualitative Modeling as an alternative approach to traditional quantitative methods for analyzing system behavior. It covers qualitative engineering models and data-driven techniques for extracting qualitative representations from incomplete or unstructured data. The objective is to equip attendees with the ability to construct qualitative models that capture the operational modes of a system using symbolic and logic-based descriptions.
+            <li><b>Section 3 - Qualitative EPA.</b> This section explores the qualitative EPA approach that integrates logic reasoning with answer set programming (ASP) - a Prolog-like declarative programming approach, and an MBSE-based framework for EPA. It discusses the role of rule-based inference engines and qualitative logic in tracing and evaluating error propagation paths. Attendees will learn how to apply qualitative reasoning techniques within an MBSE-driven EPA framework, leveraging logical inference to enhance dependability and security analysis.
+            <li><b>Section 4 - Applications and Case Study.</b> This section demonstrates qualitative EPA applications, including dependability and security evaluations in critical engineering domains. Case studies illustrate how qualitative modeling and logical reasoning contribute to assessing requirements and assessing risk. Participants will understand how to apply qualitative EPA methods to practical engineering challenges and validate system designs. The theoretical concepts presented during the tutorial will be demonstrated on a pilot framework through real-life examples.
+        </ul>
+        </div>
+      </li>
     </ul>
-
+    
+    
     
         
   </div>  
@@ -80,7 +363,64 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </div>
 
 <script>
+
+  window.onload = function () {
+  const bios = {
+    "Pietro Liguori": "Pietro Liguori (PhD) is Assistant Professor at the Federico University of Naples, Italy. His research focuses on the security and robustness of AI code generators and the application of large language models in o5ensive security. He has been organizing the workshop series on Reliable and Secure AI for Software Engineering (ReSAISE) in conjunction with the IEEE ISSRE conference.",
+    "Roberto Natella": "Roberto Natella (PhD) is Associate Professor at the Federico University of Naples, Italy. His research interests are in the experimental injection of faults, attacks, and stressful conditions, for security and dependability applications. In 2022, he received the DSN Rising Star in Dependability Award.",
+    "Domenico Cotroneo": "Domenico Cotroneo (PhD) is Full Professor at the Federico University of Naples, Italy. His research interests are in the fields of software reliability and security, field failure data analysis, and software fault injection. He is the chair of the IEEE Technical Community on Dependable Computing and Fault Tolerance, IEEE senior member, and elected member of the IFIP WG 10.4 on Dependable Computing and Fault Tolerance.",
+    "Hazel Murray": "Dr. Hazel Murray is a quantum cryptography specialist and cybersecurity researcher, lecturing as part of the Cyber Skills team at Munster Technological University. As Principal Investigator of the QCloud project, funded through the EU OCRE initiative and AWS-Rackspace, she has enabled scalable access to quantum computing infrastructure for researchers across Ireland. Her research focuses on the role of quantum technologies in security protocols, authentication, and post-quantum cryptography, bridging academic and industrial domains through partnerships with AWS, Google, and Microsoft. She also leads the QuantumEd project, enhancing cross-disciplinary quantum education, and the Quantum Music project, which uses sonification to explain complex quantum concepts. She completed her PhD in Mathematics at Maynooth University and was a recipient of the 2023 Women in STEM Award.",
+    "George O’Mahony": "Dr. George D. O’Mahony is a cybersecurity lecturer and researcher at Cyber Skills, Munster Technological University (MTU), specializing in cyber resilience, IT/OT/IoT convergence and security, cyber range technology, and AI-driven anomaly detection. He holds a BE (2015) and Ph.D. (2021) in Electrical and Electronic Engineering from University College Cork (UCC), with research focused on enhancing cybersecurity for resource-constrained edge devices using machine learning techniques. His current teaching covers network security, penetration testing, threat hunting, and cyber defense evasion. Dr O’Mahony is the WorldSkills Ireland Expert for Skill 54 Cybersecurity, an Associate Investigator in SFI CONNECT research centre contributing to the area of cyber security, co-PI role in SFI NCF Cyber Shock, a team member in Horizon Telemetry, PI in Cyber Explore and led the design/implementation of Ireland’s Cyber Range infrastructure (both mobile and cloud).",
+    "Anila Mjeda": "Dr. Anila Mjeda is a cybersecurity lecturer and researcher in the Department of Computer Science & Cyber Skills at Munster Technical University. She began her academic career as a Theoretical Physicist and, driven by her passion for modeling complex systems, moved into computer science. Dr. Mjeda completed her PhD in Safety-Critical Systems at the University of Limerick. Dr. Mjeda’s research encompasses a broad range of cybersecurity topics within software, such as application security, malware analysis, and AI actors in cybersecurity. Additionally, Dr. Mjeda’s research interests include quantum software and innovations in software engineering education. Dr. Mjeda has been a member of the Lero research centre since its foundation. She works to enhance cross-disciplinary quantum education through the QuantumEd project and is Co-PI of the QCloud Project.",
+    "András Földvári": "András Földvári is a Ph.D. student at Budapest University of Technology and Economics and a member of the Critical Systems Research Group. His research focuses on applying qualitative modeling in dependability, including model extraction from observational data and logic-based reasoning over qualitative models. He has participated in industrial R&D projects, developed tools for analyzing the cybersecurity impact of IT/OT cyber-physical systems, and contributed to cloud infrastructure performance analysis and optimization.",
+    "András Pataricza": "András Pataricza is an emeritus full professor at Budapest University of Technology and Economics, and he founded the Critical Systems Research Group in 1994. His research interests focus on model-based dependability and security evaluation using formal methods. He authored 200 papers. He is a member of IFIP WG10.4 and served as the general chair of the DSN conference in 2013.",
+    "Antonella Del Pozzo": "Antonella Del Pozzo is a Research Engineer at CEA-List, specializing in distributed systems, with a broad interest in BFT (Byzantine Fault Tolerance) solutions, blockchain, distributed registers, data spaces, as well as fairness, accountability, and auditability. She completed her Ph.D. in Engineering in Computer Science at the Universita` degli Studi di Roma La Sapienza and in Informatique, Te ́le ́communications et E ́lectroniquedeParis(EDITE)atSorbonneUniversite ́in2017, through a joint doctoral program. In addition to her research, Antonella provides blockchain courses at the university level and has delivered several seminars on distributed systems and decentralized technologies. She is also an active member of the Technical Program Committees for conferences in distributed systems and blockchain.",
+    "Maxence Perion": "Maxence Perion is a PhD Student supervised by Sara Tucci Piergiovanni (Universite ́ Paris-Saclay, CEA, List) and Petr Kuznetsov (Telecom Paris). His current research topic is about Conflict-free Replicated Data Types (CRDT) in blockchain environment. Previously, he was a research intern at CEA-List and worked on the Fantastyc paper where he helped developing its blockchain based FL prototype and its experimental evaluation.",
+    "Saurabh Jha": "Saurabh Jha is a Senior Research Scientist at IBM Research with a Ph.D. from the University of Illinois at Urbana-Champaign. His expertise combines Machine Learning and Systems, enhancing products like IBM Instana and Turbonomic while currently focusing on multi-modal AI inference systems and multi-agent applications such as SREagent. He has earned numerous recognitions, including the IBM Tech Award, IBM Ph.D. Fellowship, and best paper awards at conferences like ACM/IEEE SC 2020 and IEEE ISSRE 2020. In 2024, he was appointed as the Research Product Focal for Instana, facilitating strategic collaboration between IBM Research and IBM Instana.",
+    "Rohan Arora": "Rohan Arora is a Senior Software Engineer at IBM Research. He joined IBM Research in 2016 after graduating from the University of Illinois at Urbana-Champaign with a Master’s Degree in Electrical and Computer Engineering. In his early career at IBM, he co-led the effort on developing augmented and virtual reality-based solutions for the enterprise. Since 2021, he has been working at the intersection of machine learning (ML) and IT operations, particularly in the areas of incident management and resource optimization.",
+    "Vincent Gramoli": "Vincent Gramoli is a Professor of Computer Science at the University of Syndey and the Founder and CTO of Redbelly Network. He received the Digital National Facilities & Collections Award from CSIRO, the Education Leader of the Year Award from Blockchain Australia, and the Future Fellowship from the Australian Research Council. In the past, Prof. Gramoli has been affiliated with INRIA, Cornell, Data61 and EPFL.",
+    "Rachid Guerraoui": "Rachid Guerraoui is a professor with the Ecole Polytechnique Fe ́de ́rale de Lausanne (EPFL) where he leads the Distributed Computing Laboratory. He has been affiliated with the Research Center of Ecole des Mines de Paris, the Commissariat a l’Energie Atomique in Saclay, Hewlett-Packard Laboratories in Palo Alto and the Massachusetts Institute of Technology. His research is devoted to concurrent and distributed computing, from multiprocessors to wide-area networks.",
+    "Andrei Lebedev": "Andrei Lebedev is a PhD student at the University of Sydney. The focus of his research is evaluation and improvement of distributed systems. He received his MSc in Informatics from the Technical University of Munich and has been a technical lead for Hyperledger Iroha, a permissioned blockchain protocol. He served as Artifact Evaluation Committee member of international scientific conferences (OSDI’23, USEINX ATC’23).",
+    "Gauthier Voron": "Gauthier Voron is a postdoctoral researcher in Computer Science at the Ecole Polytechnique Fe ́de ́rale de Lausanne (EPFL), Switzerland. He holds a PhD from Sorbonne Universite ́, France, obtained in 2018 for his work on virtualization of Non Uniform Memory Architecture. His research interests revolve around performance and scalability of concurrent and distributed systems with a particular focus on interactions of low level and high level aspects of distributed systems.",
+
+    // Add more bios here...
+  };
+
+  window.showBio = function (name) {
+    const modal = document.getElementById("bioModal");
+    const bioName = document.getElementById("bioName");
+    const bioText = document.getElementById("bioText");
+
+    if (!modal || !bioName || !bioText) {
+      console.error("Modal elements not found.");
+      return;
+    }
+
+    bioName.innerText = name;
+    bioText.innerText = bios[name] || "Biography not available.";
+    modal.style.display = "block";
+  };
+
+  window.closeModal = function () {
+    const modal = document.getElementById("bioModal");
+    if (modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  window.onclick = function (event) {
+    const modal = document.getElementById("bioModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+  };
 // Script to open and close sidebar
+function toggleInfo(id) {
+        var infoDiv = document.getElementById(id);
+        infoDiv.style.display = (infoDiv.style.display === 'none') ? 'block' : 'none';
+      }
+
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
@@ -131,4 +471,14 @@ function accordianFunc(id) {
 </script>
 
 </body>
+
+<div id="bioModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.5); z-index:1000;">
+  <div class="modal-content" style="background:white; margin:10% auto; padding:20px; border-radius:10px; width:60%; max-width:600px; position:relative;">
+    <span class="close" onclick="closeModal()" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
+    <h3 id="bioName"></h3>
+    <p id="bioText"></p>
+  </div>
+</div>
+
+
 </html>
