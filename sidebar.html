@@ -49,8 +49,14 @@
     <!-- 
       <a href="registration.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-th-large fa-check-square w3-margin-right"></i>REGISTRATION</a> 
     -->
-    <a href="travelgrants.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-th-large fa-suitcase w3-margin-right"></i>STUDENT TRAVEL GRANTS</a> 
-   
+    <!-- <a href="travelgrants.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-th-large fa-suitcase w3-margin-right"></i>TRAVEL GRANTS</a> -->
+    
+    <button onclick="accordianFunc('travel')" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-money fa-fw w3-margin-right"></i>TRAVEL GRANTS<i class="fa fa-caret-down"></i></button>
+      <div id="travel" class="w3-container w3-hide">
+        <a href="travelgrant_student.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-fw w3-margin-right"></i>STUDENT</a>
+        <a href="travelgrant_volunteer.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-fw w3-margin-right"></i>STUDENT VOLUNTEER</a>
+        <a href="travelgrant_young_researcher.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-fw w3-margin-right"></i>YOUNG RESEARCHER</a>
+      </div>
     <!--
     <button onclick="accordianFunc('venueAC')" class="w3-bar-item w3-button w3-padding w3-hover-indigo"><i class="fa fa-info fa-fw w3-margin-right"></i>CONFERENCE VENUE<i class="fa fa-caret-down"></i></button>
     -->
