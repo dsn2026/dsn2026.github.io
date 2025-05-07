@@ -31,53 +31,74 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <h1><b>Banquet</b></h1>
 
 
-	<div class="w3-card-1">
-    <div class="w3-container w3-padding" style="display: flex; flex-wrap: wrap; gap: 20px;">
-      
-      <!-- Left side: Images -->
-      <div style="flex: 1; min-width: 300px;">
-        <figure class="w3-margin-bottom">
-          <a href="images/banquet/myriam-gestour.jpg">
-            <img src="images/banquet/myriam-gestour.jpg" style="width:100%">
-          </a>
-        </figure>
-  
-        <figure class="w3-margin-bottom">
-          <a href="images/banquet/myriam-gestour_2">
-            <img src="images/banquet/myriam-gestour_2.jpg" style="width:100%">
-          </a>
-        </figure>
+  <div class="w3-card-1">
+    <div class="w3-container" style="display: flex; flex-wrap: wrap; gap: 20px; padding: 0;">
+    
+      <!-- Left side: Larger, edge-to-edge images aligned with right column -->
+      <div style="flex: 1; min-width: 300px; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+        <img src="images/banquet/myriam-gestour.jpg" style="width:100%; height:90%; display:block; object-fit: cover;">
+        <img src="images/banquet/myriam-gestour_2.jpg" style="width:100%; height:90%; display:block; object-fit: cover;">
       </div>
-  
-      <!-- Right side: Text -->
-      <div style="flex: 2; min-width: 300px;">
-        <h2>Conference Social Event Aboard Myriam</h2> 
-  
-        <p>Step aboard the <b>Myriam</b> for an exclusive social event set against the stunning backdrop of the Gulf of Naples. As part of this year’s conference, we invite you to relax, mingle, and take in the breathtaking scenery while cruising on one of the most beautiful coastlines in the world.</p>
+    
+      <!-- Right side: Text + map -->
+      <div style="flex: 2; min-width: 300px; padding: 20px;">
+        <h2>Conference Social Event Aboard <i>Myriam</i></h2> 
+    
+        <p>Step aboard the <i>Myriam</i> motorboat for an exclusive social event set against the stunning backdrop of the Gulf of Naples. As part of this year’s conference, we invite you to relax, mingle, and take in the breathtaking scenery while cruising on one of the most beautiful coastlines in the world.</p>
         <p>Let the shimmering waters of the Gulf of Naples and the warm evening breeze create the perfect setting to unwind and connect beyond the conference sessions.</p>
-        
+    
         <p>Extra tickets for the banquet can be purchased from the <a href="https://dsn25.critiware.com/">registration site</a> for 100€/person.</p>
-
+    
         📍 Date: Jun 25 <br>
         📍 Time: TBD <br>
-        📍 Boarding Location: Molo Beverello (close to the conference hotel)<br>
+        📍 Boarding Location: Molo Beverello (10-minute walk from Royal Continental Hotel)<br>
+    
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2881.026139978156!2d14.248660316086058!3d40.839957971380834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x133b0879f1e48b15%3A0xa63d6456f7b9c17!2sRoyal%20Continental%20Hotel%20Naples%2C%20Via%20Partenope%2C%2038%2F44%2C%2080121%20Napoli%20NA%2C%20Italy!3m2!1d40.8299865!2d14.2499512!4m5!1s0x133b086fc2d49711%3A0x43dc612d59859f83!2sMolo%20Beverello!3m2!1d40.8390176!2d14.2578048!5e0!3m2!1sen!2sit!4v1715084070302!5m2!1sen!2sit"
+          width="100%"
+          height="300"
+          style="border:0; margin-top: 15px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
+    
+    <br>
   
-    <!-- Full-width two images side-by-side -->
-  <div style="display: flex; flex-wrap: wrap;">
-    <figure style="flex: 1; margin: 100;">
-      <a href="images/banquet/napoli-notte.jpg">
-        <img src="images/banquet/napoli-notte.jpg" style="width:100%; display:block;">
-      </a>
-    </figure>
-    <figure style="flex: 1; margin: 100;">
-      <a href="images/banquet/napoli-notte_2.jpg">
-        <img src="images/banquet/napoli-notte_2.jpg" style="width:100%; display:block;">
-      </a>
-    </figure>
+    <!-- Centered slideshow container with no distance from the top -->
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 700px; overflow: hidden; position: relative; margin: 0;">
+      <img
+        id="slideshow-image"
+        src="images/banquet/napoli-notte.jpg"
+        style="width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 1s ease-in-out; margin: 0; padding: 0;"
+      >
+    </div>
+  
+    <script>
+      const slideshowImages = [
+        'images/banquet/napoli-notte.jpg',
+        'images/banquet/napoli-notte_2.jpg',
+        'images/banquet/napoli-notte_3.jpg',
+      ];
+  
+      let currentImageIndex = 0;
+      const imgElement = document.getElementById('slideshow-image');
+  
+      setInterval(() => {
+        currentImageIndex = (currentImageIndex + 1) % slideshowImages.length;
+        imgElement.style.opacity = 0;
+        setTimeout(() => {
+          imgElement.src = slideshowImages[currentImageIndex];
+          imgElement.style.opacity = 1;
+        }, 500);
+      }, 4000);
+    </script>
   </div>
-  </div>
+  
+
+  
   
 
   
