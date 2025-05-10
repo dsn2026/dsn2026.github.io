@@ -41,6 +41,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <li><a href="#artifact">DSN 2025 Distinguished Artifact Award</a>
     <li><a href="#jcl">DSN 2024 Jean-Claude Laprie Award</a>
     </ol>
+
     
     <h2 id="bpa"><b>DSN 2025 Best Paper Award</b></h2>
     <p>DSN attributes a Best Paper Award to one of the accepted scientific
@@ -58,7 +59,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
  
     <p>To be eligible for the award, the nominee’s PhD defense must be completed prior to the nomination deadline and must have occurred no more than 16 months prior to the nomination deadline.</p>
  
-    <p>Nominations must be submitted by email to the DSN Steering Committee Chair (<a href="SC_chair@dsn.org">SC_chair@dsn.org</a>) aand are due on <b><u>December 20, 2024</u></b>. Make sure the words Carter Award are in the subject line. The winner will be announced by <b><u>April, 2025</u></b>.</p>
+    <p>Nominations must be submitted by email to the DSN Steering Committee Chair (<a href="SC_chair@dsn.org">SC_chair@dsn.org</a>) and are due on <b><u>December 20, 2024</u></b>. Make sure the words Carter Award are in the subject line. The winner will be announced by <b><u>April, 2025</u></b>.</p>
  
     <p>The committee Chair and the committee members will be appointed by the DSN Steering Committee Chair after the nomination deadline to avoid potential conflicts of interest.</p>
  
@@ -113,6 +114,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <p>All artifacts submitted will compete for a “<b>Distinguished Artifact Award</b>” that is sponsored by TBD, to be decided by the committee. This will be awarded to the artifact that (1) has the highest degree of reproducibility as well as ease of use and documentation, (2) allows other researchers to easily build upon the artifact’s functionality for their own research, and (3) substantially supports the claims of the paper. We anticipate that at most one artifact (paper) would get the award, though the committee reserves the right not to award any artifact in a given year if none of them meet the criteria for the award.
     </p>
       
+    
     <p>For complete information about the award, please visit <a href="cfartifacts.html">DSN 2025 Artifact CFP</a></p>
 
 
@@ -130,6 +132,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <li>Industrial/commercial product impact</li>
       <li>Broad impact on the dependable computing community</li>
     </ul>
+    
   </p>
     The award may be given to more than one paper.
     <p>
@@ -139,36 +142,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <p>Complete information on the Jean-Claude Laprie award can be found <a target="_blank" href="awards_jcl.html">here</a></p>
   </div>
 
-  </div>
-    
+  <div id="footer-container"></div>
+  <script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+  </script>
   
-  <footer class="w3-container w3-padding-32 w3-light-grey" style="padding-left:450px;">
-    <div class="w3-row-padding">
-      <h3>Sponsors</h3>
-      <div class="w3-third">
-        <img src="images/logoIEEE2.png" alt="IEEE Logo" style="width:50%">
-      </div>
-      <div class="w3-third">
-        <img src="images/logoIFIP.png" alt="IFIP Logo" style="width:50%">
-      </div>
-      <div class="w3-third">
-        <img src="images/sponsors/DIETI_logo.png" alt="DIETI Logo" style="width:50%">
-      </div>
-      <div class="w3-half">
-        <img src="images/sponsors/[LOGO] GoGrowing_per-sfondi-chiari.svg" alt="GoGrowing Logo" style="width:50%">
-      </div>
-      <div class="w3-half">
-        <img src="images/sponsors/micron-logo-blk-rgb.png" alt="Micron Logo" style="width:50%">
-      </div>
-    </div>
-  </footer>
-    
-  <div class="w3-white w3-center w3-padding-24" id="acknowledgments" style="padding-left:320px;">
-    Supported by <a href="https://www.critiware.com/" title="Critiware" target="_blank" class="w3-hover-opacity">
-        <img src="images/sponsors/logo-critiware.png" alt="IEEE Logo" style="width:20%">
-      </a>
-  </div>
-
 <!-- End page content -->
 </div>
 
