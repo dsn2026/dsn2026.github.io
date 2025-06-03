@@ -34,17 +34,16 @@
 
 <style>
 	:root {
-		--awards-color: rgba(118, 203, 78, 0.95); // AWARD
-		--keynotes-color: rgba(142, 169, 219, 0.95); //KEYNOTE
-		--rt-color: rgba(193, 228, 169, 0.95); //RESEARCH
-		--it-color: rgba(124, 188, 189, 0.896); //INDUSTRY
-		--d23-color: rgba(203, 202, 149, 0.95); //DISRUPT
-		--tut-color: rgba(143, 183, 140, 0.95); //TUTORIAL
+		--awards-color: rgba(118, 203, 78, 0.95); 
+		--keynotes-color: rgba(142, 169, 219, 0.95);
+		--rt-color: rgba(193, 228, 169, 0.95); 
+		--it-color: rgba(124, 188, 189, 0.896); 
+		--d23-color: rgba(203, 202, 149, 0.95); 
+		--tut-color: rgba(143, 183, 140, 0.95); 
 		--poster-color: rgb(240, 193, 163);
-		--df-color: rgba(220, 158, 126, 0.75); //DOCTORAL FORUM
-		--social-color: rgba(48, 184, 150, 0.95); //SOCIAL EVENT
+		--df-color: rgba(220, 158, 126, 0.75); 
+		--social-color: rgba(48, 184, 150, 0.95); 
 		
-		// WORKSHOPS
 		--dsml-color: #6a96c2; 
 		--verdi-color: rgb(195, 161, 117);
 		--axc-color:rgba(191, 142, 153, 0.95);
@@ -529,6 +528,23 @@
 	}
   </style>
 	
+	<style>
+		.room-highlight {
+		  position: absolute;
+		  width: 60px;
+		  height: 60px;
+		  background-color: rgba(255, 0, 0, 0.4);
+		  border: 2px solid red;
+		  border-radius: 10px;
+		  display: none;
+		  pointer-events: none;
+		  transition: all 0.3s ease-in-out;
+		}
+		.room-highlight.active {
+		  display: block;
+		  z-index: 2;
+		}
+		</style>
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
@@ -579,9 +595,15 @@
 						<tbody>
 							<tr>
 								<td class="td-1 thd time-column">Local Time <br>(UTC+2)</td>
+								<!--
+								<td class="td-3 thd session-room"><a href="#" class="room-link" data-room="aulaa">Aula A<br>(Centro Congressi)</a></td>
+								<td class="td-3 thd session-room"><a href="#" class="room-link" data-room="aulab">Aula B<br>(Centro Congressi)</a></td>
+								<td class="td-3 thd session-room"><a href="#" class="room-link" data-room="sveva">Sveva<br>(Royal)</a></td>
+								-->
 								<td class="td-3 thd session-room">Aula A <br>(Centro Congressi)</td>
 								<td class="td-3 thd session-room">Aula B <br>(Centro Congressi)</td>
 								<td class="td-3 thd session-room">Sveva <br>(Royal)</td>
+								
 								<td class="td-3 thd session-room">Santa Lucia <br>(Royal)</td>
 								<td class="td-3 thd session-room">Catalana <br>(Royal)</td>
                                 <td class="td-3 thd session-room">Aragonese <br>(Royal)</td>
@@ -1740,42 +1762,20 @@
 		</div>
 
 		<hr>
-		<div class="session w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
-			<h6>CONFERENCE ROOMS:</h6>
-			<td class="td-3 thd session-room">
-			<li>Aula A (Centro Congressi)
-			<li>Aula B (Centro Congressi)</li>
-			<li>Sveva (Royal)</li>
-			<li>Santa Lucia (Royal)</li>
-			<li>Catalana (Royal)</li>
-			<li>Aragonese (Royal)</li>
-            <li>Angioina (Royal)</li>
-			<li>Capuana (Royal)</li>
-			
-			<br>
-            <!--
-			<h6>CATERING</h6>
-			<li>Lunches in KG Bar (<b>Ground Level - Opposite Goldfinch Restaurant</b>)</li>
-			<li>Arrival TC / Coffee Break / Coffee Break in <b>Grand Windsor Ballroom</b></li>
-			<li>Banquet Dinner in Lincoln & Roosevelt (<b>Level 2 Pullman Tower</b>)</li>
-            -->
-		</div>
+		
+		
 
-        <!--
-		<div id="venue_map" style='text-align: center;'>
+		<div id="venue_map" class="text-center my-4">	
 			<h3 class="page-header">Venue Floor Plan</h3>
-			<select id="pdfSelector">
-				<option value="./floorplan/Grand_Windsor_Ballroom.pdf">Grand Windsor Ballroom</option>
-				<option value="./floorplan/Room 2.pdf">Room 2</option>
-				<option value="./floorplan/King_George_Room.pdf">Room 3</option>
-				<option value="./floorplan/Room 1.pdf">Room 1</option>
-				<option value="./floorplan/Olivers_Room.pdf">Room 4 Room</option>
-			</select>
-			<div class="pdf-container">
-				<embed id="pdfViewer" src="./floorplan/Grand_Windsor_Ballroom.pdf" type="application/pdf" width="100%" height="100%">
-			</div>
+			<img id="venue_image" src="images/floorplan/day_1.webp" loading="lazy" alt="Day 1 Floorplan" width="90%" class="img-fluid rounded shadow">
+
+			<!-- Room overlays (position them appropriately) -->
+			<!--
+			<div class="room-highlight" id="highlight-aulaa" style="top: 50px; left: 100px;"></div>
+			<div class="room-highlight" id="highlight-aulab" style="top: 60px; left: 250px;"></div>
+			<div class="room-highlight" id="highlight-sveva" style="top: 120px; left: 200px;"></div>
+			-->
 		</div>
-        -->
 
         <div id="footer-container"></div>
             <script>
@@ -1871,6 +1871,56 @@
 		});
 		});
 	</script>
+
+	<script>
+		const tabToPdfMap = {
+		day1: 'day_1.webp',
+		day2: 'day_2.webp',
+		day3: 'day_3.webp',
+		day4: 'day_4.webp'
+		};
+	
+		document.addEventListener('DOMContentLoaded', () => {
+		const tabLinks = document.querySelectorAll('#program-tab button[data-bs-toggle="tab"]');
+	
+		tabLinks.forEach(tab => {
+			tab.addEventListener('shown.bs.tab', (event) => {
+			const targetId = event.target.getAttribute('data-bs-target').substring(1); // "day1", "day2", etc.
+			const pdfFile = tabToPdfMap[targetId];
+	
+			if (pdfFile) {
+				const embedEl = document.getElementById('venue_embed');
+				embedEl.src = `documents/floorplan/${pdfFile}`;
+			}
+			});
+		});
+		});
+  	</script>
+  
+  <!--
+  <script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  const links = document.querySelectorAll('.room-link');
+	  const highlights = document.querySelectorAll('.room-highlight');
+	
+	  links.forEach(link => {
+		link.addEventListener('click', function (e) {
+		  e.preventDefault();
+		  const room = this.getAttribute('data-room');
+	
+		  // Hide all highlights
+		  highlights.forEach(h => h.classList.remove('active'));
+	
+		  // Show the selected one
+		  const highlight = document.getElementById('highlight-' + room);
+		  if (highlight) {
+			highlight.classList.add('active');
+		  }
+		});
+	  });
+	});
+	</script>
+	-->
 
 </body>
 
