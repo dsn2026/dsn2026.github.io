@@ -1843,15 +1843,12 @@
 		}
 
 
-        document.getElementById('pdfSelector').addEventListener('change', function() {
-            var selectedPDF = this.value;
-            document.getElementById('pdfViewer').src = selectedPDF;
-        });
+        
 
 	</script>
 
-	<script src="js/common.js"></script>
-
+	
+	<!--
 	<script>
 		session_ids = ["dcds", "ssiv", "dsml", "axc", "verdi", "dcds1", "ssiv1", "dsml1", "axc1", "verdi1", "tut1", "tut2", "tut3", "tut4", "tut11", "tut31", "tut41", "dcds2", "ssiv2", "dsml2", "axc2", "verdi2", "tut12", "tut32", "tut42", "dcds3", "ssiv3", "dsml3", "axc3", "verdi3", "tut21", "dcds4", "ssiv4", "dsml4", "axc4", "verdi4", "tut22", "values_cell"];
 		window.onload = function (event) {
@@ -1861,6 +1858,7 @@
 			}
 		};
 	</script>
+	-->
 
 	<script>
 		document.querySelectorAll('.session-cell').forEach(cell => {
@@ -1892,8 +1890,10 @@
 			const pdfFile = tabToPdfMap[targetId];
 	
 			if (pdfFile) {
-				const embedEl = document.getElementById('venue_embed');
-				embedEl.src = `images/floorplan/${pdfFile}`;
+				const imageEl = document.getElementById('venue_image');
+				
+				imageEl.src = `images/floorplan/${pdfFile}`;
+				
 			}
 			});
 		});
