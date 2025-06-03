@@ -535,24 +535,8 @@
 	  font-style: normal;
 	}
   </style>
-	
-	<style>
-		.room-highlight {
-		  position: absolute;
-		  width: 60px;
-		  height: 60px;
-		  background-color: rgba(255, 0, 0, 0.4);
-		  border: 2px solid red;
-		  border-radius: 10px;
-		  display: none;
-		  pointer-events: none;
-		  transition: all 0.3s ease-in-out;
-		}
-		.room-highlight.active {
-		  display: block;
-		  z-index: 2;
-		}
-		</style>
+
+		
 
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
@@ -1774,13 +1758,7 @@
 		<div id="venue_map" class="text-center my-4">	
 			<h3 class="page-header">Venue Floor Plan</h3>
 			<img id="venue_image" src="images/floorplan/day_1.webp" loading="lazy" alt="Day 1 Floorplan" width="90%" class="img-fluid rounded shadow">
-
-			<!-- Room overlays (position them appropriately) -->
-			<!--
-			<div class="room-highlight" id="highlight-aulaa" style="top: 50px; left: 100px;"></div>
-			<div class="room-highlight" id="highlight-aulab" style="top: 60px; left: 250px;"></div>
-			<div class="room-highlight" id="highlight-sveva" style="top: 120px; left: 200px;"></div>
-			-->
+			
 		</div>
 
         <div id="footer-container"></div>
@@ -1850,18 +1828,6 @@
 
 	</script>
 
-	
-	<!--
-	<script>
-		session_ids = ["dcds", "ssiv", "dsml", "axc", "verdi", "dcds1", "ssiv1", "dsml1", "axc1", "verdi1", "tut1", "tut2", "tut3", "tut4", "tut11", "tut31", "tut41", "dcds2", "ssiv2", "dsml2", "axc2", "verdi2", "tut12", "tut32", "tut42", "dcds3", "ssiv3", "dsml3", "axc3", "verdi3", "tut21", "dcds4", "ssiv4", "dsml4", "axc4", "verdi4", "tut22", "values_cell"];
-		window.onload = function (event) {
-			//Enabling the tooltip
-			for (let id in session_ids) {
-				bootstrap.Tooltip.getOrCreateInstance("#" + session_ids[id]);
-			}
-		};
-	</script>
-	-->
 
 	<script>
 		document.querySelectorAll('.session-cell').forEach(cell => {
@@ -1870,8 +1836,9 @@
 			const targetId = cell.getAttribute('data-target');
 			const target = document.getElementById(targetId);
 			if (target) {
-			target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 			}
+			
 		});
 		});
 	</script>
@@ -1903,30 +1870,6 @@
 		});
   	</script>
   
-  <!--
-  <script>
-	document.addEventListener("DOMContentLoaded", function () {
-	  const links = document.querySelectorAll('.room-link');
-	  const highlights = document.querySelectorAll('.room-highlight');
-	
-	  links.forEach(link => {
-		link.addEventListener('click', function (e) {
-		  e.preventDefault();
-		  const room = this.getAttribute('data-room');
-	
-		  // Hide all highlights
-		  highlights.forEach(h => h.classList.remove('active'));
-	
-		  // Show the selected one
-		  const highlight = document.getElementById('highlight-' + room);
-		  if (highlight) {
-			highlight.classList.add('active');
-		  }
-		});
-	  });
-	});
-	</script>
-	-->
 
 </body>
 
