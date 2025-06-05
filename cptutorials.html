@@ -107,14 +107,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         <br><button class="info-button" onclick="toggleInfo('info1')">More details</button>
         <div id="info1" style="display:none; margin-top:10px;" class="info-box">
           <h4>Overview</h4>
-          This tutorial we introduce recent advances and open challenges in Generative AI for Cybersecurity, focusing on AI Code Generators. The presentation will highlight practical applications of AI in cybersecurity, demonstrating how AI-generated code can be used in the generation of code for o5ensive security purposes.
+          This tutorial we introduce recent advances and open challenges in Generative AI for Cybersecurity, focusing on AI Code Generators. The presentation will highlight practical applications of AI in cybersecurity, demonstrating how AI-generated code can be used in the generation of code for offensive security purposes.
           <br><br>
             We will examine datasets to illustrate the generation of security exploits. Then, we will discuss evaluation methodologies for AI Code Generators, with focus on the assessment of AI-generated code using automated techniques. We will then consider prompt engineering techniques for optimizing AI Code Generators. Finally, we will analyze the role of data processing and data augmentation, showcasing how these methods enhance the accuracy of AI Code Generators in security contexts.
             <br><br>
-            By providing a comprehensive overview of AI's role in cybersecurity, participants will gain valuable insights into the future of automated o5ensive security practices and the critical importance of thorough assessment to ensure the reliability of AI-generated code.</i>
+            By providing a comprehensive overview of AI's role in cybersecurity, participants will gain valuable insights into the future of automated offensive security practices and the critical importance of thorough assessment to ensure the reliability of AI-generated code.</i>
             <br><br>
-
+            
+            <h4>What you need</h4>
+            The tutorial will include practical activities. Please bring with you your personal computer.
+            <br><br>
+            
             <h4>Outline</h4>
+            
             <b>First part (1.5 hours):</b>
             <ul>
               <li>Introduction to AI Code Generators and applications to cybersecurity (15 min)
@@ -127,9 +132,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
             <br>
             <b>Second part (1.5 hours)</b>
             <ul>
-              <li>Prompt Engineering for O5ensive Code Generation (20 min)
-              <li>Data Augmentation for O5ensive Code Generation (20 min)
-              <li>Practical experiments with O5ensive Code Generation (40 min)
+              <li>Prompt Engineering for offensive Code Generation (20 min)
+              <li>Data Augmentation for offensive Code Generation (20 min)
+              <li>Practical experiments with offensive Code Generation (40 min)
             </ul>
 
         </div>
@@ -349,9 +354,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   window.onload = function () {
   const bios = {
-    "Pietro Liguori": "Pietro Liguori (PhD) is Assistant Professor at the Federico University of Naples, Italy. His research focuses on the security and robustness of AI code generators and the application of large language models in o5ensive security. He has been organizing the workshop series on Reliable and Secure AI for Software Engineering (ReSAISE) in conjunction with the IEEE ISSRE conference.",
-    "Roberto Natella": "Roberto Natella (PhD) is Associate Professor at the Federico University of Naples, Italy. His research interests are in the experimental injection of faults, attacks, and stressful conditions, for security and dependability applications. In 2022, he received the DSN Rising Star in Dependability Award.",
-    "Domenico Cotroneo": "Domenico Cotroneo (PhD) is Full Professor at the Federico University of Naples, Italy. His research interests are in the fields of software reliability and security, field failure data analysis, and software fault injection. He is the chair of the IEEE Technical Community on Dependable Computing and Fault Tolerance, IEEE senior member, and elected member of the IFIP WG 10.4 on Dependable Computing and Fault Tolerance.",
+    "Pietro Liguori": "Pietro Liguori (PhD) is Assistant Professor at the Federico II University of Naples, Italy. His research focuses on the security and robustness of AI code generators and the application of large language models in offensive security. He has been organizing the workshop series on Reliable and Secure AI for Software Engineering (ReSAISE) in conjunction with the IEEE ISSRE conference.",
+    "Roberto Natella": "Roberto Natella (PhD) is Associate Professor at the Federico II University of Naples, Italy. His research interests are in the experimental injection of faults, attacks, and stressful conditions, for security and dependability applications. In 2022, he received the DSN Rising Star in Dependability Award.",
+    "Domenico Cotroneo": "Domenico Cotroneo (PhD) is Full Professor at the Federico II University of Naples, Italy. His research interests are in the fields of software reliability and security, field failure data analysis, and software fault injection. He is the chair of the IEEE Technical Community on Dependable Computing and Fault Tolerance, IEEE senior member, and elected member of the IFIP WG 10.4 on Dependable Computing and Fault Tolerance.",
     "Hazel Murray": "Dr. Hazel Murray is a quantum cryptography specialist and cybersecurity researcher, lecturing as part of the Cyber Skills team at Munster Technological University. As Principal Investigator of the QCloud project, funded through the EU OCRE initiative and AWS-Rackspace, she has enabled scalable access to quantum computing infrastructure for researchers across Ireland. Her research focuses on the role of quantum technologies in security protocols, authentication, and post-quantum cryptography, bridging academic and industrial domains through partnerships with AWS, Google, and Microsoft. She also leads the QuantumEd project, enhancing cross-disciplinary quantum education, and the Quantum Music project, which uses sonification to explain complex quantum concepts. She completed her PhD in Mathematics at Maynooth University and was a recipient of the 2023 Women in STEM Award.",
     "George O’Mahony": "Dr. George D. O’Mahony is a cybersecurity lecturer and researcher at Cyber Skills, Munster Technological University (MTU), specializing in cyber resilience, IT/OT/IoT convergence and security, cyber range technology, and AI-driven anomaly detection. He holds a BE (2015) and Ph.D. (2021) in Electrical and Electronic Engineering from University College Cork (UCC), with research focused on enhancing cybersecurity for resource-constrained edge devices using machine learning techniques. His current teaching covers network security, penetration testing, threat hunting, and cyber defense evasion. Dr O’Mahony is the WorldSkills Ireland Expert for Skill 54 Cybersecurity, an Associate Investigator in SFI CONNECT research centre contributing to the area of cyber security, co-PI role in SFI NCF Cyber Shock, a team member in Horizon Telemetry, PI in Cyber Explore and led the design/implementation of Ireland’s Cyber Range infrastructure (both mobile and cloud).",
     "Anila Mjeda": "Dr. Anila Mjeda is a cybersecurity lecturer and researcher in the Department of Computer Science & Cyber Skills at Munster Technical University. She began her academic career as a Theoretical Physicist and, driven by her passion for modeling complex systems, moved into computer science. Dr. Mjeda completed her PhD in Safety-Critical Systems at the University of Limerick. Dr. Mjeda’s research encompasses a broad range of cybersecurity topics within software, such as application security, malware analysis, and AI actors in cybersecurity. Additionally, Dr. Mjeda’s research interests include quantum software and innovations in software engineering education. Dr. Mjeda has been a member of the Lero research centre since its foundation. She works to enhance cross-disciplinary quantum education through the QuantumEd project and is Co-PI of the QCloud Project.",
