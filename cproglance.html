@@ -37,26 +37,38 @@
 
 <style>
 	:root {
-		--awards-color: rgba(118, 203, 78, 0.95); 
-		--keynotes-color: rgba(142, 169, 219, 0.95);
+		--awards-color: rgba(85, 228, 61, 0.95);
+		--keynotes-color: rgba(85, 228, 61, 0.95);
 		--rt-color: rgba(193, 228, 169, 0.95); 
-		--it-color: rgba(124, 188, 189, 0.896); 
+		--it-color: rgba(0,176,240);
 		--d23-color: rgba(203, 202, 149, 0.95); 
-		--tut-color: rgba(143, 183, 140, 0.95); 
+		--tut-room1-color: rgba(0,176,240);
+		--tut-room2-color: rgba(143, 183, 140, 0.95);
+		--tut-room3-color: rgba(255, 192, 0, 0.95);
 		--poster-color: rgb(240, 193, 163);
 		--df-color: rgba(220, 158, 126, 0.75); 
 		--social-color: rgba(48, 184, 150, 0.95); 
 		
 		--dsml-color: #6a96c2; 
 		--verdi-color: rgb(195, 161, 117);
-		--axc-color:rgba(191, 142, 153, 0.95);
+		--axc-color:#bdb2ff;
 		--envsys-color:rgba(203, 202, 149, 0.95);
 		--dt4drs-color: darkgray;
-		--wdmd-color:  #d1d97f;
-		--force-color:  #f3d36c;
-		--s2aim-color:  #55e43c;
+		--wdmd-color:  #bdb2ff;
+		--force-color:  #bdb2ff;;
+		--s2aim-color:  #bdb2ff;
 		
-		
+		--aula-a-color: rgb(195, 161, 117);
+		--aula-b-color:  #6a96c2;
+		--aula-magna-color: rgba(193, 228, 169, 0.95); 
+
+		--mirabilis-color:rgba(85, 228, 61, 0.95);
+		--catalana-color: #bdb2ff;
+		--aragonese-color: rgba(0,176,240);
+		--santalucia-color: rgba(203, 202, 149, 0.95);
+		--sveva-color: rgba(169,169,169);
+		--angioina-color: rgba(143, 183, 140, 0.95);
+		--capuana-color: rgba(255, 192, 0, 0.95);
 	}
 	.dsml_1 {
 		background: linear-gradient(to bottom, white 15%, var(--dsml-color) 15%, var(--dsml-color) 85%, white 85%);
@@ -77,26 +89,6 @@
 		/* background: linear-gradient(to bottom, var(--dsml-color) 85%,white 100%); */
 		background: linear-gradient(to bottom, white 27%, var(--dsml-color) 27%, var(--dsml-color) 100%);
 	}	
-	/* .awards-session,
-	.awards-rt-session,
-	.keynotes-session {
-		font-weight: 600;
-		font-size: 14px;
-	} */
-
-	/*
-	.legend-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; 
-	}
-
-	.legend-items span {
-		display: flex;
-		align-items: center;
-		gap: 5px; 
-	}
-	*/
 
 	.legend p {
     margin-top: 5pt;    /* Removes top margin */
@@ -136,16 +128,59 @@
 		background-color: var(--df-color);
 	}
 
-	.tut-session {
-		background-color: var(--tut-color);
+	.aula-a-session{ 
+		background-color: var(--aula-a-color);
+		font-weight: 600;
+	}
+	.aula-b-session{ 
+		background-color: var(--aula-b-color);
+		font-weight: 600;
+	}
+	.tut-room1-session {
+		background-color: var(--tut-room1-color);
+		font-weight: 600;
+	}
+	.tut-room2-session {
+		background-color: var(--tut-room2-color);
+		font-weight: 600;
+	}
+	.tut-room3-session {
+		background-color: var(--tut-room3-color);
+		font-weight: 600;
 	}
 
-	/*
-	.social-session {
-		background-color: var(--social-color);
-		font-weight: 800;
+	.catalana-session {
+		background-color: var(--catalana-color);
+		font-weight: 600;
 	}
-	*/
+	.aragonese-session {
+		background-color: var(--aragonese-color);
+		font-weight: 600;
+	}
+	.sveva-session {
+		background-color: var(--sveva-color);
+		font-weight: 600;
+	}
+	.angioina-session {
+		background-color: var(--angioina-color);
+		font-weight: 600;
+	}
+	.santalucia-session {
+		background-color: var(--santalucia-color);
+		font-weight: 600;
+	}
+	.capuana-session {
+		background-color: var(--capuana-color);
+		font-weight: 600;
+	}
+	.aula-magna-session {
+		background-color: var(--aula-magna-color);
+		font-weight: 600;
+	}
+	.mirabilis-session {
+		background-color: var(--mirabilis-color);
+		font-weight: 600;
+	}
 	
 	.business-session {
 		font-weight: 800;
@@ -153,51 +188,7 @@
 		color: white;
 	}
 
-	/*
-	.table-prog {
-		width: 100%;
-		border: 1px solid gray;
-		table-layout: fixed;
-		border-collapse: collapse
-	}
-
-	.table-prog tr {
-		border: 1px solid gray;
-	}
-
-	.table-prog td {
-		text-align: center;
-		border: 1px solid gray;
-		padding: 5px;
-		width: auto; 
-	}
 	
-	.td-right {
-		text-align: left !important;
-	}
-
-	.tdbg,
-	.void-session {
-		background-color: aliceblue;
-	}
-	.thd {
-		font-weight: 800;
-	}
-	
-	.td-1 {
-		width: 12%;
-		padding-left: 10px
-	}
-
-	.td-2 {
-		width: 22%;
-	}
-
-	.td-3 {
-		width: 11%;
-	}
-	*/
-
 
 	/* General Table Styling */
 	.table-prog {
@@ -235,14 +226,6 @@
 		font-size: 0.95rem;
 	}
 
-	/*
-	.session-room {
-		background-color: #003366;
-		color: #fff;
-		border-left: 1px solid #ccc;
-	}
-	*/
-
 	.session-cell {
   		width: 120px; /* set a fixed width that fits your content */
   		min-width: 120px;
@@ -264,42 +247,6 @@
 		color: #663300;
 	}
 
-	.tut-session {
-		
-		background-color: var(--tut-color);
-		font-weight: 600;
-		
-	}
-
-	/*
-	.envsys {
-		background-color:var(--envsys-color);
-	}
-	.axc {
-		background-color:var(--axc-color);
-	}
-	.dsml{
-		background-color:var(--dsml-color);
-	}
-	.verdi{
-		background-color:var(--verdi-color);
-	}
-	.dt4drs{
-		background-color:var(--dt4drs-color);
-	}
-	.wdmd{
-		background-color:var(--wdmd-color);
-	}
-	.force{
-		background-color:var(--force-color);
-	}
-	.s2aim{
-		background-color:var(--s2aim-color);
-	}
-	.poster{
-		background-color:var(--poster-color);
-	}	
-	*/
 
 	.wdmd{
 		background-color:var(--wdmd-color);
@@ -593,15 +540,15 @@
 								<td class="td-3 thd session-room"><a href="#" class="room-link" data-room="sveva">Sveva<br>(Royal)</a></td>
 								-->
 								
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Sveva <br>(Royal)</td>
+								<td class="td-3 aula-a-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
+								<td class="td-3 aula-b-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
+								<td class="td-3 sveva-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Sveva <br>(Royal)</td>
 								
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Santa Lucia <br>(Royal)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
-                                <td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
-                                <td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Angioina <br>(Royal)</td>
-                                <td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Capuana <br>(Royal)</td>
+								<td class="td-3 santalucia-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Santa Lucia <br>(Royal)</td>
+								<td class="td-3 catalana-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
+                                <td class="td-3 aragonese-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
+                                <td class="td-3 angioina-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Angioina <br>(Royal)</td>
+                                <td class="td-3 capuana-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Capuana <br>(Royal)</td>
 							</tr>
 							<tr>
 								<td class="td-1"><span class="">8:30 - 9:00</span></td>
@@ -615,11 +562,11 @@
 								<td class="td-3 dt4drs session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DT4DRS_1"><b>DT4DRS 1</b></td>
 
 								<td class="td-3 envsys session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="EnvSys_1"><b>EnvSys 1</b></td>
-								<td class="td-3 axc session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_1"><b>AxC 1</b></td>
+								<td class="td-3 catalana-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_1"><b>AxC 1</b></td>
 								
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 3</b></td>
+								<td class="td-3 tut-room1-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 tut-room2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
+								<td class="td-3 tut-room3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 3</b></td>
 
 								
 							</tr>
@@ -634,10 +581,10 @@
 								<td class="td-3 dsml session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_2"><b>DSML 2</b></td>
 								<td class="td-3 dt4drs session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DT4DRS_2"><b>DT4DRS 2</b></td>
 								<td class="td-3 envsys session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="EnvSys_2"><b>EnvSys 2</b></td>
-								<td class="td-3 axc session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_2"><b>AxC 2</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 3</b></td>
+								<td class="td-3 catalana-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_2"><b>AxC 2</b></td>
+								<td class="td-3 tut-room1-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 tut-room2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
+								<td class="td-3 tut-room3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 3</b></td>
 
 							</tr>
 							
@@ -660,10 +607,10 @@
 								<td class="td-3 dsml session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_3"><b>DSML 3</b></td>
 								<td class="td-3 dt4drs session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DT4DRS_3"><b>DT4DRS 3</b></td>
 								<td class="td-3 envsys session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="EnvSys_3"><b>EnvSys 3</b></td>
-								<td class="td-3 axc session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_3"><b>AxC 3</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 4</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 5</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 6</b></td>
+								<td class="td-3 catalana-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_3"><b>AxC 3</b></td>
+								<td class="td-3 tut-room1-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 4</b></td>
+								<td class="td-3 tut-room2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 5</b></td>
+								<td class="td-3 tut-room3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 6</b></td>
 
 								
 							</tr>
@@ -684,11 +631,10 @@
 								<td class="td-3 void-session session-cell" rowspan="1" data-bs-toggle="tooltip"></td>
 								<td class="td-3 void-session session-cell" rowspan="1" data-bs-toggle="tooltip"></td>
 								
-								<td class="td-3 axc session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_4"><b>AxC 4</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 4</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 5</b></td>
-								<td class="td-3 tut-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 6</b></td>
-								
+								<td class="td-3 catalana-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="AxC_4"><b>AxC 4</b></td>
+								<td class="td-3 tut-room1-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 4</b></td>
+								<td class="td-3 tut-room2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 5</b></td>
+								<td class="td-3 tut-room3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 6</b></td>								
 
 							</tr>								
 							
@@ -699,7 +645,7 @@
 						</tbody>
 					</table>
 
-
+					<!--
 					<div class="legend">
 						<p class="fw-bold">Legend:</p>
 						<div class="legend-items">
@@ -713,7 +659,7 @@
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--social-color);stroke-width:3;stroke:var(--social-color)" width="15"></rect></svg> Social Event</span>
 						</div>
 					</div>
-
+					-->
 					<hr>
 
 					
@@ -959,11 +905,11 @@
 							<tr>
 								<td class="td-1 thd time-column">Local Time <br>(UTC+2)</td>
 									
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula Magna <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
+								<td class="td-3 aula-magna-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula Magna <br>(Centro Congressi)</td>
+								<td class="td-3 aula-a-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
+								<td class="td-3 aula-b-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
+								<td class="td-3 aragonese-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
+								<td class="td-3 catalana-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
                                 
 							</tr>
 							
@@ -1002,9 +948,9 @@
 								<td class="td-1"><span class="">14:00 - 15:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS2"><b>RS2</b></td>
 								<td class="td-2 poster session-cell" rowspan="1" data-target="POSTER_PITCH_1"><b>Poster pitch</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS3"><b>RS3</b></td>
+								<td class="td-2 aula-b-session session-cell" rowspan="1" data-target="RS3"><b>RS3</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I1"><b>Industry 1</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS4"><b>RS4</b></td>
+								<td class="td-2 catalana-session session-cell" rowspan="1" data-target="RS4"><b>RS4</b></td>
 
 								
 							</tr>
@@ -1016,10 +962,10 @@
 							<tr>
 								<td class="td-1"><span class="">16:00 - 17:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS5"><b>RS5</b></td>
-								<td class="td-2 disrupt session-cell" rowspan="1" data-target="DISRUPT_1"><b>Disrupt 1</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS6"><b>RS6</b></td>
+								<td class="td-2 aula-a-session session-cell" rowspan="1" data-target="DISRUPT_1"><b>Disrupt 1</b></td>
+								<td class="td-2 aula-b-session session-cell" rowspan="1" data-target="RS6"><b>RS6</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I2"><b>Industry 2</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS7"><b>RS7</b></td>
+								<td class="td-2 catalana-session session-cell" rowspan="1" data-target="RS7"><b>RS7</b></td>
 
 								
 							
@@ -1033,12 +979,15 @@
 					<div class="legend">
 						<p class="fw-bold">Legend:</p>
 						<div class="legend-items">
+							<!--
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--keynotes-color);stroke-width:3;stroke:var(--keynotes-color)" width="15"></rect></svg> Keynotes</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--rt-color);stroke-width:3;stroke:var(--rt-color)" width="15"></rect></svg> Research</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--it-color);stroke-width:3;stroke:var(--it-color)" width="15"></rect></svg> Industry</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--poster-color);stroke-width:3;stroke:var(--poster-color)" width="15"></rect></svg> Poster</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--awards-color);stroke-width:3;stroke:var(--awards-color)" width="15"></rect></svg> Awards</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--social-color);stroke-width:3;stroke:var(--social-color)" width="15"></rect></svg> Social Event</span>
+						-->
+							<span><b>RS</b>: Research</span>
 						</div>
 					</div>
                     
@@ -1210,11 +1159,11 @@
 						<tbody>
 							<tr>
 								<td class="td-1 thd time-column">Local Time <br>(UTC+2)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula Magna <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
+								<td class="td-3 aula-magna-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula Magna <br>(Centro Congressi)</td>
+								<td class="td-3 aula-a-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
+								<td class="td-3 aula-b-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
+								<td class="td-3 aragonese-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
+								<td class="td-3 catalana-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
                                 
 							</tr>	
 							<tr>
@@ -1223,13 +1172,13 @@
 							</tr>														
 							<tr>
 								<td class="td-1"><span class="">9:00 - 9:45</span></td>
-								<td class="td-2 awards-session session-cell" rowspan="1" colspan="4" data-target="JCL"><b>Award (Jean-Claude Laprie) — Aula Magna (Centro Congressi)</b></td>
+								<td class="td-2 aula-magna-session session-cell" rowspan="1" colspan="4" data-target="JCL"><b>Award (Jean-Claude Laprie) — Aula Magna (Centro Congressi)</b></td>
 								<td class="td-3 wdmd session-cell" rowspan="2" colspan="1" data-bs-toggle="tooltip" data-target="WDMD_1"><b>WDMD 1</b></td>
 
 							</tr>
 							<tr>
 								<td class="td-1"><span class="">9:45 - 10:30</span></td>
-								<td class="td-2 keynotes-session session-cell" rowspan="1" colspan="4" data-target="keynote2"><b>Keynote 2</b></td>
+								<td class="td-2 aula-magna-session session-cell" rowspan="1" colspan="4" data-target="keynote2"><b>Keynote 2 — Aula Magna (Centro Congressi)</b></td>
 
 							</tr>
 							
@@ -1240,8 +1189,8 @@
 							<tr>
 								<td class="td-1"><span class="">11:00 - 12:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS8"><b>RS8</b></td>
-								<td class="td-2 disrupt session-cell" rowspan="1" data-target="DISRUPT_2"><b>Disrupt 2</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS9"><b>RS9</b></td>
+								<td class="td-2 aula-a-session session-cell" rowspan="1" data-target="DISRUPT_2"><b>Disrupt 2</b></td>
+								<td class="td-2 aula-b-session session-cell" rowspan="1" data-target="RS9"><b>RS9</b></td>
 								<td class="td-3 void-session" rowspan="1" data-bs-toggle="tooltip"></td>
 								<td class="td-3 wdmd session-cell" rowspan="1" colspan="1" data-target="WDMD_2"><b>WDMD 2</b></td>
 
@@ -1255,8 +1204,8 @@
 							<tr>
 								<td class="td-1"><span class="">14:00 - 15:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS10"><b>RS10</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS11"><b>RS11</b></td>
-								<td class="td-2 df-session session-cell" rowspan="1" data-target="doctoral_1"><b>Doctoral 1</b></td>
+								<td class="td-2 aula-a-session session-cell" rowspan="1" data-target="RS11"><b>RS11</b></td>
+								<td class="td-2 aula-b-session session-cell" rowspan="1" data-target="doctoral_1"><b>Doctoral 1</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I3"><b>Industry 3</b></td>
 								<td class="td-3 wdmd session-cell" rowspan="1" colspan="1" data-target="WDMD_3"><b>WDMD 3</b></td>
 
@@ -1271,8 +1220,8 @@
 							<tr>
 								<td class="td-1"><span class="">16:00 - 17:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS12"><b>RS12</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS13"><b>RS13</b></td>
-								<td class="td-2 df-session session-cell" rowspan="1" data-target="doctoral_2"><b>Doctoral 2</b></td>
+								<td class="td-2 aula-a-session session-cell" rowspan="1" data-target="RS13"><b>RS13</b></td>
+								<td class="td-2 aula-b-session session-cell" rowspan="1" data-target="doctoral_2"><b>Doctoral 2</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I4"><b>Industry 4</b></td>
 								<td class="td-3 wdmd session-cell" rowspan="1" colspan="1" data-target="WDMD_4"><b>WDMD 4</b></td>
 
@@ -1288,6 +1237,7 @@
 					<div class="legend">
 						<p class="fw-bold">Legend:</p>
 						<div class="legend-items">
+							<!--
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--keynotes-color);stroke-width:3;stroke:var(--keynotes-color)" width="15"></rect></svg> Keynotes</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--rt-color);stroke-width:3;stroke:var(--rt-color)" width="15"></rect></svg> Research</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--it-color);stroke-width:3;stroke:var(--it-color)" width="15"></rect></svg> Industry</span>
@@ -1296,6 +1246,8 @@
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--awards-color);stroke-width:3;stroke:var(--awards-color)" width="15"></rect></svg> Awards</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--wdmd-color);stroke-width:3;stroke:var(--wdmd-color)" width="15"></rect></svg> WDMD</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--social-color);stroke-width:3;stroke:var(--social-color)" width="15"></rect></svg> Social Event</span>
+							-->
+							<span><b>RS</b>: Research</span>
 						</div>
 					</div>
 
@@ -1507,11 +1459,11 @@
 						<tbody>
 							<tr>
 								<td class="td-1 thd time-column">Local Time <br>(UTC+2)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula Magna <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
-								<td class="td-3 thd session-room session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
+								<td class="td-3 aula-magna-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula Magna <br>(Centro Congressi)</td>
+								<td class="td-3 aula-a-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula A <br>(Centro Congressi)</td>
+								<td class="td-3 aula-b-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aula B <br>(Centro Congressi)</td>
+								<td class="td-3 aragonese-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Aragonese <br>(Royal)</td>
+								<td class="td-3 catalana-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Catalana <br>(Royal)</td>
                                 
 							</tr>							
 							<tr>
@@ -1520,14 +1472,14 @@
 							</tr>							
 							<tr>
 								<td class="td-1"><span class="">9:00 - 9:45</span></td>
-								<td class="td-2 awards-session session-cell" rowspan="1" colspan="4" data-target="RS"><b>Awards (Rising Star + William Carter) — Aula Magna (Centro Congressi)</b></td>
+								<td class="td-2 aula-magna-session session-cell" rowspan="1" colspan="4" data-target="RS"><b>Awards (Rising Star + William Carter) — Aula Magna (Centro Congressi)</b></td>
 								<td class="td-3 force session-cell" rowspan="2" colspan="1" data-bs-toggle="tooltip" data-target="FORCE_1"><b>FORCE 1</b></td>
 
 
 							</tr>
 							<tr>
 								<td class="td-1"><span class="">9:45 - 10:30</span></td>
-								<td class="td-2 keynotes-session session-cell" rowspan="1" colspan="4" data-target="keynote3"><b>Keynote 3 — Aula Magna (Centro Congressi)</b></td>
+								<td class="td-2 aula-magna-session session-cell" rowspan="1" colspan="4" data-target="keynote3"><b>Keynote 3 — Aula Magna (Centro Congressi)</b></td>
 
 							</tr>
 							<tr>
@@ -1536,9 +1488,9 @@
 							</tr>
 							<tr>
 								<td class="td-1"><span class="">11:00 - 12:30</span></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS14"><b>RS14</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS15"><b>RS15</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS16"><b>RS16</b></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS14"><b>R14</b></td>
+								<td class="td-2 aula-a-session session-cell" rowspan="1" data-target="RS15"><b>RS15</b></td>
+								<td class="td-2 aula-b-session session-cell" rowspan="1" data-target="RS16"><b>RS16</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I5"><b>Industry 5</b></td>
 								<td class="td-3 force session-cell" rowspan="1" colspan="1" data-bs-toggle="tooltip" data-target="FORCE_2"><b>FORCE 2</b></td>
 
@@ -1552,8 +1504,8 @@
 							<tr>
 								<td class="td-1"><span class="">14:00 - 15:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS17"><b>RS17</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS18"><b>RS18</b></td>
-								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS19"><b>RS19</b></td>
+								<td class="td-2 aula-a-session session-cell" rowspan="1" data-target="RS18"><b>RS18</b></td>
+								<td class="td-2 aula-b-session session-cell" rowspan="1" data-target="RS19"><b>RS19</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I6"><b>Industry 6</b></td>
 								<td class="td-3 s2aim session-cell" rowspan="1" colspan="1" data-bs-toggle="tooltip" data-target="S2AIM_1"><b>S2AIM 1</b></td>
 
@@ -1579,15 +1531,17 @@
 						</tbody>
 					</table>
 					<div class="legend">
-						<p class="fw-bold">Legend:</p>
+						<p class="fw-bold">Legend</p>
 						<div class="legend-items">
+							<!--
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--keynotes-color);stroke-width:3;stroke:var(--keynotes-color)" width="15"></rect></svg> Keynotes</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--rt-color);stroke-width:3;stroke:var(--rt-color)" width="15"></rect></svg> Research</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--it-color);stroke-width:3;stroke:var(--it-color)" width="15"></rect></svg> Industry</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--force-color);stroke-width:3;stroke:var(--force-color)" width="15"></rect></svg> FORCE</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--s2aim-color);stroke-width:3;stroke:var(--s2aim-color)" width="15"></rect></svg> S2AIM</span>
 							<span><svg height="15" width="15"><rect height="15" style="fill:var(--social-color);stroke-width:3;stroke:var(--social-color)" width="15"></rect></svg> Social Event</span>
-
+								-->
+							<span><b>RS</b>: Research</span>
 						</div>
 					</div>	
 					
@@ -1757,7 +1711,7 @@
 
 		<div id="venue_map" class="text-center my-4">	
 			<h3 class="page-header">Venue Floor Plan</h3>
-			<img id="venue_image" src="images/floorplan/day_1.webp" loading="lazy" alt="Day 1 Floorplan" width="90%" class="img-fluid rounded shadow">
+			<img id="venue_image" src="images/floorplan/webp/day_1.webp" loading="lazy" alt="Day 1 Floorplan" width="90%" class="img-fluid rounded shadow">
 			
 		</div>
 
@@ -1862,7 +1816,7 @@
 			if (pdfFile) {
 				const imageEl = document.getElementById('venue_image');
 				
-				imageEl.src = `images/floorplan/${pdfFile}`;
+				imageEl.src = `images/floorplan/webp/${pdfFile}`;
 				
 			}
 			});
