@@ -8,37 +8,47 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-</style>
-<body class="w3-light-grey w3-content" style="max-width:1640px">
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:320px;" id="mySidebar"><br>
-  <div w3-include-html="sidebar.html"></div>
-</nav>
+@media (max-width: 600px) {
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:320px">
+  .sponsor-table {
+    min-width: 700px;
+    table-layout: fixed;
+  }
 
-  <!-- Header -->
-  <header id="dsnHeader">
-    <div w3-include-html="header.html"></div>
-  </header>
-  
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
-    <h1><b>Sponsors</b></h1>
+  /* Fixed width for Benefits column */
+  .sponsor-table th[rowspan],
+  .sponsor-table td.benefit {
+    width: 180px;
+    min-width: 180px;
+    max-width: 180px;
+  }
 
-    <p>DSN is the leading annual event in which academic and industry leaders exchange research ideas and tools, and discuss
-    emerging practices. It is an event composed of workshops, tutorials, keynotes, paper presentations, interactive sessions,
-    networking events, and posters. We are looking forward to receive contributors from academia, industry, and government to
-    help us share leading-edge dependable system and network ideas. Please join us in contributing and participating in DSN
-    2026 in Charlotte, USA. The financial support program is listed below.</p>
+  /* Sticky ONLY the Benefits header cell */
+  .sponsor-table thead th[rowspan],
+  .sponsor-table tbody td.benefit {
+    position: sticky;
+    left: 0;
+    z-index: 5;
+  }
 
-    <style>
+  /* All other header cells scroll underneath */
+  .sponsor-table thead th:not([rowspan]) {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+
   table.sponsor-table {
     border-collapse: collapse;
     width: 100%;
@@ -85,8 +95,37 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   .bronze {
     background-color: #ffffff;
   }
+
 </style>
 
+<body class="w3-light-grey w3-content" style="max-width:1640px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:320px;" id="mySidebar"><br>
+  <div w3-include-html="sidebar.html"></div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:320px">
+
+  <!-- Header -->
+  <header id="dsnHeader">
+    <div w3-include-html="header.html"></div>
+  </header>
+  
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
+    <h1><b>Sponsors</b></h1>
+
+    <p>DSN is the leading annual event in which academic and industry leaders exchange research ideas and tools, and discuss
+    emerging practices. It is an event composed of workshops, tutorials, keynotes, paper presentations, interactive sessions,
+    networking events, and posters. We are looking forward to receive contributors from academia, industry, and government to
+    help us share leading-edge dependable system and network ideas. Please join us in contributing and participating in DSN
+    2026 in Charlotte, USA. The financial support program is listed below.</p>
+
+    <div class="table-wrapper">
     <table class="sponsor-table">
       <thead>
         <tr>
@@ -172,6 +211,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         </tr>
       </tbody>
     </table>
+    </div>
 
     <h2><b>Contact Details</b></h2>
 
