@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<title>HAP 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/DSN_logo.png"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1640px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:320px;" id="mySidebar"><br>
+  <div w3-include-html="sidebar.html"></div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:320px">
+
+  <!-- Header -->
+  <header id="dsnHeader">
+    <div w3-include-html="header.html"></div>
+  </header>
+  
+  <!-- Call for papers -->
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h1><b>HAP 2026: First Workshop on Holistic Architecture for Privacy in Clouds, Edges, and IoT</b></h1>
+
+    <p><b>Website:</b> <a href="https://plaublin.codeberg.page/2026-hap-workshop/@pages/">https://plaublin.codeberg.page/2026-hap-workshop/@pages/</a></p>
+
+   <p>The Workshop on Holistic Architecture for Privacy in Clouds, Edges, and IoT (HAP) focuses on research challenges related to data privacy in small- to large-scale computing platforms, placing more emphasis on a ”holistic” approach of innovative co-design of computer architecture, systems software, and formal verification. 
+    The workshop aims to foster collaboration and discussion among researchers and practitioners with different backgrounds; hardware architects, system software developers, and theorists. 
+    Current design of computer systems is horizontally divided and makes it harder to design safe and secure systems based on a vertical consistent view of the entire system from bare-metal hardware, firmware, hypervisors, operating systems, libraries, to applications. 
+    Guaranteeing privacy strongly demands an holistic approach because privacy will be compromised if there is a minor weak point in the entire stack from hardware to software; strong software on weak hardware cannot guarantee privacy and vice versa. 
+    The workshop seeks contributions on all aspects of data privacy and protection.</p>
+
+    <h2><b>HAP Workshop Co-Chairs:</b></h2>
+    Kenji Kono, Keio University, Japan<br>
+    Pierre-Louis Aublin, IIJ Research Laboratory, Japan<br>
+    Christof Fetzer, TU Dresden, Germany<br>
+  </div>
+  
+  <div id="footer-container"></div>
+            <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+                });
+            </script>
+    
+  
+  
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+includeHTML();
+
+function accordianFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
