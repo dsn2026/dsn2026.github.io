@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<title>FORCE 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/DSN_logo.png"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1640px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:320px;" id="mySidebar"><br>
+  <div w3-include-html="sidebar.html"></div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:320px">
+
+  <!-- Header -->
+  <header id="dsnHeader">
+    <div w3-include-html="header.html"></div>
+  </header>
+  
+  <!-- Call for papers -->
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h1><b>FORCE 2026: Foundations Of Reliable Classical-Quantum Engineering</b></h1>
+
+    <p>Website: <a href="https://sites.google.com/view/force2026/home">https://sites.google.com/view/force2026/home</a></p>
+    
+    <p>Quantum computing and networking represent a transformative shift in computational systems, bringing unique challenges for ensuring system dependability. Current Noisy Intermediate-Scale Quantum (NISQ) devices operate with significantly higher error rates than classical computers, requiring new approaches to error management. Beyond hardware concerns, quantum systems face distinct software dependability challenges, including the need for robust algorithms and novel verification methodologies that account for quantum measurement's probabilistic nature.</p>
+
+    <p>The integration of quantum devices with traditional infrastructure introduces additional complexity, particularly in coordinating multiple quantum devices across distributed locations. A key challenge is the lack of standardized high-level architectures for these heterogeneous systems incorporating CPUs, GPUs, and QPUs (Quantum Processing Units). Security considerations add another crucial dimension, as quantum systems must be protected against both traditional and quantum-specific vulnerabilities, including side-channel attacks and information leakage during measurement.</p>
+
+    <p>While progress has been made in understanding various noise sources, the field lacks comprehensive predictive models for quantum error propagation, especially as systems scale to larger qubit counts. The workshop aims to address these challenges by uniting quantum computing and dependability experts to establish rigorous methodologies for quantum dependability engineering. Key focus areas include developing fault models spanning quantum and classical domains, end-to-end system dependability assessment, and practical fault-tolerance schemes, while working toward new standards appropriate for quantum systems.</p>
+
+    <p>The workshop welcomes submissions addressing dependability aspects of quantum systems, including but not limited to:</p>
+    
+    <ul>
+        <li>Dependable system architectures and interfaces for fault-tolerant hybrid quantum-classical HPC computing</li>
+        <li>Characterization and modeling of quantum noise sources and decoherence effects and techniques to counteract these to increase the dependability of the system</li>
+        <li>Reliability assessment of quantum control systems and interfaces</li>
+        <li>Integration of hardware topology, error and noise models with compilation and transpilation frameworks</li>
+        <li>Novel techniques for quantum error detection, correction, mitigation, and suppression and their implementation challenges</li>
+        <li>Testing methodologies for quantum algorithms and their physical implementation</li>
+        <li>Benchmarking methods for quantum system reliability</li>
+        <li>Validation of hybrid quantum-classical systems</li>
+        <li>Dependable integration approaches of quantum devices with classical infrastructures and related implementation challenge</li>
+        <li>Side-channel attacks and countermeasures in quantum systems</li>
+        <li>Privacy-preserving quantum computation</li>
+        <li>Trust and certification of quantum devices</li>
+        <li>Software tools for quantum reliability assessment</li>
+        <li>Programming models for dependable quantum-classical HPC applications</li>
+        <li>Quantum systems benchmarking methodologies and standardization of quantum reliability metrics</li>
+        <li>Experiences from quantum-classical HPC deployments addressing dependability issues</li>
+    </ul>
+
+    <h2><b>FORCE Workshop Co-Chairs:</b></h2>
+    Edoardo Giusto, University of Naples Federico II, Italy<br>
+    Betis Baheri, State University of New York, USA<br>
+    
+  </div>
+
+  <div id="footer-container"></div>
+            <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+                });
+            </script>
+    
+  
+  
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+includeHTML();
+
+function accordianFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
