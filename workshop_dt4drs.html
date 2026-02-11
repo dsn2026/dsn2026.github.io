@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<title>DT4DRS 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/DSN_logo.png"/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1640px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:320px;" id="mySidebar"><br>
+  <div w3-include-html="sidebar.html"></div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:320px">
+
+  <!-- Header -->
+  <header id="dsnHeader">
+    <div w3-include-html="header.html"></div>
+  </header>
+  
+  <!-- Call for papers -->
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h1><b>DT4DRS 2026: The 2nd International Workshop on Digital Twins for Systems Dependability, Resilience, and Security</b></h1>
+
+    <p><b>Website:</b> <a href="https://dt4drs2026.dieti.unina.it/"> https://dt4drs2026.dieti.unina.it/</a></p>
+
+    <p> Digital Twins (DTs) are key enabling technologies to strengthen the dependability, resilience, and security of complex and interconnected Cyber-Physical Systems (CPSs). By maintaining evolving virtual counterparts of physical assets and processes, DTs enable continuous observation, simulation-driven analysis, optimization, and forecasting, ultimately supporting improved assurance of critical CPS quality attributes throughout their lifecycle.</p>
+
+    <p>The 2nd <b>International Workshop on Digital Twins for Systems Dependability, Resilience, and Security</b> (DT4DRS) aims to gather researchers, practitioners, and industrial stakeholders to investigate novel methods, tools, and applications leveraging DTs to enhance these essential quality dimensions across multiple CPS domains.</p>
+
+    <p>The workshop will address a broad set of topics, including (but not limited to):</p>
+
+    <ul>
+        <li>Design of DT frameworks for dependable CPSs</li>
+        <li>Predictive DT-based models and techniques for CPS resilience reinforcement</li>
+        <li>Fault diagnosis, anomaly detection, and recovery mechanisms in DT-driven CPSs</li>
+        <li>Adaptive, autonomous, and self-healing decision-making supported by DTs</li>
+        <li>Preserving privacy, integrity, and trustworthiness of DT data and pipelines</li>
+        <li>DT-based monitoring, protection, and assurance of critical CPS infrastructures</li>
+        <li>Real-time risk assessment and what-if analysis through DT-based simulation</li>
+        <li>Trust management, explainability, and auditability in DT-CPS ecosystems</li>
+        <li>Testing, verification, and validation approaches for DT in CPS</li>
+        <li>Case studies and industrial experiences on DTs for CPSs</li>
+        <li>Cyber threat intelligence (CTI) integration in DT-based monitoring</li>
+    </ul>
+
+    <p>Through these topics, DT4DRS aims to stimulate research and innovation on DT-enabled CPS assurance, fostering collaboration to address emerging challenges in modern CPSs while improving their dependability, resilience, and security.</p>
+
+    <h2><b>DT4DRS Workshop General and PC Chairs:</b></h2>
+    Vittorio Orbinato, Università degli Studi di Napoli Federico II, Italy<br>
+    Alessandra Somma, Università degli Studi di Napoli Federico II, Italy<br>
+    Alessandra De Benedictis, Università degli Studi di Napoli Federico II, Italy<br>
+    Mauro Pezzè, Università della Svizzera Italiana, Lugano, Switzerland; Università degli Studi di Milano Bicocca, Milano, Italy<br>
+    
+  </div>
+  <div id="footer-container"></div>
+            <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+                });
+            </script>
+    
+  
+  
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+}
+includeHTML();
+
+function accordianFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
