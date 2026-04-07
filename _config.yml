@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
-title: DSN2025
+title: DSN2026
 description: Empty
+exclude:
+  - old_html/
