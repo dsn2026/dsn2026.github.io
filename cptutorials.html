@@ -112,56 +112,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         Abraham Chan (Univ. of British Columbia), 
         Yu Sun (George Mason University)
         
-        <!---
         <br><button class="info-button" onclick="toggleInfo('info3')">More details</button>
         <div id="info3" style="display:none; margin-top:10px;" class="info-box">
           
-          <h4>Overview</h4>
-            This tutorial will introduce attendees to ITBench, primarily focusing on site reliability engineering (SRE). Participants will learn how to use ITBench to benchmark and improve AI agents for site reliability engineering (SRE), compliance and security operations (CISO), and financial operations (FinOps) tasks. The hands-on tutorial will guide participants through the fundamentals of modern IT management challenges, explore how large language models (LLMs) and AI agents can transform IT operations, and provide practical experience with ITBench. Through guided exercises, attendees will be able to contribute SRE scenarios into ITBench and build effective AI agents capable of handling such scenarios. This exercise of deploying AI agents will help participants uncover limitations of current agentic AI approaches to advance the state-of-the-art in automated IT operations. The tutorial targets researchers and practitioners in dependable systems with basic knowledge of AI/LLM technologies. We also look forward to feedback on improving ITBench to help us enable community contributions at scale.
-            <br>
-            Attendees will learn:
-            <ul>
-              <li>Real-world challenges in IT automation and how to address them
-              <li>Building AI agents for IT automation and evaluating them
-              <li>Creating realistic scenarios for IT automation tasks
-            </ul>
+          This tutorial introduces fault injection (FI) techniques for analyzing the resilience of machine learning (ML) applications, with a focus on both deep neural networks (DNNs) and large language models (LLMs). While ML systems are increasingly used in safety-critical domains, their unpredictable failure modes require systematic evaluation through FI.
+          Participants will gain hands-on experience using LLTFI, a flexible framework developed at UBC, along with PyTorch-based tools, to inject faults into ML models and analyze the results. The tutorial will cover the workflow of designing FI experiments, interpreting results, and applying these techniques to real-world scenarios.
+          Special attention will be given to the emerging challenges of FI in LLMs, where adaptive and multi-task behaviors complicate resilience analysis. We will discuss methodologies for large-scale FI campaigns and highlight open research problems in this space.
+          By the end of the tutorial, attendees will understand how to apply FI to modern ML systems and evaluate their robustness in practical settings.
+
           <h4>Outline</h4>
           
-          <b>IT Automation Challenges—30 minutes</b>
           <ul>
-              <li>Complexity of modern IT systems
-              <li>Domain-specific (SRE, CISO, FinOps) challenges
-              <li>State-of-the-art approaches: AI and heuristics
-          </ul>
-          <b>ITBench: Overview, Architecture, and Principles—30 minutes</b>
-          <ul>
-            <li>Framework architecture: open and extensible
-            <li>Benchmark scenarios
-            <li>Evaluation methodologies
+            <li>Introduction to FI, Philosophy of FI, and high-level overview of LLTFI (30 minutes)
+            <li>Two case studies for illustrating the use of LLTFI, one injecting faults into DNN applications, and the other for injecting faults into LLM applications (60 minutes)
+            <li>A case study for illustrating large-scale LLM FI, launching a FI campaign on a cluster, analyzing the obtained FI trace and investigating task-specific LLM outcomes against faults. (60 minutes) 
+            <li>Open issues and research directions in fault injection, free-form discussion (30 minutes)
           </ul>
 
-          <b>Large Language Models (LLMs) and Agents—45 minutes</b>
-          <ul>
-            <li>LLMs: overview
-            <li>Agents: overview
-            <li>Leveraging SREAgent, an existing open-source agent
-          </ul>
-
-          <b>Break—15 minutes</b>
-
-          <b>Hands-On Session—75 minutes</b>
-          <ul>
-            <li>Environment setup
-            <li>Running an existing scenario, with an agent attempting to resolve it
-            <li>Contributing a *new* scenario
-          </ul>
-
-          <b>Community Contributions and Feedback—15 minutes</b>
-          <ul>
-            <li>Q&A session
-          </ul>
-
-        </div>!--->
+        </div>
       </li>
 
       <li class="w3-padding-large">
@@ -211,27 +179,51 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         Julian Stephen,
         Enriquillo Valdez (IBM Research)
 
-        <!---<br><button class="info-button" onclick="toggleInfo('info5')">More details</button>
+        <br><button class="info-button" onclick="toggleInfo('info5')">More details</button>
         
         <div id="info5" style="display:none; margin-top:10px;" class="info-box">
           <h4>Overview</h4>
-            Blockchains are often assumed to be fault tolerant due to their decentralized nature, yet real-world failures repeatedly challenge this assumption. Outages lasting days have been observed across major blockchain networks. Some could not even recover from transient isolated failures. Unlike traditional distributed systems, where well-established fault tolerance mechanisms exist, blockchains vary significantly in their consensus protocols, network structures, and failure handling approaches, making dependability evaluation particularly challenging. Despite the critical importance of fault tolerance, most blockchain benchmarking efforts focus primarily on performance metrics such as throughput and latency, often under ideal conditions that fail to account for real-world failure scenarios.
-            <br><br>
-            Evaluating fault tolerance requires a systematic approach to fault injection and measurement, enabling researchers and practitioners to analyze blockchain resilience, recoverability, and failure impact. This tutorial focuses on dependability assessment, covering practical methods for introducing faults, observing their effects, and quantifying blockchain sensitivity to failures, providing a different perspectives on blockchain performance evaluation compared to our tutorial on performance benchmarking with DIABLO.
-            <br><br>
-            In this half-day tutorial, we will evaluate the fault tolerance of one of the six blockchains, Algorand, Avalanche, Aptos, Ethereum, Redbelly and Solana with the recent STABL benchmark suite. We will look at the sensitivity score and extend the observer node with another fault type.
+            Confidential Computing (CC) has emerged as a critical security paradigm for protecting sensitive code and data within untrusted public compute infrastructures. This tutorial provides a comprehensive, top-down exploration of the CC landscape, organized into three sections: Fundamentals, Platforms, and Research. In the Fundamentals section, we cover core security principles, application scenarios, and the overarching challenges facing CC. This section provides attendees with a high-level conceptual overview of the technology. The Platforms section delves into technical specifications to explain how CC mechanisms operate “under the hood.” We will focus on two key platforms: Intel Trust Domain Extensions (TDX) and NVIDIA GPU Confidential Computing. Attendees will gain a deep understanding of memory access control, cryptographic isolation, remote attestation, and secure I/O channels for CPU-GPU data transmission. Finally, the Research section highlights three recent studies to illustrate real-world use cases, the security implications of CC misuse, and strategies to overcome performance bottlenecks. This concluding section will familiarize attendees with the current research frontier and prepare them to explore this evolving field.
           <h4>Outline</h4>
-          The tutorial will have the following structure:
+
+          <p><b>Section I: Fundamentals of Confidential Computing (1 hour)</b></p>
+
           <ul>
-            <li><b>Introduction (20 min). What is blockchain, transaction throughput and latency, DIABLO and STABL benchmarking frameworks.
-            <li><b>Simple Demo (30 min).</b> Using the virual machine image, members of the audience will run a local experiment on their own machines.
-            <li><b>Fault Tolerance and Dependability (20 min).</b> Explanation of crash faults and network partitioning, and packet loss.
-            <li><b>Fault Tolerance Demo (30 min).</b> We will introduce crash faults in the scenario and observe performance and sensitivity score under new conditions.
-            <li><b>Benchmarking Details (20 min).</b> Explanation of metrics, workload types, and emulating various network conditions.
-            <li><b>Advanced Demo (30 min).</b> We will explain the fault scenario implementation in STABL observer node and how to extend it with a new fault type.
-            <li><b>Discussion (30 min).</b> Implications of design decisions, metrics and aspects to be evaluated.
+              <li>Threat model and security principles</li>
+              <li>Timeline of major CC technologies</li>
+              <li>Representative applications: confidential AI, collaborative learning, confidential containers</li>
+              <li>System and security challenges</li>
+          </ul>
+
+          <p><b>Section II: Confidential Computing Platforms (1 hour)</b></p>
+
+          CPU-CC: Intel TDX
+          <ul>
+            <li>Building blocks: VT, MKTME, SGX</li>
+            <li>Security features of TDX</li>
+            <li>Secure initialization of TDX module</li>
+            <li>Memory protection: confidentiality and integrity</li>
+            <li>Remote attestation</li>
+          </ul>
+          GPU-CC: NVIDIA Hopper
+          <ul>
+            <li>Security principles of GPU-CC</li>
+            <li>Blueprint: architectural engines</li>
+            <li>Bootstrap: secure boot, key negotiation, device attestation, and firewall establishment</li>
+            <li>Bridge: CPU-GPU data paths, data protection mechanisms, and security implications</li>
+          </ul>
+
+        <p><b> Section III: Research on Confidential Computing (1 hour)</b></p>
+
+        Discussion of our recent CC research works from three perspectives: 
+
+        <ul>
+            <li>Leveraging CC for confidential AI and collaborative learning</li>
+            <li>Security implications of misusing CC</li>
+            <li>Overcoming the performance bottleneck of GPU-CC</li>
         </ul>
-        </div>!--->
+
+        </div>
       </li>
 
       <li class="w3-padding-large">
