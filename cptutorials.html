@@ -146,26 +146,61 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         Tolga O. Atalay (A2 Labs LLC),
         Angelos Stavrou (WayWave Inc, A2 Labs LLC, Virginia Tech, Arlingto)
 
-        <!---        <br><button class="info-button" onclick="toggleInfo('info4')">More details</button>
+        <br><button class="info-button" onclick="toggleInfo('info4')">More details</button>
         <div id="info4" style="display:none; margin-top:10px;" class="info-box">
           
 
           <h4>Overview</h4>
-            The goal of this tutorial is to help attendees gain a clear understanding of when and how to use blockchain, what it can truly offer, and at what cost. Blockchain is often viewed as either a universal solution to all problems or an inefficient, energy-consuming technology with limited real-world applications. This tutorial aims to move beyond these extremes by offering a structured discussion on its actual strengths, trade-offs, and limitations.
-            An essential part of this exploration is considering the role blockchain plays in solving specific problems. By examining Federated Learning (FL) as a use case, we will also explore whether, depending on the situation, blockchain is the best fit, or if alternatives can be used to achieve similar objectives with fewer trade-offs. This perspective will enable participants to understand how decentralization can enhance reliability and trust in FL, while also considering other approaches that may better address scalability, efficiency, and resource consumption.
-          
+
+          <p>The rapid proliferation of small unmanned aerial systems (drones) has fundamentally transformed low-altitude airspace, creating new opportunities in infrastructure inspection, disaster response, and commercial delivery — but also introducing serious risks to public safety, aviation operations, and critical infrastructure protection. Recent incidents involving unauthorized drone activity near airports, military installations, and sensitive facilities underscore the growing need for reliable airspace monitoring. Addressing these risks requires solutions that combine sensing technologies, dependable system design, and cybersecurity principles.</p>
+
+          <p>This half-day tutorial provides a comprehensive overview of modern airspace monitoring technologies and their associated cybersecurity implications. We examine sensing approaches ranging from traditional radar systems to emerging passive sensing techniques that leverage ambient radio-frequency (RF) signals and spaceborne transmitters — such as low-Earth-orbit (LEO) satellite constellations — as illuminators of opportunity. These passive approaches offer advantages including reduced cost, increased stealth, and improved scalability compared to active radar systems.</p>
+
+          <p>A central focus of the tutorial is the intersection between cybersecurity and safety in airspace monitoring. Detection infrastructures can themselves become targets of cyber attacks, including spoofing, signal injection, replay attacks, and adversarial evasion. We discuss these threat vectors in depth and examine how distributed sensing architectures can improve resilience and coverage. Through a real-world case study of passive sensing systems that leverage LEO satellite signals, we demonstrate how next-generation sensing networks can provide scalable and dependable airspace awareness.</p>
+
+          <p>Participants will gain a broad understanding of the technological landscape of drone detection, the cybersecurity challenges facing sensing infrastructures, and open research directions in dependable airspace monitoring.</p>
+
           <h4>Outline</h4>
-          The tutorial is structured as follows:
+
+          <b>Part 1 — Landscape and Technologies (50 min)</b>
+
           <ul>
-            <li><b>Federated Learning (FL), introduction and limitations.</b> Basic overview of the FL paradigm with a focus on its main limitations. (15 min)
-            <li><b>Blockchain Introduction.</b> Basic overview of blockchain technology—what it is, its components, limitations, and how it can be applied in distributed systems beyond cryptocurrencies. (25 min)
-            <li><b>Initial Integration Attempt: Challenges and Inefficiencies.</b> Discussion on challenges and inefficiencies (25 min)
-            <li><b>External storage.</b> Exploration of how external storage can be integrated into FL-blockchain systems to improve efficiency and performance. We also discuss their limitations, particularly in terms of data availability and computational integrity. (25 min)
-            <li><b>Final Solution with External Storage and Certificates.</b> Discussion on how integrating certificates and additional mechanisms can address the shortcomings of the previous approach (25 min)
-            <li><b>Implementation: Technology Discussion.</b> Discussion of why we chose Cosmos for the blockchain framework and Cosmos ABCI for custom blockchain applications and how does it work. We also discuss our use of Zenoh for pub/sub communication (40 min)
-            <li><b>Final Discussion.</b> Discussion to reflect on the lessons learned, the role of blockchain in solving real-world problems, and the trade-offs involved. We will specifically explore whether blockchain is always necessary in the context of FL or if, depending on the situation, alternative solutions might be more efficient and effective. (20 min)
+            <li><b>The Emerging Airspace Security Problem (20 min).</b> Growth of drone usage across commercial and civilian sectors; accidental versus malicious drone activity; implications for national security and critical infrastructure protection.</li>
+            <li><b>Airspace Monitoring Technologies (30 min).</b> Traditional radar systems; radio-frequency (RF) sensing; acoustic sensing; optical and computer-vision methods; introduction to passive sensing approaches.</li>
           </ul>
-        </div>!--->
+
+          <b>Part 2 — Cybersecurity and Passive Sensing (40 min)</b>
+
+          <ul>
+            <li><b>Airspace Monitoring Cybersecurity Threats (20 min).</b> Spoofing attacks on sensing infrastructure; signal injection and replay attacks; drone identity spoofing and GNSS manipulation; adversarial evasion strategies.</li>
+            <li><b>Passive Sensing Approaches (20 min).</b> Passive radar fundamentals; illuminators of opportunity; leveraging LEO satellite constellations (e.g., Starlink) for airspace monitoring.</li>
+          </ul>
+
+          <p><b>Break (15 min)</b></p>
+
+          <b>Part 3 — Dependability and Safety (30 min)</b>
+
+          <ul>
+            <li><b>Dependability Challenges (15 min).</b> Reliability of sensing infrastructure; coverage and scalability trade-offs; detection accuracy and false-alarm management; system resilience and redundancy.</li>
+            <li><b>Safety Implications (15 min).</b> Aviation safety concerns; notable airport drone incidents; protection of critical infrastructure.</li>
+          </ul>
+
+          <b>Part 4 — Case Study and Open Challenges (60 min)</b>
+
+          <ul>
+            <li><b>Case Study: Passive Detection Using LEO Satellites (40 min).</b> Passive detection with LEO satellites as illuminators of opportunity; forward-scatter sensing techniques; real-world deployment experiences, experimental results, and lessons learned; live demo.</li>
+            <li><b>Open Research Challenges and Q&A (20 min).</b> Scalable airspace monitoring; adversarial drones and countermeasures; AI-assisted sensing and detection; regulatory and operational challenges; open Q&A with participants.</li>
+          </ul>
+
+          <h4>Target Audience</h4>
+
+          <p>This tutorial targets researchers and practitioners working in cybersecurity, dependable systems, wireless sensing, critical infrastructure protection, and autonomous systems. The tutorial is designed to be accessible to participants without prior background in radar systems while still providing technical depth for experienced researchers.</p>
+
+          <h4>Supporting Materials</h4>
+
+          <p>The tutorial will be supported by presentation slides, a live demo, and selected experimental results from real-world passive sensing deployments using LEO satellite signals.</p>
+
+        </div>
       </li>
 
       <li class="w3-padding-large">
