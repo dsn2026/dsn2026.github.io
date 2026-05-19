@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html>
+<title>Conference Program</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/DSN_logo.png" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+	integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+	crossorigin="anonymous"></script>
+
+
+<style>
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Raleway", sans-serif
+	}
+</style>
+
+<style>
+	:root {
+		--awards-color: rgba(85, 228, 61, 0.95);
+		--keynotes-color: rgba(85, 228, 61, 0.95);
+		--rt-color: rgba(193, 228, 169, 0.95); 
+		--it-color: rgba(0,176,240);
+		--d23-color: rgba(203, 202, 149, 0.95); 
+		--poster-color: rgb(240, 193, 163);
+		--df-color: rgba(220, 158, 126, 0.75); 
+		--social-color: rgba(48, 184, 150, 0.95); 
+
+		--auditorium-color: rgba(193, 228, 169, 0.95); 
+		
+		--room-1102-color: rgb(195, 161, 117);
+		--room-1102-2-color: rgb(193, 132, 53);
+
+		--room-1104-color:  #6a96c2;
+
+		--room-1105-color: #bdb2ff;
+
+		--room-905-color: rgba(0,176,240);
+		--room-905-2-color: rgb(51, 196, 249);
+		--room-905-3-color: rgb(91, 209, 252);
+		
+		--room-_-color: rgba(255, 192, 0, 0.95);
+	}
+
+	.legend p {
+    margin-top: 5pt;    /* Removes top margin */
+    margin-bottom: 0; /* Removes bottom margin */
+	}
+
+	
+	
+
+	.awards-session {
+		background-color: var(--awards-color);
+	}
+	.best-paper-session {
+		background-color: var(--awards-color);
+	}
+	.keynotes-session {
+		background-color: var(--keynotes-color);
+	}
+
+	.rt-session {
+		background-color: var(--rt-color);
+	}
+
+	.awards-rt-session {
+		background: linear-gradient(to right, var(--rt-color) 50%, var(--awards-color) 51%);
+	}
+
+	.it-session {
+		background-color: var(--it-color);
+	}
+
+	.disrupt {
+		background-color: var(--d23-color);
+	}
+
+	.df-session {
+		background-color: var(--df-color);
+	}
+
+	.room-1102-session{ 
+		background-color: var(--room-1102-color);
+		font-weight: 600;
+	}
+	.room-1102-2-session{
+		background-color: var(--room-1102-2-color);
+		font-weight: 600;
+	}
+	.room-1104-session{ 
+		background-color: var(--room-1104-color);
+		font-weight: 600;
+	}
+	.room-1105-session {
+		background-color: var(--room-1105-color);
+		font-weight: 600;
+	}
+	.room-905-session {
+		background-color: var(--room-905-color);
+		font-weight: 600;
+	}
+	.room-905-2-session {
+		background-color: var(--room-905-2-color);
+		font-weight: 600;
+	}
+	.room-905-3-session {
+		background-color: var(--room-905-3-color);
+		font-weight: 600;
+	}
+	.room-_-session {
+		background-color: var(--room-_-color);
+		font-weight: 600;
+	}
+	.auditorium-session {
+		background-color: var(--auditorium-color);
+		font-weight: 600;
+	}
+	
+	.business-session {
+		font-weight: 800;
+		background-color: rgb(191, 187, 187);
+		color: white;
+	}
+
+	
+
+	/* General Table Styling */
+	.table-prog {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0;
+		font-family: 'Segoe UI', sans-serif;
+		font-size: 0.95rem;
+		color: #333;
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.table-prog th,
+	.table-prog td {
+		padding: 12px 16px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.td-1 {
+		font-weight: bold;
+		background-color: #f5f5f5;
+		color: #444;
+		width: 10%;
+		white-space: nowrap;
+	}
+
+	.thd {
+		background-color: #003366;
+		color: white;
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+
+	.session-cell {
+  		width: 120px; /* set a fixed width that fits your content */
+  		min-width: 120px;
+  		max-width: 120px;
+  		box-sizing: border-box; /* includes padding/borders in width */
+		color: rgb(33, 52, 58);
+	}
+
+	.tdbg {
+		background-color: #e0f0ff;
+		font-weight: 500;
+		color: #003366;
+	}
+
+	.social-session {
+		
+		background-color: var(--social-color);
+		font-weight: 600;
+		color: #663300;
+	}
+
+
+	.wdmd{
+		background-color:var(--wdmd-color);
+		font-weight: 600;
+	}
+
+	.poster{
+		background-color:var(--poster-color);
+		font-weight: 600;
+	}	
+
+	.force{
+		background-color:var(--force-color);
+		font-weight: 600;
+	}
+
+	.s2aim{
+		background-color:var(--s2aim-color);
+		font-weight: 600;
+	}
+
+	.rasacc {
+		background-color: var(--verdi-color, #d1e7dd);
+		font-weight: 600;
+	}
+
+	.dsml {
+		background-color: var(--dsml-color, #d0e2f2);
+		font-weight: 600;
+	}
+
+	.axc {
+		background-color: var(--axc-color, #fce4ec);
+		font-weight: 600;
+	}
+
+	.envsys {
+		background-color: var(--envsys-color, #e6ffe6);
+		font-weight: 600;
+	}
+
+	.dt4drs {
+		background-color: var(--dt4drs-color, #f3e5f5);
+		font-weight: 600;
+	}
+
+	.void-session {
+		background-color: #f8f9fa;
+	}
+
+	/* Hover Effects */
+	.table-prog td:hover {
+		background-color: #f0f8ff;
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	/* Link Styling */
+	.table-prog a {
+		color: #003366;
+		text-decoration: none;
+	}
+
+	.table-prog a:hover {
+		text-decoration: underline;
+	}
+
+	/* Legend */
+	.legend {
+		margin-top: 20px;
+		padding: 10px 15px;
+		background: #fafafa;
+		border: 1px solid #ddd;
+		border-radius: 6px;
+	}
+
+	.legend-items span {
+		display: inline-block;
+		margin-right: 15px;
+		margin-bottom: 5px;
+		font-size: 0.9rem;
+		color: #444;
+	}
+
+
+	.clickable-td {
+		cursor: pointer;
+	}
+
+	.clickable-td:hover {
+		color: #336699;
+		font-weight: 800;
+	}
+
+	.session-room {
+		background-color: lightblue;
+		color: #003366;
+		font-weight: 800;
+		font-size: 14px;
+	}
+
+	/* Narrow time column */
+	.time-column {
+		width: 60px;     /* narrow width for time */
+		min-width: 60px;
+		max-width: 60px;
+		white-space: nowrap; /* prevent time from wrapping */
+	}
+
+	.session h6 {
+            font-weight: bold;
+            color: rgb(12, 71, 173);
+        }
+	#program-content {
+		font-size: 13px;
+	}
+
+	
+	select {
+		padding: 10px;
+		font-size: 16px;
+		margin-bottom: 20px;
+		border-radius: 4px;
+		border: 1px solid #ccc;
+		width: 100%;
+		max-width: 300px;
+	}
+	.pdf-container {
+		width: 100%;
+		height: 900px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		overflow: hidden;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+	embed {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
+<style>
+	/* Container for nav tabs */
+	.nav-tabs {
+	  border-bottom: 2px solid #ccc;
+	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	  margin-bottom: 1rem;
+	}
+	
+	/* Tab buttons */
+	.nav-tabs .nav-link {
+	  background: linear-gradient(to right, #f0f4f8, #e6ecf2);
+	  border: none;
+	  border-radius: 12px 12px 0 0;
+	  color: #333;
+	  font-weight: 600;
+	  padding: 0.75rem 1.5rem;
+	  margin-right: 5px;
+	  transition: all 0.3s ease;
+	  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+	}
+	
+	/* Hover effect */
+	.nav-tabs .nav-link:hover {
+	  background-color: #dee6f1;
+	  color: #000;
+	  cursor: pointer;
+	}
+	
+	/* Active tab styling */
+	.nav-tabs .nav-link.active {
+	  background-color: #ffffff;
+	  border-bottom: 3px solid #0d6efd;
+	  color: #0d6efd;
+	  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+	  font-weight: 700;
+	}
+	</style>
+
+<style>
+	/* Basic styling for readability and flair */
+
+	/*
+
+	body {
+	  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	  background: #f9fafb;
+	  color: #222;
+	  line-height: 1.6;
+	  margin: 2rem;
+	}
+	section.session {
+	  background: #fff;
+	  border-radius: 8px;
+	  padding: 1.2rem 2rem;
+	  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+	  margin-bottom: 1.5rem;
+	}
+	section.session h2, section.session h3 {
+	  margin-top: 0;
+	  font-weight: 700;
+	  color: #003366;
+	}
+	section.session h2 {
+	  font-size: 1.3rem;
+	}
+	section.session h3 {
+	  font-size: 1.1rem;
+	  font-style: italic;
+	  margin-bottom: 1rem;
+	}
+	*/
+	ul.speakers {
+	  list-style: none;
+	  padding-left: 0;
+	}
+	ul.speakers li {
+	  margin-bottom: 0.6rem;
+	}
+	li.session-chair {
+	  font-style: italic;
+	  color: #555;
+	}
+	li.title {
+	  font-weight: 600;
+	  color: #111;
+	}
+	li.speaker {
+	  font-weight: 400;
+	  color: #333;
+	}
+	i.location-time {
+	  color: #666;
+	  font-style: normal;
+	}
+  </style>
+
+		
+
+<body class="w3-light-grey w3-content" style="max-width:1640px">
+
+	<!-- Sidebar/menu -->
+	<nav class="w3-sidebar w3-collapse w3-white" style="z-index:3;width:320px;" id="mySidebar"><br>
+		<div w3-include-html="sidebar.html"></div>
+	</nav>
+
+	<!-- Overlay effect when opening sidebar on small screens -->
+	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+		title="close side menu" id="myOverlay"></div>
+
+	<!-- !PAGE CONTENT! -->
+	<div class="w3-main" style="margin-left:320px">
+
+		<!-- Header -->
+		<header id="dsnHeader">
+			<div w3-include-html="header.html"></div>
+		</header>
+
+		<div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
+			<h1><b>Conference Program</b></h1>
+
+
+			<ul class="nav nav-tabs" id="program-tab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1"
+						type="button" role="tab" aria-controls="day1" aria-selected="true">Monday, June 22</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link " id="day2-tab" data-bs-toggle="tab" data-bs-target="#day2" type="button"
+						role="tab" aria-controls="day2" aria-selected="false">Tuesday, June 23</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link " id="day3-tab" data-bs-toggle="tab" data-bs-target="#day3" type="button"
+						role="tab" aria-controls="day3" aria-selected="false">Wednesday, June 24</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link " id="day4-tab" data-bs-toggle="tab" data-bs-target="#day4" type="button"
+						role="tab" aria-controls="day4" aria-selected="false">Thursday, June 25</button>
+				</li>
+			</ul>
+			<div class="tab-content" id="program-content">
+				
+				<div class="tab-pane fade show active" id="day1" role="tabpanel" aria-labelledby="day1-tab">
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd time-column">Local Time <br>(UTC-4)</td>
+								
+								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
+								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
+								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
+								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+								<td class="td-3 room-905-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 905</td>
+                                <td class="td-3 room-_-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room ?</td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">8:00 - 9:00</span></td>
+								<td class="td-3 tdbg" colspan="8">Registration</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:00 - 10:30</span></td>
+								
+								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_1"><b>RASACC 1</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_1"><b>FORCE 1</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_1"><b>CRAI+RASACC 1</b></td>
+								
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
+								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
+
+								
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="8">Coffee Break</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 12:30</span></td>
+								
+								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_2"><b>RASACC 2</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_2"><b>FORCE 2</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_2"><b>CRAI + RASACC 2</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 3</b></td>
+								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
+
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="8">Lunch</td>
+							</tr>
+
+							<tr>
+								<td class="td-1"><span class="">14:00 - 15:30</span></td>
+								
+								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_3"><b>RASACC 3</b></td>
+								<td class="td-3 room-1102-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_1"><b>DSAS + DT4DRS</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_3"><b>CRAI + RASACC 3</b></td>
+
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
+								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>
+
+								
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:00</span></td>
+                                <td class="td-3 tdbg" colspan="8" id="dcds4" data-bs-toggle="tooltip">Coffee Break</td>
+                                
+							</tr>														
+							<tr>
+								<td class="td-1"><span class="">16:00 - 17:30</span></td>
+								
+								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_4"><b>RASACC 4</b></td>
+								<td class="td-3 room-1102-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_2"><b>DSAS + DT4DRS</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_4"><b>CRAI + RASACC 4</b></td>
+
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
+								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>								
+
+							</tr>								
+							
+							<tr>
+								<td class="td-1"><span class="">18:30 - 20:00</span></td>
+								<td class="td-2 social-session session-cell" colspan="8">Welcome Reception</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<hr>
+
+					
+					<div class="session" id="RASACC_1">
+						<h6>RASACC 1: TBD at <i>Auditorium, 9:00 - 10:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li> 
+						</ul>
+					</div>
+					
+					<div class="session" id="RASACC_2">
+						<h6>RASACC 2: TBD at <i>Auditorium, 11:00 - 12:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RASACC_3">
+						<h6>RASACC 3: TBD at <i>Auditorium, 14:00 - 15:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RASACC_4">
+						<h6>RASACC 4: TBD at <i>Auditorium, 16:00 - 17:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="FORCE_1">
+						<h6>FORCE 1: TBD at <i>Room 1102, 9:00 - 10:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="FORCE_2">
+						<h6>FORCE 2: TBD at <i>Room 1102, 11:00 - 12:30, June 23</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="DSAS_DT4DRS_1">
+						<h6>DSAS + DT4DRS 1: TBD at <i>Room 1102, 14:00 - 15:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="DSAS_DT4DRS_2">
+						<h6>DSAS + DT4DRS 2: TBD at <i>Room 1102, 16:00 - 17:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+
+					
+					<div class="session" id="CRAI_RASACC_1">
+						<h6>CRAI + RASACC 1: TBD at <i>Room 1104, 9:00 - 10:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="CRAI_RASACC_2">
+						<h6>CRAI + RASACC 2: TBD at <i>Room 1104, 11:00 - 12:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="CRAI_RASACC_3">
+						<h6>CRAI + RASACC 3: TBD at <i>Room 1104, 14:00 - 15:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="CRAI_RASACC_4">
+						<h6>CRAI + RASACC 4: TBD at <i>Room 1104, 16:00 - 17:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+
+					<div class="session" id="T1">
+						<h6>Tutorial 1: at <i>Room 1105, 09:00 - 17:30, June 22</i></h6>
+						<ul>
+							<li><b>RESIST: Resilience against Silent Silicon Threats - A Cross-Layer Perspective</b> by Peter W. Deutsch (MIT), Vincent Quentin Ulitzsch (MIT), Mengjia Yan (MIT), Sudhanva Gurumurthi (AMD), Vilas Sridharan (AMD), Harish Dixit (Meta), Sriram Sankar (Meta)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="T2">
+						<h6>Tutorial 2: at <i>Room 905, 09:00 - 10:30, June 22</i></h6>
+						<ul>
+							<li><b>Fault Injection for ML Applications: From DNNs to LLMs</b> by Karthik Pattabiraman (Univ. of British Columbia), Bo Fang (Univ. of Texas, Arlington), Lishan Yang (George Mason Univ.), Abraham Chan (Univ. of British Columbia), Yu Sun (George Mason University)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="T3">
+						<h6>Tutorial 3: at <i>Room 905, 11:00 - 12:30, June 22</i></h6>
+						<ul>
+							<li><b>Evaluating Blockchain Fault Tolerance with STABL</b> by Vincent Gramoli (University of Sydney and Redbelly Network, Australia), Rachid Guerraoui (EPFL, Switzerland), Andrei Lebedev (University of Sydney, Australia), Gauthier Voron (EPFL, Switzerland)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="T4">
+						<h6>Tutorial 4: at <i>Room 905, 14:00 - 17:30, June 22</i></h6>
+						<ul>
+							<li><b>Securing Your Airspace: The Interplay Between Cybersecurity, Sensing, and Safety</b> by Alireza Famili (WayWave Inc), Amir Fakhim Babaei (WayWave Inc), Tolga O. Atalay (A2 Labs LLC), Angelos Stavrou (WayWave Inc, A2 Labs LLC, Virginia Tech, Arlingto)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="T5">
+						<h6>Tutorial 5: at <i>Room ?, 09:00 - 17:30, June 22</i></h6>
+						<ul>
+							<li><b>Preventing Human Errors for Dependable Computer System Design</b> by Fuqun Huang (Western Washington University)</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				
+				<div class="tab-pane fade " id="day2" role="tabpanel" aria-labelledby="day2-tab">
+				
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd time-column">Local Time <br>(UTC-4)</td>
+									
+								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
+								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
+								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
+								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+                                
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">8:00 - 9:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Registration</td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">9:00 - 9:45</span></td>
+								<td class="td-2 auditorium-session session-cell" colspan="5" data-target="opening">
+							  	<b>Opening and Test of Time Award</b>
+								</td>
+								  
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:45 - 10:30</span></td>
+								<td class="td-2 auditorium-session session-cell" colspan="5" data-target="keynote1"><b>Keynote 1: Michael Reiter "On the Dependability of ML for Security-Related Tasks"</b></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 12:30</span></td>
+								<td class="td-2 auditorium-session session-cell" colspan="5" data-target="RS1"><b>RS1 - Best Paper (3 talks)</b></td>
+
+								</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Lunch</td>
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">14:00 - 15:30</span></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS2"><b>RS2</b></td>
+								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS3"><b>RS3</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="POSTER_PITCH_1"><b>Poster Pitch</b></td>
+								<td class="td-2 room-1105-session session-cell" rowspan="1" data-target="I1"><b>Industry 1</b></td>
+
+								
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break (with Posters)</td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">16:00 - 17:30</span></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS4"><b>RS4</b></td>
+								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS5"><b>RS5</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="DISRUPT_1"><b>Disrupt 1</b></td>
+								<td class="td-2 room-1105-session session-cell" rowspan="1" data-target="I2"><b>Industry 2</b></td>
+
+							</tr>																									
+						</tbody>
+					</table>
+
+					<div class="legend">
+						<p class="fw-bold">Legend:</p>
+						<div class="legend-items">
+
+							<span><b>RS</b>: Research</span>
+						</div>
+					</div>
+                    
+					<hr>
+					<div class="session" id="opening">
+						<h6>Opening, at <i>Auditorium, 9:00 - 9:15, June 23</i></h6>
+						<p><b>Speakers:</b> Bojan Cukic and Marco Vieira, University of North Carolina at Charlotte</p>
+						<p><b>Speakers:</b> ??</p>
+					</div>
+					<div class="session" id="opening">
+						<h6>Test of Time (TOT) Award, at <i>TBD, 09:15 - 09:45, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Targeted Attacks on Teleoperated Surgical Robots: Dynamic Model-Based Detection and Mitigation</b> by Homa Alemzadeh, Daniel Chen, Xiao Li, Thenkurussi Kesavadas, Zbigniew T. Kalbarczyk, Ravishankar K. Iyer</li>
+							<li><b>PARBOR: An Efficient System-Level Technique to Detect Data-Dependent Failures in DRAM</b> by Samira Khan, Donghyuk Lee, Onur Mutlu</li>							
+	
+						</ul>
+					</div>										
+					
+					<div class="session" id="keynote1">
+						<h6>Keynote 1, at <i>Auditorium, 9:45 - 10:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>The AI Paradox: Between Global Power, Technology Sourcing, Errors and (De)regulation Shifts</b> by Roberto Baldoni (Senior Advisor for Technology and Cybersecurity Policy, Embassy of Italy in Washington DC)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RS1">
+						<h6>RS1: Best Paper Candidates, at <i>Auditorium, 11:00 - 12:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>PRAXIS: Integrating Program Analysis with Observability for Root-Cause Analysis</b> by Shengkun Cui, Ravishankar K. Iyer (UIUC); Rahul Krishna, Saurabh Jha (IBM Research)</li>
+							<li><b>Thinking Inside the Box: Injecting Realistic Radiation Faults in ML Accelerators</b> by Bruno Loureiro Coelho (University of Trento); Mani Sadati, Abraham Chan (University of British Columbia); Alex Hands (TRL)</li>
+							<li><b>Q3Fuzz: Multi-Layered Stateful Fuzzing for the QUIC-HTTP/3 Protocol Stack</b> by Isa Jafarov (City University of New York); Choongin Lee, Heejo Lee (Korea University); Sven Dietrich (City University of New York)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RS2">
+						<h6>RS2: Making LLMs Safer, at <i>Auditorium, 14:00 - 15:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>LUMEN: A Systems Approach to LLM-Guided Activation of Hidden Behaviors in Malware</b> by Kevin Valakuzhy (Georgia Tech); Miuyin Yong Wong (Univ. of Maryland); Doug Blough, Mustaque Ahamad (Georgia Tech)</li>
+							<li><b>A First Look at the Security Issues in the Model Context Protocol Ecosystem</b> by Xiaofan Li, Xing Gao (University of Delaware)</li>
+							<li><b>RIPE-II: Retrieval In-Place Poisoning Evaluation with Indirect Injections</b> by Gayatri Malladi, Geethapriya Thamilarasu (University of Washington Bothell)</li>
+							<li><b>Bypassing Safety Alignment via API Design: A Systematic Risk Analysis of Response Prefill in LLM systems</b> by Yakai Li, Luping Ma, Weijuan Zhang, Aimin Yu, Qihang Zhou, Qingjia Huang (Institute of Information Engineering, CAS; Univ. of Chinese Academy of Sciences) ; Jiekang Hu (Shopee.com); Weiduan Sang (JD.com); Yi Su, Dongsheng Nie (Sinochem Energy High-Tech)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RS3">
+						<h6>RS3: Dependability in Federation, at <i>Room 1102, 14:00 - 15:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Beyond Corner Patches: Semantics-Aware Backdoor Attack in Federated Learning</b> by Kavindu Herath, Joshua Zhao, Saurabh Bagchi (Purdue University and KeyByte)</li>
+							<li><b>In-Depth Exploration of Differentially Private Quantization for Privacy-Preserving and Communication-Efficient Federated Learning</b> by Shan Huang, Zhijing Ye, Jiamin Wang (Stevens Institute of Technology); Zhaorui Zhang (The Hong Kong Polytechnic University)</li>
+							<li><b>From Centralized Learning to Federated Setting: Keeping Reliability on Track</b> by Junjian Yan (Macao Polytechnic University); Paulo de Carvalho, Jorge Henriques, João Loureiro (University of Coimbra)</li>
+							<li><b>Computationally Efficient Anomaly Detection and Exclusion for Practical and Robust Federated Learning</b> by Raman Zatsarenko, Dmitrii Korobeinikov (Rochester Institute of Technology); Sergei Chuprov (The University of Texas Rio Grande Valley)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RS4">
+						<h6>RS4: Safer Learning, at <i>Auditorium, 16:00 - 17:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Generalizable Graph-based Reinforcement Learning Agents for Automated Cyber Defense</b> by Isaiah J. King, H. Howie Huang (The George Washington University); Benjamin Bowman (Cybermonic LLC)</li>
+							<li><b>LymphNode: A Plug-and-Play Access Control Method for Deep Neural Networks</b> by Hanyu Pei, Shang Liu, Zeyan Liu (University of Louisville)</li>
+							<li><b>Ruby: Unmasking Unsafe Rust in Stripped Binaries via Machine Learning</b> by Xiang Cheng (Georgia Tech); Sangdon Park (POSTECH); HyungSeok Han (KAIST)</li>
+							<li><b>OptiMAC: Adaptive Security Optimization for Message Authentication Code in Adversarial Environment</b> by SeyedMohammad Kashani, Erfan Khademnia (Iowa State University); Görkem Emirhüseyinoğlu; Yilu Dong, Tianwei Wu (The Pennsylvania State University)</li>
+						</ul>
+					</div>
+
+					<div class="session" id="RS5">
+						<h6>RS5: Detecting Vulnerabilities, at <i>Room 1102, 16:00 - 17:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>VulJSFormer: Learning to Detect JavaScript Vulnerabilities with Vulnerability-Relevant Graphs</b> by Kunlun Ren, Haochen He, Hang Wang, Weizhong Qiang, Yueming Wu, Deqing Zou (Huazhong University of Science and Technology)</li>
+							<li><b>VulStyle: A Multi-Modal Pre-Training for Code Stylometry-Augmented Vulnerability Detection</b> by Chidera Biringa, Ajmal Abbas, Vishnu Selvaraj, Gokhan Kul (University of Massachusetts Dartmouth)</li>
+							<li><b>VulLens: Enhancing Software Vulnerability Detection against Evasion Attacks</b> by Shihua Sun, Pragya Sharma, Sudip Maitra, Angelos Stavrou, Haining Wang (Virginia Tech)</li>
+							<li><b>AnBridge: Protecting On-Device AI with Android Virtualization Framework</b> by Giorgio Farina, Raffaele Della Corte (Università di Napoli Federico II); Aravind Machiry (Purdue University)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="I1">
+						<h6>Industry 1: Security Threats and Countermeasures, at <i>Room 1105, 14:00 - 15:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Knowledge Transfer from LLMs to Provenance Analysis: Semantic-Augmented APT Detection</b> by Fei Zuo, Junghwan Rhee, Yung Ryn Choe, Chung Hwan Kim</li>
+							<li><b>LLM4BP: A Collaborative LLM Framework for Insider-Resilient BPMN Workflows in Industrial Control Systems</b> by Antonio Iannaccone, Chao Feng, Roberto Nardone, Burkhard Stiller</li>
+							<li><b>EgoLoc: Secure Ego-Agent Selection for Robust Collaborative Perception Against Privilege Hijacking</b> by Kyeomhyeok Woo, Eun-Kyu Lee, Jiwoo Lee</li>
+							<li><b>Mitigating TEE Risks in a Verifiable DEX: Diversity, Ownership Assurance, and ZK Proofs</b> by Giovanni Mazzeo, Vladislav Kapitsyn, Kyle Habib, Faisal Mehrban</li>
+							<li><b>A Secure, Manifest-Based Framework for Delegated Privilege Promotion</b> by Rajarshi Chowdhury, Akshay Shah</li>
+						</ul>
+					</div>
+
+					<div class="session" id="I2">
+						<h6>Industry 2: Dependable AI and AI for Dependability, at <i>Room 1105, 16:00 - 17:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Harnessing Large Language Models for Seed Generation in Greybox Fuzzing</b> by Yunhang Zhang, Wenxuan Shi, Xinyu Xing, Jun Xu</li>
+							<li><b>AIReSim: A Discrete Event Simulator for Large-scale AI Cluster Reliability Modeling</b> by Karthik Pattabiraman, Mihir Patel, Fred Lin</li>
+							<li><b>From Security Standards to Adversary Emulation: An AI-Assisted Framework for ICS Security Assessment</b> by Nima Faraji, Giovanni Mazzeo, Roberto Nardone, Francesco Brancati, Luigi Romano</li>
+							<li><b>Event Burst Trigger: An Availability Backdoor Attack on Event-Based SNN Object Detection</b> by Jaesun Baek, Chanwook Lee, Eun-Kyu Lee</li>
+							<li><b>A Robustness Metric and Evaluation Approach for Machine Learning Components in Aviation</b> by Casidhe Hutchison, Tomasz Swierzewski, Joshua Neighbor, Alex Johnson, Todd Grossaint, Liam Kruse, Xusheng Luo, Changliu Liu</li>
+						</ul>
+					</div>
+
+					<div class="session" id="POSTER_PITCH_1">
+						<h6>Poster Pitch, at <i>Room 1104, 14:00 - 15:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>FGF: A Fact-Graph Feedback Loop Framework for Verifiable LLM-based Decision Making</b> by Subi Kim, Jimin Ryu, Jieun Kang, Yong Ik Yoon</li>
+							<li><b>Adaptive Symbolic Execution with LLMs for Evasive Malware Analysis</b> by Ajay Kumara Makanahalli Annaiah, Shahid Ali Lodin, William Setters<br></li>
+							<li><b>Co-evolving SQL Injection Attacks and ModSecurity Rules via Agentic AI</b> by Vahid Babaey, Arun Ravindran</li>
+							<li><b>Why Are Anomalies Rare in RSS? Diagnosing Strict Serializability Violations in Spanner-RSS</b> by Sejong Kim, Yon Dohn Chung</li>
+							<li><b>Towards Automated Detection of Latent Software Robustness Failures using Large Language Models</b> by José Flauzino, Marco Vieira, Elias Duarte</li>
+							<li><b> by Optimal Fast-ReRoute: A Tool for Generating and Visualizing Arborescence-based Routes</b> by Leon Okida, Elias P. Duarte Jr., André Vignatti</li>
+							<li><b>Making Binary Decisions in Decentralized Autonomous Organizations</b> by Nuno Braz, Miguel Correia</li>
+							<li><b>Efficient Backdoor Sample Identification via Blend Transform for Untrusted Training Data</b> by Shuhong Yang, Zhenyong Zhang, Zeyu Yang, Shuaiting Huang</li>
+							<li><b>Memory-Bandwidth Side Channels for Input Recovery in Edge-Deployed LLM Inference</b> by Davis Ranney, Yashaswini Makaram, Yunsi Fei</li>
+							<li><b>Does the Knight and Leveson Hypothesis Hold for LLM-Based Code Generation?</b> by Rodrigo Pato Nogueira, Karthik Pattabiraman, Marco Vieira, João R. Campos</li>
+							<li><b>The Overlooked Role of False Negatives in Reentrancy Detection</b> by Alvise Spanò, Dalila Ressi, Sabina Rossi, Michele Bugliesi</li>
+							<li><b>LUMENating: Insights from an LLM-Guided System for Activating Hidden Behaviors in Malware</b> by Kevin Valakuzhy, Abhinav Vemulapalli, Miuyin Yong Wong, Doug Blough, Mustaque Ahamad, Fabian Monrose</li>
+							<li><b>Mind the Driver: A Fault Injection Methodology for AI Systems</b> by Marcello Cinque, Luigi De Simone, Nike Di Giacomo</li>
+							<li><b>On the Feasibility of Side-Channel Information for Malicious Traffic Detection in IoT Networks</b> by Shadman Sakib Arnob, Ahmad Patooghy, Islam Obaidat</li>
+							<li><b>Edge-Based Privacy Auditing for Trustworthy Humanoid Robot Interaction</b> by Bontu Geremew, Sharun Akter Khushbu, Shaohu Zhang</li>
+							<li><b>Evaluating Security Best Practices in the GitHub Actions Documentation</b> by Lukas Boschanski, Marco Vieira</li>
+							<li><b>Demystifying Differentially Private Quantization in Federated Learning</b> by Shan Huang, Zhijing Ye, Jiamin Wang, Zhaorui Zhang, Jie Fu, Wendy Hui Wang, Sheng Di, Xiaodong Yu</li>
+							<li><b>Investigating the Relationship Between Autonomous Driving System Disengagements and Crashes</b> by Dev Patel, Arpan Swaroop, Saurabh Bagchi</li>
+					</ul>
+					</div>					
+					
+					<div class="session" id="DISRUPT_1">
+						<h6>Disrupt 1: Disruptive Distributed Systems and Networks, at <i>Room 1104, 16:00 - 17:30, June 23</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Trust, but Verify: ByzTwin-Range, a Digital Twin Cyber-Range for Byzantine Faults</b> by Tadeu Freitas, João Soares and Rolando Martins</li>
+							<li><b>Taming the Airwaves: Resilient Spectrum Sharing with BFT</b> by Xiaoxuan Qin, Prashant Krishnamurthy and Amy Babay</li>
+							<li><b>Network-Aware Differential Privacy</b> by Zhou Li, Yu Zheng, Tianhao Wang and Sang-Woo Jun</li>
+							<li><b>Towards Security by Performance: Rethinking Cyber Risk Assessment for Distributed ML Systems</b> by Alessandro Palma, Gianluca Capozzi, Silvia Bonomi and Giuseppe Antonio Di Luna</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tab-pane fade " id="day3" role="tabpanel" aria-labelledby="day3-tab">
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd time-column">Local Time <br>(UTC-4)</td>
+
+								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
+								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
+								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
+								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+                                
+							</tr>	
+							<tr>
+								<td class="td-1"><span class="">8:00 - 9:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Registration</td>
+							</tr>														
+							<tr>
+								<td class="td-1"><span class="">9:00 - 9:45</span></td>
+								<td class="td-2 auditorium-session session-cell" rowspan="1" colspan="5" data-target="JCL"><b>Jean-Claude Laprie Award</b></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:45 - 10:30</span></td>
+								<td class="td-2 auditorium-session session-cell" rowspan="1" colspan="5" data-target="keynote2"><b>Keynote 2: Pradip Bose "Robust Power Management in AI-Centric Systems"</b></td>
+
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break (with Posters)</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 12:30</span></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS6"><b>RS6</b></td>
+								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS7"><b>RS7</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="DISRUPT_2"><b>Disrupt 2</b></td>
+								<td class="td-3 it-session session-cell" rowspan="1" data-target="I3"><b>Industry 3</b></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Lunch</td>
+								
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">14:00 - 15:30</span></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS8"><b>RS8</b></td>
+								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS9"><b>RS9</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="doctoral_1"><b>Doctoral Forum 1</b></td>
+								<td class="td-2 it-session session-cell" rowspan="1" data-target="I4"><b>Industry 4</b></td>
+								<!---<td class="td-3 wdmd session-cell" rowspan="1" colspan="1" data-target="WDMD_3"><b>PC Chairs Meeting</b></td>!-->
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">16:00 - 17:10</span></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS10"><b>RS10</b></td>
+								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS11"><b>RS11</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="doctoral_2"><b>Doctoral Forum 2</b></td>
+								<td class="td-2 it-session session-cell" rowspan="1" data-target="I5"><b>Industry 5</b></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">17:10 - 22:00</span></td>
+								<td class="td-2 social-session session-cell" colspan="5" data-target="Banquet_and_Excursion" style="cursor:pointer;" onclick="window.location.href='cvbanquet.html'">Excursion and Banquet</td>
+
+
+							</tr>																									
+						</tbody>
+					</table>
+					<div class="legend">
+
+						<p class="fw-bold">Legend:</p>
+						<div class="legend-items">
+							<span><b>RS</b>: Research</span>
+						</div>
+
+					</div>
+
+					<hr>
+					<div class="session" id="JCL">
+						<h6>Jean-Claude Laprie (JCL) Award, at <i>Auditorium, 09:00 - 09:45, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Orthogonal Defect Classification – A Concept for In-Process Measurements</b> by Ram Chillarege, Inderpal S. Bhandari, Jarir K. Chaar, Michael J. Halliday, Diane S. Moebus, Bonnie K. Ray, and Man-Yuen Wong. <a href="https://doi.org/10.1109/32.177364" target="_blank">https://doi.org/10.1109/32.177364</a></li>
+						</ul>
+					</div>
+					  
+					<div class="session" id="keynote2">
+						<h6>Keynote 2, at <i>Auditorium, 09:45 - 10:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Robust Power Management in AI-Centric Systems</b> by Pradip Bose</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RS6">
+						<h6>RS6: Fuzzing &amp; Bug Detection, at <i>Auditorium, 11:00 - 12:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>RomeFuzz: Path-aware Directed Greybox Fuzzing via Dyna-Static Indirect Call analysis</b> by Xiaoyun Zhao, Pengbin Feng, Yang Chao, Zhizhuang Jia, JianFeng Ma (School of Cyber Engineering, Xidian University)</li>
+							<li><b>SnipleyFuzz: Enhancing Black-Box Fuzzing of IoT Devices with Shapley-Based Priority Selection</b> by Yifan Yang, Futai Zou, Jiaping Gui (Shanghai Jiao Tong University)</li>
+							<li><b>Psyzkaller: Learning from Historical and On-the-Fly Execution Data for Smarter OS Kernel Fuzzing</b> by Boyu Liu (University of Chinese Academy of Sciences; TCA Lab, Institute of Software, CAS)</li>
+							<li><b>Behavior-Guided Decompilation of AVR Firmware with Autonomous LLM Agents</b> by Charles Cao (University of Tennessee)</li>
+						</ul>
+					</div>
+					
+					<div class="session" id="RS7">
+						<h6>RS7: Binary Analysis &amp; Program Understanding, at <i>Room 1102, 11:00 - 12:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Efficient Bug Detection by Inferring Implicit API Contract of Pointer State Transition</b> by Xingjing Deng, Yunlong Ma, Xiang Gao, Hailong Sun (Beihang University)</li>
+							<li><b>Meta-Architecture Binary Code Analysis</b> by Chenfeng Duan, Junzhe Wang, Qiang Zeng, Lannan Lisa Luo (George Mason University)</li>
+							<li><b>MBA-Sniffer: Rapidly Locating Mixed Boolean-Arithmetic Obfuscation in Binary Code</b> by Zheyun Feng, Dongpeng Xu (University of New Hampshire)</li>
+							<li><b>From MIRAGE to CLEAR: Component-Level Explainable Anomaly Reasoning for Autonomous Vehicle Perception Systems</b> by David Fernandez, Pedram MohajerAnsari, Amir Salarpour, Cigdem Kokenoz, Bing Li, Mert D. Pesé (Clemson University)</li>
+						</ul>
+					</div>
+
+					<div class="session" id="RS8">
+						<h6>RS8: Intrusion Detection &amp; Traffic Analysis, at <i>Auditorium, 14:00 - 15:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>I-DETECT: In-network Deep Packet Inspection for Timed Event Correlation in Industrial Control Systems</b> by Zheng Hu, Yanfeng Qu, Dong Jin (University of Arkansas); Hui Lin (University of Rhode Island)</li>
+							<li><b>Beyond Token Attention: Contiguous and Interpretable Payload Identification for Web Attacks</b> by Yue Yang, Jing Zhao, Changhua Pei, Wei Wan, Chun Long, Guanyao Du (Computer Network Information Center, Chinese Academy of Sciences)</li>
+							<li><b>DRIFT: Drift-Resilient Invariant-Feature Transformer for DGA Detection</b> by Chaeyoung Lee, Chaeri Jung, Seonghoon Jeong (Sookmyung Women's University)</li>
+							<li><b>Hi-Fi Flow: Real-Time High-Granularity Flow Feature Extraction for Robust Network Monitoring</b> by Shengping Bi, Lang Zhou, Tao Wang, Tao Hou (University of North Texas)</li>
+						</ul>
+					</div>
+
+					<div class="session" id="RS9">
+						<h6>RS9: DNS, Protocol &amp; Network Security, at <i>Room 1102, 14:00 - 15:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Understanding and Exploiting DNS Relaying: Harnessing Legitimate Services for DNS Attacks</b> by Ruian Duan, Shu Wang, Daiping Liu, Hongya Xing, Lexuan Sun, Yuwen Dai, Zhemin Su, Mengying Jiang, Fan Fei, Mickey Zhang (Palo Alto Networks)</li>
+							<li><b>Too Open to be Secure: An Evaluation of OpenNIC DNS Services and Domains</b> by Dianshi Yang (University of Delaware); Xiaoqin Liang (Old Dominion University); Daiping Liu (Palo Alto Networks); Guanna Chen (University of Delaware)</li>
+							<li><b>MeshGuard: MUD-Based Network Access Control for Large-Scale Thread-Powered IoT Networks</b> by Dominik Roy George, Wouter Van Hoof, Habib Mostafaei, Savio Sciancalepore (Eindhoven University of Technology)</li>
+							<li><b>An (m,k)-firm Elevation Policy for Weakly Hard Real-Time in Converged 5G-TSN Networks</b> by Yongle Chen (Taiyuan University of Technology); Simon Egger, Robin Laidig, Heiko Geppert, Lucas Haug, Jona Herrmann, Frank Dürr, Christian Becker (University of Stuttgart)</li>
+						</ul>
+					</div>
+					  
+					  
+					  <div class="session" id="RS10">
+						<h6>RS10: Smart Contract Vulnerabilities, at <i>Auditorium, 16:00 - 17:10, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Zero-Shot Vulnerability Detection in Low-Resource Smart Contracts Through Solidity-Only Training</b> by Minghao Hu, Qiang Zeng, Lannan Lisa Luo (George Mason University)</li>
+						  <li><b>Large-Scale Security Analysis of Multi-Token Smart Contracts: Uncovering Hidden Flaws in Batch Transfers</b> by Ashok Kasthuri, Lingxiao Jiang (Singapore Management University); Sajad Meisami (Illinois Institute of Technology)</li>
+						  <li><b>Reentrancy Detection in the Age of LLMs</b> by Dalila Ressi, Alvise Spanò, Matteo Rizzo (Ca' Foscari University of Venice); Sabina Rossi (Ca' Foscari)</li>
+						  <li><b>ReSect: A Tool for Automated Analysis of Reentrancy Transactions on Blockchains</b> by Yuqi Liu, Rui Xi, Karthik Pattabiraman (University of British Columbia)</li>
+						</ul>
+					  </div>
+					  
+					  <div class="session" id="RS11">
+						<h6>RS11: Cryptography &amp; Privacy, at <i>Room 1102, 16:00 - 17:10, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Bringing Your Own Privacy: Towards Measurable Privacy in Mobile Device Management and Security</b> by Shuwen Liu, Craig A. Shue (Worcester Polytechnic Institute)</li>
+							<li><b>Accurate, Secure, and Efficient Semi-Constrained Navigation with Multiple Spatial Restrictions</b> by Meng Li, Yao Hu, Yan Qiao (Hefei University of Technology); Zijian Zhang, Liehuang Zhu (Beijing Institute of Technology); Mauro Conti (University of Padua &amp; Örebro University)</li>
+						  	<li><b>SpeechShield: Latency-Efficient and Robust Timbre-Aware Voice Protection Against Speech Synthesis Deepfake Attacks</b> by Jianshuo Liu (University of Michigan); Shiquan Dong, Hong Li, Chenghua Gao (Institute of Information Engineering, Chinese Academy of Sciences)</li>
+							<li><b>One Error to Rule Them All: Can a Single Bit-Flip Disrupt Fully Homomorphic Encryption?</b> by Vattana Chan (Georgetown University); Matias Mazzanti (Universidad de Buenos Aires); Karthik Swaminathan, Augusto Vega (IBM Research)</li>
+						</ul>
+					  </div>
+
+					  <div class="session" id="DISRUPT_2">
+						<h6>Disrupt 2: Security and Resilience in Emerging Computing Paradigms, at <i>Aula A (Centro Congressi), 11:00 - 12:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Fast or Slow? Human-Inspired Self-Evolving Framework for Resilient AI Systems</b> byHaoran Qiu, Phuong Cao, Shengkun Cui, Archit Patke and Ravi Iyer</li>
+						  <li><b>RO: Reliable Orchestration of LLM Programs via Deterministic-Generative Separation</b> by Saurabh Jha</li>
+						  <li><b>An Experimental Paradigm for Studying Cognitive Mechanisms behind Software Faults</b> by Fuqun Huang and Owen Wright</li>
+						  <li><b>In-DRAM Signature Generation Using Simultaneous Multiple-Row Activation: An Experimental Study of Off-The-Shelf DRAM Chips</b> by Umut Başer, İsmail Emir Yüksel, F. Nisa Bostancı, Konstantinos Sgouras, Ataberk Olgun, Emre Hakan Demirli, Zhiheng Yue, Harsh Songara, Oğuz Ergin and Onur Mutlu</li>
+						</ul>
+					  </div>
+
+
+					  <div class="session" id="doctoral_1">
+						<h6>Doctoral Forum 1: AI/ML Dependability and Security, at <i>Room 1104, 14:00 - 15:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  
+						  <li><b>Location-Aware Prompt Injection in Semantically Routed Multi-Agent Systems</b> by Jean Tonday Rodriguez, Muhammad Nadeem and Mohammad Ashiqur Rahman</li>
+						  <li><b>Bridging the Research-Implementation Gap in Dependable Federated Learning with Autonomous Multi-Agent Orchestration</b> by Raman Zatsarenko and Leon Reznik</li> 
+						  <li><b>Automating Research and Development of Dependable Federated Learning Systems</b> by Dmitrii Korobeinikov and Leon Reznik</li>
+						  <li><b>Data Quality and Fairness in Federated Learning</b> by James Edward Sudlow and Sara Bouchenak</li>
+						  <li><b>Agentic Reinforcement Learning for Adaptive Moving Target Defense in Cyber-Physical Systems</b> by Mohammad Zakaria Haider and Mohammad Ashiqur Rahman</li>
+						</ul>
+					  </div>					  
+
+					  <div class="session" id="doctoral_2">
+						<h6>Doctoral Forum 2: Security and Reliability of Networked Systems, at <i>Room 1104, 16:00 - 17:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Securing Blockchain Applications by Transaction Analysis</b> by Rui Xi</li>
+							<li><b>Dynamic Wakeup with Collision Costs</b> by Umesh Biswas and Maxwell Young</li>
+							<li><b>Contention Resolution with Evictions</b> by Umesh Biswas, Vini Chaudhary, Shafqat Hasan and Maxwell Young</li>						  
+						  	<li><b>Dependable Real-Time Guarantees in Converged 5G and Time-Sensitive Networks</b> by Simon Egger, Frank Dürr and Christian Becker</li>
+						  	<li><b>Balancing Mutation Entropy and Session Continuity in SDN-Based Moving Target Defense</b> by Souhail Chakkour, Umesh Biswas and Charan Gudla</li>
+						</ul>
+					  </div>
+					
+					  <div class="session" id="I3">
+						<h6>Industry 3: Critical Systems and Sensors, at <i>Room 1105, 11:00 - 12:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>A Configurable Logic Architecture Based on Micro-Electromechanical Relays for Nuclear Power Safety Systems</b> by Coby Cockrell, Aidan Collins, Ben Smith, Umit Ozgur, Vitaliy Avrutin, Matt Gibson, Abhi Rajagopala, Carl Elks</li>
+						  <li><b>A Polyglot OpenTelemetry Framework for Cloud-Native Reliability and Performance Engineering in Connected-Vehicle Platforms</b> by Gaurav Saxena, Niladri Bihari Mohanty</li>						  
+						  <li><b>CRISP: End-to-End Fingerprint Recognition Leveraging Hardware-Anchored Liveness Detection</b> by Subin Ki, Kyuseung Han, Hyuk Kim, Taewook Kang, Kwang-Il Oh, Hyeonguk Jang, Sukho Lee, Jae-Jin Lee, Jaehyoung Lee, Woojoo Lee, Jinho Lee</li>
+						</ul>
+					  </div>
+					  
+					  <div class="session" id="I4">
+						<h6>Industry 4: Smart Contracts and Blockchain, at <i>Room 1105, 14:00 - 15:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Cross-Referencing Whitepaper Claims and Smart Contract Code for Automated ICO Auditing</b> by Chenglong Fu, Chi Zhang, Mengtian Li</li>
+						  <li><b>Structural Compliance, Governed Adaptation: Dependable Evolution in the ePayroll Governmental Blockchain Platform</b> by Attila Klenik, Imre Kocsis, Sándor Pap, Péter Tóth, László Gönczy, Ferenc Vágujhelyi, András Pataricza</li>
+						  <li><b>VeriExist: Blockchain-Assisted Existence-Verifiable Protocol in User-Centric Data Sharing</b> by Rui Han, Weizhong Qiang, Weijie Chen, Yulin Tang</li>
+						</ul>
+					  </div>
+
+					  <div class="session" id="I5">
+						<h6>Industry 5: Processors and Memories, at <i>Room 1105, 16:00 - 17:10, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Harpocrates-in-action: Using Simulation-based Functional Test Programs to Catch Marginal Defects in CPUs</b> by Nikos Karystinos, Odysseas Chatzopoulos, Dimitris Gizopoulos, Ashish Kumar, Sankar Gurumurthy, Sudhanva Gurumurthi, Vilas Sridharan</li>
+						  <li><b>The Anatomy of Silent Data Corruption: GPU Error Pattern Study and Modeling Guidance</b> by Chung-Hsuan Tung, Yanxiang Huang, Nirmal Saxena, Philip Shirvani, Saurabh Hukerikar, Twinkle Jain, Abhishek Tyagi, Sanjay Gongalore</li>
+						  <li><b>Enterprise-Scale RAS in IBM Z Memory Subsystem</b> by Patrick Meaney, David Cadigan, Gary Van Huben, Stephen Powell, Kelvin Wong, Colleen Weller, Gary Tressler, Hailey Nicholson, Marc Gollub, Alper Buyuktosunoglu</li>
+						  <li><b>HBM Errors at Scale: An Industrial Study</b> by Shreya Varshini, Qintian Huang, Xun Jiao, Mihir Patel, Abhinav Pandey, Fred Lin</li>
+						  <li><b>Redefining Page Offlining: Real-World Memory Failure Modes with Preemptive Strategies</b> by Ankit Saxena, Jongmin Lee, Youngwook Ko, Stuti Patel, Grant Gambetta, Dankyu Kang, Yoon Kim, Ilgyu Jung, Paul Cho</li>
+						</ul>
+					  </div>
+
+				</div>
+				
+				<div class="tab-pane fade " id="day4" role="tabpanel" aria-labelledby="day4-tab">
+					<p>&nbsp;</p>
+					<table class="table-prog">
+						<tbody>
+							<tr>
+								<td class="td-1 thd time-column">Local Time <br>(UTC-4)</td>
+
+								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
+								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
+								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
+								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+                                
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">8:00 - 9:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Registration</td>
+							</tr>							
+							<tr>
+								<td class="td-1"><span class="">9:00 - 9:45</span></td>
+								<td class="td-2 auditorium-session session-cell" rowspan="1" colspan="4" data-target="RS"><b>Rising Star + William Carter Awards</b></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">9:45 - 10:30</span></td>
+								<td class="td-2 auditorium-session session-cell" rowspan="1" colspan="4" data-target="keynote3"><b>Keynote 3: ??</b></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">10:30 - 11:00</span></td>
+								<td class="td-2 tdbg" colspan="5">Coffee Break</td>
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">11:00 - 12:30</span></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS12"><b>R12</b></td>
+								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS13"><b>RS13</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="RS14"><b>RS14</b></td>
+								<td class="td-2 it-session session-cell" rowspan="1" data-target="I6"><b>Industry 6</b></td>
+
+							</tr>
+							<tr>
+								<td class="td-1"><span class="">12:30 - 14:00</span></td>
+								<td class="td-2 tdbg" rowspan="1" colspan="5">Lunch</td>
+							</tr>
+							
+							<tr>
+								<td class="td-1"><span class="">14:00 - 15:30</span></td>
+								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS15"><b>RS15</b></td>
+								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS16"><b>RS16</b></td>
+							</tr>													
+						
+							<tr>
+								<td class="td-1"><span class="">15:30 - 16:30</span></td>
+								<td class="td-2 business-session session-cell" rowspan="1" colspan="1" data-target="BusinessMeeting">Business Meeting and Closure</td>
+								<td class="td-3 void-session" rowspan="1" colspan="3" data-bs-toggle="tooltip"></td>
+							</tr>
+							
+						</tbody>
+					</table>
+					<div class="legend">
+						<p class="fw-bold">Legend</p>
+						<div class="legend-items">
+
+							<span><b>RS</b>: Research</span>
+						</div>
+					</div>	
+					
+					<hr>
+					<div class="session" id="RS">
+						<h6>Award: Rising Star and William Carter, at <i>Auditorium, 09:00 - 09:45, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Rising Star:</b> Jianshan Yu (University of Sydney, Australia)</li>
+						  <li><b>William Carter:</b> “Software Solutions for Mitigating Physical  Attacks against Robotic Autonomous Vehicles” by Pritam Dash (University of British Columbia, Canada)</li>
+						</ul>
+					</div>	
+					
+					<div class="session" id="keynote3">
+						<h6>Keynote 3, at <i>Auditorium, 09:45 - 10:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>TBD</b></li>
+						</ul>
+					</div>
+
+					<div class="session" id="RS12">
+						<h6>RS12: Systems Dependability &amp; Software Testing, at <i>Auditorium, 11:00 - 12:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Will It Break in Production? Metric-Driven Prediction of Residual Defects in Python Systems</b> by Giuseppe De Rosa, Pietro Liguori (University of Naples Federico II)</li>
+						  <li><b>What Makes Software Bugs Escape Testing? Evidence from a Large-Scale Empirical Study</b> by Domenico Cotroneo (University of North Carolina at Charlotte); Giuseppe De Rosa, Cristina Improta, Benedetta Gaia Varriaro (University of Naples Federico II)</li>
+						  <li><b>PDLogger: Automated Logging Framework for Practical Software Development</b> by Shengchen Duan (Singapore Management University); Yihua Xu (Illinois Institute of Technology); Sheng Zhang (Hefei University of Technology); Shen Wang, Yue Duan (Singapore Management University)</li>
+						  <li><b>Measuring Attack Observability in Cloud Telemetry Logs: A Cross-Platform Analysis</b> by Mary Dhooghe, Minkyung Park (UT Dallas); Junghwan Rhee (University of Central Oklahoma); Yung Ryn Choe (UT Dallas)</li>
+						</ul>
+					  </div>
+					  
+					  <div class="session" id="RS13">
+						<h6>RS13: Mobile, Firmware &amp; Supply Chain Security, at <i>Room 1102, 11:00 - 12:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Demystifying Progressive Web Application Permission Systems</b> by Mengxiao Wang, Jianwei Huang, Guofei Gu (Texas A&amp;M University)</li>
+						  <li><b>VCAligner: Aligning Source Distribution Versions with Upstream Git Commits to Secure Supply Chain</b> by Yan Li, Nan Jiang, Qihang Zhou, Shaowen Xu, Yamin Xie (Institute of Information Engineering, Chinese Academy of Sciences)</li>
+						  <li><b>MTFuzz: A Novel Efficacy Fuzzing Framework for Aerospace Monolithic Firmware</b> by Shuai Wang (Tsinghua Shenzhen International Graduate School); Xi Xiao (Tsinghua University Graduate School at Shenzhen)</li>
+						  <li><b>Whiplash on the Grid: Emulation of a Cyber-Physical Attack Misusing Inverter-Based Resources in a Distribution Grid (Practical Experience Report)</b> by Arman A. Attar, Kaibin Bao (Karlsruhe Institute of Technology); Oliver Gehrke, Kai Heussen (Technical University of Denmark)</li>
+						</ul>
+					  </div>
+
+
+					<div class="session" id="RS14">
+						<h6>RS14: Distributed Protocols, at <i>Room 1104, 11:00 - 12:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>FORTIHTLC: Because a Atomic Swap Must Resist Bribery Attacks</b> by Nitin Awathare (Indian Institute of Technology, Jodhpur)</li>
+						  <li><b>Efficient Merkle-Tree Consistent Accumulator</b> by Anna Mendonca, Hudson Shi, Triet (PJ) Huynh (University of Connecticut); Ivan Pryvalov (Brandenburg University of Technology)</li>
+						  <li><b>Robust and Automated Reconfiguration of Byzantine Wide-Area Replication</b> by Rowdy Chotkan, Bulat Nasrulin, Johan Pouwelse, Jérémie Decouchant (Delft University of Technology)</li>
+						  <li><b>Fault-tolerant and Self-recovering Sharing of Multicast Transmission</b> by Sinchan Sengupta (LS2N, Nantes Université); Arannya Mukherjee (Adhrith AI); Matthieu Perrin (LS2N)</li>
+						</ul>
+					  </div>
+					  
+					  <div class="session" id="RS15">
+						<h6>RS15: AI-Driven Security Analysis, at <i>Auditorium, 14:00 - 15:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>SPDAgent: Leveraging LLM Agents for Context-Aware Binary Security Patch Detection via Pseudocode Diff Analysis</b> by Fengrui Yang, Zeyu Gao, Xi Xiao (Tsinghua University); Lingyun Ying, Bin Yin (QI-ANXIN Technology Research Institute); Chao Zhang (Tsinghua University); Qing Li (Peng Cheng Laboratory)</li>
+						  <li><b>LLM-Empowered Discovery of Windows APIs Exploitable for Persistent Storage in Fileless Attacks</b> by Shuai Cheng, Shu Meng, Haitao Xu, Meng Han (Zhejiang University); Shuai Hao (Old Dominion University)</li>
+						  <li><b>NS-FirmID: A Neuro-Symbolic Multi-Agent Framework for Reliable Firmware Version Identification at Internet Scale</b> by Fengshi Zhang, Zhi Li, Shunchao Xu, Zekun Zhang, Dongliang Fang, Limin Sun (Institute of Information Engineering, CAS; Univ. of Chinese Academy of Sciences); Yongle Chen (Taiyuan University of Technology)</li>
+						  <li><b>LLMGuard: Multi-Agent Fault Diagnosis for Reliable Language-Model-as-a-Service</b> by Yuedong Zhong, Guangba Yu, Yujie Huang (The Chinese University of Hong Kong); QunChao Fu (Computing and Networking Innovation Lab)</li>
+						  <li><b>LaserTag: A Tool for Autonomous XAI-Guided Physical Adversarial Perturbations in Industrial Vision Pipelines</b> by Gustavo Sánchez, Li Wei, Veit Hagenmeyer (Karlsruhe Institute of Technology)</li>
+						</ul>
+					  </div>
+					  
+					  <div class="session" id="RS16">
+						<h6>RS16: Emerging Dependability and Security Topics, at <i>Room 1102, 14:00 - 15:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>TLG: Two-stage Layer-wise Gradient Inversion Attack in Federated Learning</b> by Can Liu, Jin Wang, Yachao Yuan (Soochow University); Haozhe Wang (University of Exeter)</li>
+						  <li><b>ScaleDisturb: Exploiting Temporal Asymmetry to Amplify Read Disturbance in Modern DRAM Chips</b> by Jikun Wang, Haocong Luo, Ataberk Olgun, Ismail Emir Yuksel (ETH Zurich); A. Giray Yaglikci (CISPA); Yu Liang (Inria Paris)</li>
+						  <li><b>Automated Data Error Cleaning Impact on Federated Learning Utility and Fairness</b> by James Sudlow, Baudouin Naline (CNRS - LIRIS); Sara Bouchenak (INSA Lyon - LIRIS)</li>
+						  <li><b>ShuttleCross: An Efficient Cross-Chain Smart Contract Invocation Framework</b> by Rongkai Zhang, Qiuyu Ding, Qianyi Liu, Shengjie Guan, Zhen Xiao (Peking University); Jieyi Long (Supranational LLC)</li>
+						  <li><b>Exploring the Limits of Side-Channel Protections in ML-KEM Hardware Implementations</b> by Davis Ranney, Yashaswini I Makaram, A. Adam Ding, Yunsi Fei (Northeastern University)</li>
+						</ul>
+					  </div>
+
+					  
+					  <div class="session" id="I6">
+						<h6>Industry 6: Distributed Systems and Networks, at <i>Room 1105, 11:00 - 12:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Decentralized Root Cause Analysis for Cloud-Native Microservices: Experience with Distributed PageRank in Production</b> by Shabbir Hussain, Hari Charan Panjwani</li>
+						  <li><b>PeerLumen: A Bitcoin P2P Honeypot Telescope</b> by Wenjun Fan, Fei Du, Jungho Kim, and Sang-Yoon Chang</li>
+						  <li><b>SNAS: A Multi-Layer Defense-in-Depth Architecture for Secure Egress in Sandboxed Workloads</b> by Niranjan Kumar Sharma, S Muralidhar, Samy Boshra-Riad, Mike Halcrow, Yuxiong He, Nitya Kumar Sharma, Shawn Xia, Haowei Yu, Elliott Brossard, Derek Denny-Brown, Choden Konigsmark, Chenwei Xie, Bhanu Prakash, Brandon Baker, Andong Zhan</li>
+						  <li><b>An IPsec Tunnel Recovery Protocol to Overcome QKD Key desynchronization</b> by Hong-Sung Kim, Hyong-Shik Kim</li>
+						  <li><b>Preventing Cross-Domain Resource Abuse in MCP</b> by Shriti Priya, Teryl Taylor, Frederico Araujo</li>
+						</ul>
+					  </div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<hr>
+		
+		
+
+		<!--<div id="venue_map" class="text-center my-4">	
+			<h3 class="page-header">Venue Floor Plan</h3>
+			<img id="venue_image" src="images/floorplan/webp/day_1.webp" loading="lazy" alt="Day 1 Floorplan" width="90%" class="img-fluid rounded shadow">
+			
+		</div>!-->
+
+        <div id="footer-container"></div>
+            <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                document.getElementById("footer-container").innerHTML = data;
+                });
+            </script>
+
+    </div>
+	<!-- End page content -->
+
+	<script>
+		// Script to open and close sidebar
+		function w3_open() {
+			document.getElementById("mySidebar").style.display = "block";
+			document.getElementById("myOverlay").style.display = "block";
+		}
+
+		function w3_close() {
+			document.getElementById("mySidebar").style.display = "none";
+			document.getElementById("myOverlay").style.display = "none";
+		}
+
+		function includeHTML() {
+			var z, i, elmnt, file, xhttp;
+			/* Loop through a collection of all HTML elements: */
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+				elmnt = z[i];
+				/*search for elements with a certain atrribute:*/
+				file = elmnt.getAttribute("w3-include-html");
+				if (file) {
+					/* Make an HTTP request using the attribute value as the file name: */
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function () {
+						if (this.readyState == 4) {
+							if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+							if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+							/* Remove the attribute, and call this function once more: */
+							elmnt.removeAttribute("w3-include-html");
+							includeHTML();
+						}
+					}
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					/* Exit the function: */
+					return;
+				}
+			}
+		}
+		includeHTML();
+
+		function accordianFunc(id) {
+			var x = document.getElementById(id);
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+
+
+        
+
+	</script>
+
+
+	<script>
+		document.querySelectorAll('.session-cell').forEach(cell => {
+		cell.style.cursor = 'pointer';
+		cell.addEventListener('click', () => {
+			const targetId = cell.getAttribute('data-target');
+			const target = document.getElementById(targetId);
+			if (target) {
+				target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+			
+		});
+		});
+	</script>
+
+	<script>
+		const tabToPdfMap = {
+		day1: 'day_1.webp',
+		day2: 'day_2.webp',
+		day3: 'day_3.webp',
+		day4: 'day_4.webp'
+		};
+	
+		document.addEventListener('DOMContentLoaded', () => {
+		const tabLinks = document.querySelectorAll('#program-tab button[data-bs-toggle="tab"]');
+	
+		tabLinks.forEach(tab => {
+			tab.addEventListener('shown.bs.tab', (event) => {
+			const targetId = event.target.getAttribute('data-bs-target').substring(1); // "day1", "day2", etc.
+			const pdfFile = tabToPdfMap[targetId];
+	
+			if (pdfFile) {
+				const imageEl = document.getElementById('venue_image');
+				
+				imageEl.src = `images/floorplan/webp/${pdfFile}`;
+				
+			}
+			});
+		});
+		});
+  	</script>
+  
+
+</body>
+
+</html>
