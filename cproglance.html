@@ -52,6 +52,7 @@
 		--room-1102-2-color: rgb(193, 132, 53);
 
 		--room-1104-color:  #6a96c2;
+		--room-1104-2-color: #567ca1;
 
 		--room-1105-color: #bdb2ff;
 
@@ -59,7 +60,12 @@
 		--room-905-2-color: rgb(51, 196, 249);
 		--room-905-3-color: rgb(91, 209, 252);
 		
-		--room-_-color: rgba(255, 192, 0, 0.95);
+		--room-906-color: rgba(255, 192, 0, 0.95);
+		--room-906-2-color: rgba(255, 207, 61, 0.95);
+		--room-906-3-color: rgba(250, 215, 108, 0.95);
+
+		--room-_-color: rgba(220, 158, 126, 0.75); 
+
 	}
 
 	.legend p {
@@ -112,6 +118,10 @@
 		background-color: var(--room-1104-color);
 		font-weight: 600;
 	}
+	.room-1104-2-session{ 
+		background-color: var(--room-1104-2-color);
+		font-weight: 600;
+	}
 	.room-1105-session {
 		background-color: var(--room-1105-color);
 		font-weight: 600;
@@ -126,6 +136,18 @@
 	}
 	.room-905-3-session {
 		background-color: var(--room-905-3-color);
+		font-weight: 600;
+	}
+	.room-906-session {
+		background-color: var(--room-906-color);
+		font-weight: 600;
+	}
+	.room-906-2-session {
+		background-color: var(--room-906-2-color);
+		font-weight: 600;
+	}
+	.room-906-3-session {
+		background-color: var(--room-906-3-color);
 		font-weight: 600;
 	}
 	.room-_-session {
@@ -460,8 +482,19 @@
 		</header>
 
 		<div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
-			<h1><b>Conference Program</b></h1>
+        <b>
+          <p style="color: red; font-size: 1.25em;">NOTES:</p>
+		  <p style="color: red; font-size: 1.25em;">1. There have been some paper author/title changes that were not present in the program (the program still had the old versions).</p>
+		  <p style="color: red; font-size: 1.25em;">2. Paper "Mitigating TEE Risks in a Verifiable DEX: Diversity, Ownership Assurance, and ZK Proofs" has been withdrawn but was still in the program.</p>
+          <p style="color: red; font-size: 1.25em;">3. Swapped Industry 3 and 4 with 5 and 6 in order to have the sessions with only 3 papers in shorter slots.</p>
+		  <p style="color: red; font-size: 1.25em;">4. We need one more room for the workshops.</p>
+		  <p style="color: red; font-size: 1.25em;">5. We need the actual workshop program.</p>
+		  <p style="color: red; font-size: 1.25em;">6. Did the reshufling to allow for three shorter research questions on Thursday 4-5:10PM. Left the session number the same for now to make it easier to understand what was the original assignment. New session (with currently no papers) was named "RS NEW".</p>
+		  <p style="color: red; font-size: 1.25em;">7. Will update the papers in each RS as soon as I get that information.</p>		  
+		</b>
+      </p>
 
+			<h1><b>Conference Program</b></h1>
 
 			<ul class="nav nav-tabs" id="program-tab" role="tablist">
 				<li class="nav-item" role="presentation">
@@ -495,6 +528,7 @@
 								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
 								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
 								<td class="td-3 room-905-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 905</td>
+								<td class="td-3 room-906-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 906</td>
                                 <td class="td-3 room-_-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room ?</td>
 
 							</tr>
@@ -506,11 +540,12 @@
 								<td class="td-1"><span class="">9:00 - 10:30</span></td>
 								
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_1"><b>RASACC 1</b></td>
-								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_1"><b>FORCE 1</b></td>
-								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_1"><b>CRAI+RASACC 1</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_1"><b>DSML 1</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_1"><b>FORCE 1</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_1"><b>CRAI+RASACC 1</b></td>
 								
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
-								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
+								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
 								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
 
 								
@@ -523,10 +558,11 @@
 								<td class="td-1"><span class="">11:00 - 12:30</span></td>
 								
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_2"><b>RASACC 2</b></td>
-								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_2"><b>FORCE 2</b></td>
-								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_2"><b>CRAI + RASACC 2</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
-								<td class="td-3 room-905-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 3</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_2"><b>DSML 2</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_2"><b>FORCE 2</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_2"><b>CRAI + RASACC 2</b></td>
+								<td class="td-3 room-905-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 room-906-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 3</b></td>
 								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
 
 							</tr>
@@ -540,11 +576,12 @@
 								<td class="td-1"><span class="">14:00 - 15:30</span></td>
 								
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_3"><b>RASACC 3</b></td>
-								<td class="td-3 room-1102-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_1"><b>DSAS + DT4DRS</b></td>
-								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_3"><b>CRAI + RASACC 3</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_3"><b>DSML 3</b></td>
+								<td class="td-3 room-1104-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_1"><b>DSAS + DT4DRS 1</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_3"><b>CRAI + RASACC 3</b></td>
 
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
-								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
+								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
+								<td class="td-3 room-906-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
 								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>
 
 								
@@ -559,11 +596,12 @@
 								<td class="td-1"><span class="">16:00 - 17:30</span></td>
 								
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="RASACC_4"><b>RASACC 4</b></td>
-								<td class="td-3 room-1102-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_2"><b>DSAS + DT4DRS</b></td>
-								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_4"><b>CRAI + RASACC 4</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_4"><b>DSML 4</b></td>
+								<td class="td-3 room-1104-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_2"><b>DSAS + DT4DRS 2</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_4"><b>CRAI + RASACC 4</b></td>
 
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
-								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
+								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
+								<td class="td-3 room-906-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
 								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>								
 
 							</tr>								
@@ -610,6 +648,38 @@
 						</ul>
 					</div>
 					
+					<div class="session" id="DSML_1">
+						<h6>DSML 1: TBD at <i>Room 1102, 9:00 - 10:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li> 
+						</ul>
+					</div>
+					
+					<div class="session" id="DSML_2">
+						<h6>DSML 2: TBD at <i>Room 1102, 11:00 - 12:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="DSML_3">
+						<h6>DSML 3: TBD at <i>Room 1102, 14:00 - 15:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+					
+					<div class="session" id="DSML_4">
+						<h6>DSML 4: TBD at <i>Room 1102, 16:00 - 17:30, June 22</i></h6>
+						<ul>
+							<li><b>Session Chair:</b> TBD</li>
+							<li><b>TBD</b></li>
+						</ul>
+					</div>
+
 					<div class="session" id="FORCE_1">
 						<h6>FORCE 1: TBD at <i>Room 1102, 9:00 - 10:30, June 22</i></h6>
 						<ul>
@@ -677,28 +747,28 @@
 					
 
 					<div class="session" id="T1">
-						<h6>Tutorial 1: at <i>Room 1105, 09:00 - 17:30, June 22</i></h6>
+						<h6>Tutorial 1: at <i>Room 905, 09:00 - 17:30, June 22</i></h6>
 						<ul>
 							<li><b>RESIST: Resilience against Silent Silicon Threats - A Cross-Layer Perspective</b> by Peter W. Deutsch (MIT), Vincent Quentin Ulitzsch (MIT), Mengjia Yan (MIT), Sudhanva Gurumurthi (AMD), Vilas Sridharan (AMD), Harish Dixit (Meta), Sriram Sankar (Meta)</li>
 						</ul>
 					</div>
 					
 					<div class="session" id="T2">
-						<h6>Tutorial 2: at <i>Room 905, 09:00 - 10:30, June 22</i></h6>
+						<h6>Tutorial 2: at <i>Room 906, 09:00 - 10:30, June 22</i></h6>
 						<ul>
 							<li><b>Fault Injection for ML Applications: From DNNs to LLMs</b> by Karthik Pattabiraman (Univ. of British Columbia), Bo Fang (Univ. of Texas, Arlington), Lishan Yang (George Mason Univ.), Abraham Chan (Univ. of British Columbia), Yu Sun (George Mason University)</li>
 						</ul>
 					</div>
 					
 					<div class="session" id="T3">
-						<h6>Tutorial 3: at <i>Room 905, 11:00 - 12:30, June 22</i></h6>
+						<h6>Tutorial 3: at <i>Room 906, 11:00 - 12:30, June 22</i></h6>
 						<ul>
 							<li><b>Evaluating Blockchain Fault Tolerance with STABL</b> by Vincent Gramoli (University of Sydney and Redbelly Network, Australia), Rachid Guerraoui (EPFL, Switzerland), Andrei Lebedev (University of Sydney, Australia), Gauthier Voron (EPFL, Switzerland)</li>
 						</ul>
 					</div>
 					
 					<div class="session" id="T4">
-						<h6>Tutorial 4: at <i>Room 905, 14:00 - 17:30, June 22</i></h6>
+						<h6>Tutorial 4: at <i>Room 906, 14:00 - 17:30, June 22</i></h6>
 						<ul>
 							<li><b>Securing Your Airspace: The Interplay Between Cybersecurity, Sensing, and Safety</b> by Alireza Famili (WayWave Inc), Amir Fakhim Babaei (WayWave Inc), Tolga O. Atalay (A2 Labs LLC), Angelos Stavrou (WayWave Inc, A2 Labs LLC, Virginia Tech, Arlingto)</li>
 						</ul>
@@ -751,7 +821,7 @@
 							</tr>
 							<tr>
 								<td class="td-1"><span class="">11:00 - 12:30</span></td>
-								<td class="td-2 auditorium-session session-cell" colspan="5" data-target="RS1"><b>RS1 - Best Paper (3 talks)</b></td>
+								<td class="td-2 auditorium-session session-cell" colspan="5" data-target="RS1"><b>RS1 - Best Paper</b></td>
 
 								</td>
 							</tr>
@@ -800,7 +870,7 @@
 						<p><b>Speakers:</b> ??</p>
 					</div>
 					<div class="session" id="opening">
-						<h6>Test of Time (TOT) Award, at <i>TBD, 09:15 - 09:45, June 23</i></h6>
+						<h6>Test of Time (TOT) Award, at <i>Auditorium, 09:15 - 09:45, June 23</i></h6>
 						<p><b>Session Chair:</b> TBD</p>
 						<ul>
 							<li><b>Targeted Attacks on Teleoperated Surgical Robots: Dynamic Model-Based Detection and Mitigation</b> by Homa Alemzadeh, Daniel Chen, Xiao Li, Thenkurussi Kesavadas, Zbigniew T. Kalbarczyk, Ravishankar K. Iyer</li>
@@ -813,7 +883,7 @@
 						<h6>Keynote 1, at <i>Auditorium, 9:45 - 10:30, June 23</i></h6>
 						<p><b>Session Chair:</b> TBD</p>
 						<ul>
-							<li><b>The AI Paradox: Between Global Power, Technology Sourcing, Errors and (De)regulation Shifts</b> by Roberto Baldoni (Senior Advisor for Technology and Cybersecurity Policy, Embassy of Italy in Washington DC)</li>
+							<li><b>On the Dependability of ML for Security-Related Tasks</b> by Michael Reiter</li>
 						</ul>
 					</div>
 					
@@ -982,7 +1052,7 @@
 								<td class="td-1"><span class="">14:00 - 15:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS8"><b>RS8</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS9"><b>RS9</b></td>
-								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="doctoral_1"><b>Doctoral Forum 1</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="RS14"><b>RS14</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I4"><b>Industry 4</b></td>
 								<!---<td class="td-3 wdmd session-cell" rowspan="1" colspan="1" data-target="WDMD_3"><b>PC Chairs Meeting</b></td>!-->
 							</tr>
@@ -996,7 +1066,7 @@
 								<td class="td-1"><span class="">16:00 - 17:10</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS10"><b>RS10</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS11"><b>RS11</b></td>
-								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="doctoral_2"><b>Doctoral Forum 2</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="RSNEW"><b>RS NEW</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I5"><b>Industry 5</b></td>
 
 							</tr>
@@ -1077,6 +1147,17 @@
 							<li><b>An (m,k)-firm Elevation Policy for Weakly Hard Real-Time in Converged 5G-TSN Networks</b> by Yongle Chen (Taiyuan University of Technology); Simon Egger, Robin Laidig, Heiko Geppert, Lucas Haug, Jona Herrmann, Frank Dürr, Christian Becker (University of Stuttgart)</li>
 						</ul>
 					</div>
+
+					  <div class="session" id="RS14">
+						<h6>RS14: Distributed Protocols, at <i>Room 1104, 11:00 - 12:30, June 25</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>FORTIHTLC: Because a Atomic Swap Must Resist Bribery Attacks</b> by Nitin Awathare (Indian Institute of Technology, Jodhpur)</li>
+						  <li><b>Efficient Merkle-Tree Consistent Accumulator</b> by Anna Mendonca, Hudson Shi, Triet (PJ) Huynh (University of Connecticut); Ivan Pryvalov (Brandenburg University of Technology)</li>
+						  <li><b>Robust and Automated Reconfiguration of Byzantine Wide-Area Replication</b> by Rowdy Chotkan, Bulat Nasrulin, Johan Pouwelse, Jérémie Decouchant (Delft University of Technology)</li>
+						  <li><b>Fault-tolerant and Self-recovering Sharing of Multicast Transmission</b> by Sinchan Sengupta (LS2N, Nantes Université); Arannya Mukherjee (Adhrith AI); Matthieu Perrin (LS2N)</li>
+						</ul>
+					  </div>
 					  
 					  
 					  <div class="session" id="RS10">
@@ -1101,6 +1182,14 @@
 						</ul>
 					  </div>
 
+					  <div class="session" id="RSNEW">
+						<h6>RS NEW: TBD, at <i>Room 1104, 16:00 - 17:10, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li>TBD</li>
+						</ul>
+					  </div>
+
 					  <div class="session" id="DISRUPT_2">
 						<h6>Disrupt 2: Security and Resilience in Emerging Computing Paradigms, at <i>Aula A (Centro Congressi), 11:00 - 12:30, June 24</i></h6>
 						<p><b>Session Chair:</b> TBD</p>
@@ -1111,55 +1200,9 @@
 						  <li><b>In-DRAM Signature Generation Using Simultaneous Multiple-Row Activation: An Experimental Study of Off-The-Shelf DRAM Chips</b> by Umut Başer, İsmail Emir Yüksel, F. Nisa Bostancı, Konstantinos Sgouras, Ataberk Olgun, Emre Hakan Demirli, Zhiheng Yue, Harsh Songara, Oğuz Ergin and Onur Mutlu</li>
 						</ul>
 					  </div>
-
-
-					  <div class="session" id="doctoral_1">
-						<h6>Doctoral Forum 1: AI/ML Dependability and Security, at <i>Room 1104, 14:00 - 15:30, June 24</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
-						<ul>
-						  
-						  <li><b>Location-Aware Prompt Injection in Semantically Routed Multi-Agent Systems</b> by Jean Tonday Rodriguez, Muhammad Nadeem and Mohammad Ashiqur Rahman</li>
-						  <li><b>Bridging the Research-Implementation Gap in Dependable Federated Learning with Autonomous Multi-Agent Orchestration</b> by Raman Zatsarenko and Leon Reznik</li> 
-						  <li><b>Automating Research and Development of Dependable Federated Learning Systems</b> by Dmitrii Korobeinikov and Leon Reznik</li>
-						  <li><b>Data Quality and Fairness in Federated Learning</b> by James Edward Sudlow and Sara Bouchenak</li>
-						  <li><b>Agentic Reinforcement Learning for Adaptive Moving Target Defense in Cyber-Physical Systems</b> by Mohammad Zakaria Haider and Mohammad Ashiqur Rahman</li>
-						</ul>
-					  </div>					  
-
-					  <div class="session" id="doctoral_2">
-						<h6>Doctoral Forum 2: Security and Reliability of Networked Systems, at <i>Room 1104, 16:00 - 17:30, June 24</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
-						<ul>
-							<li><b>Securing Blockchain Applications by Transaction Analysis</b> by Rui Xi</li>
-							<li><b>Dynamic Wakeup with Collision Costs</b> by Umesh Biswas and Maxwell Young</li>
-							<li><b>Contention Resolution with Evictions</b> by Umesh Biswas, Vini Chaudhary, Shafqat Hasan and Maxwell Young</li>						  
-						  	<li><b>Dependable Real-Time Guarantees in Converged 5G and Time-Sensitive Networks</b> by Simon Egger, Frank Dürr and Christian Becker</li>
-						  	<li><b>Balancing Mutation Entropy and Session Continuity in SDN-Based Moving Target Defense</b> by Souhail Chakkour, Umesh Biswas and Charan Gudla</li>
-						</ul>
-					  </div>
 					
 					  <div class="session" id="I3">
 						<h6>Industry 3: Critical Systems and Sensors, at <i>Room 1105, 11:00 - 12:30, June 24</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
-						<ul>
-						  <li><b>A Configurable Logic Architecture Based on Micro-Electromechanical Relays for Nuclear Power Safety Systems</b> by Coby Cockrell, Aidan Collins, Ben Smith, Umit Ozgur, Vitaliy Avrutin, Matt Gibson, Abhi Rajagopala, Carl Elks</li>
-						  <li><b>A Polyglot OpenTelemetry Framework for Cloud-Native Reliability and Performance Engineering in Connected-Vehicle Platforms</b> by Gaurav Saxena, Niladri Bihari Mohanty</li>						  
-						  <li><b>CRISP: End-to-End Fingerprint Recognition Leveraging Hardware-Anchored Liveness Detection</b> by Subin Ki, Kyuseung Han, Hyuk Kim, Taewook Kang, Kwang-Il Oh, Hyeonguk Jang, Sukho Lee, Jae-Jin Lee, Jaehyoung Lee, Woojoo Lee, Jinho Lee</li>
-						</ul>
-					  </div>
-					  
-					  <div class="session" id="I4">
-						<h6>Industry 4: Smart Contracts and Blockchain, at <i>Room 1105, 14:00 - 15:30, June 24</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
-						<ul>
-						  <li><b>Cross-Referencing Whitepaper Claims and Smart Contract Code for Automated ICO Auditing</b> by Chenglong Fu, Chi Zhang, Mengtian Li</li>
-						  <li><b>Structural Compliance, Governed Adaptation: Dependable Evolution in the ePayroll Governmental Blockchain Platform</b> by Attila Klenik, Imre Kocsis, Sándor Pap, Péter Tóth, László Gönczy, Ferenc Vágujhelyi, András Pataricza</li>
-						  <li><b>VeriExist: Blockchain-Assisted Existence-Verifiable Protocol in User-Centric Data Sharing</b> by Rui Han, Weizhong Qiang, Weijie Chen, Yulin Tang</li>
-						</ul>
-					  </div>
-
-					  <div class="session" id="I5">
-						<h6>Industry 5: Processors and Memories, at <i>Room 1105, 16:00 - 17:10, June 24</i></h6>
 						<p><b>Session Chair:</b> TBD</p>
 						<ul>
 						  <li><b>Harpocrates-in-action: Using Simulation-based Functional Test Programs to Catch Marginal Defects in CPUs</b> by Nikos Karystinos, Odysseas Chatzopoulos, Dimitris Gizopoulos, Ashish Kumar, Sankar Gurumurthy, Sudhanva Gurumurthi, Vilas Sridharan</li>
@@ -1167,6 +1210,28 @@
 						  <li><b>Enterprise-Scale RAS in IBM Z Memory Subsystem</b> by Patrick Meaney, David Cadigan, Gary Van Huben, Stephen Powell, Kelvin Wong, Colleen Weller, Gary Tressler, Hailey Nicholson, Marc Gollub, Alper Buyuktosunoglu</li>
 						  <li><b>HBM Errors at Scale: An Industrial Study</b> by Shreya Varshini, Qintian Huang, Xun Jiao, Mihir Patel, Abhinav Pandey, Fred Lin</li>
 						  <li><b>Redefining Page Offlining: Real-World Memory Failure Modes with Preemptive Strategies</b> by Ankit Saxena, Jongmin Lee, Youngwook Ko, Stuti Patel, Grant Gambetta, Dankyu Kang, Yoon Kim, Ilgyu Jung, Paul Cho</li>
+						</ul>
+					  </div>
+					  
+					  <div class="session" id="I4">
+						<h6>Industry 4: Smart Contracts and Blockchain, at <i>Room 1105, 14:00 - 15:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>Decentralized Root Cause Analysis for Cloud-Native Microservices: Experience with Distributed PageRank in Production</b> by Shabbir Hussain, Hari Charan Panjwani</li>
+						  <li><b>PeerLumen: A Bitcoin P2P Honeypot Telescope</b> by Wenjun Fan, Fei Du, Jungho Kim, and Sang-Yoon Chang</li>
+						  <li><b>SNAS: A Multi-Layer Defense-in-Depth Architecture for Secure Egress in Sandboxed Workloads</b> by Niranjan Kumar Sharma, S Muralidhar, Samy Boshra-Riad, Mike Halcrow, Yuxiong He, Nitya Kumar Sharma, Shawn Xia, Haowei Yu, Elliott Brossard, Derek Denny-Brown, Choden Konigsmark, Chenwei Xie, Bhanu Prakash, Brandon Baker, Andong Zhan</li>
+						  <li><b>An IPsec Tunnel Recovery Protocol to Overcome QKD Key desynchronization</b> by Hong-Sung Kim, Hyong-Shik Kim</li>
+						  <li><b>Preventing Cross-Domain Resource Abuse in MCP</b> by Shriti Priya, Teryl Taylor, Frederico Araujo</li>
+						</ul>
+					  </div>
+
+					  <div class="session" id="I5">
+						<h6>Industry 5: Processors and Memories, at <i>Room 1105, 16:00 - 17:10, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  <li><b>A Configurable Logic Architecture Based on Micro-Electromechanical Relays for Nuclear Power Safety Systems</b> by Coby Cockrell, Aidan Collins, Ben Smith, Umit Ozgur, Vitaliy Avrutin, Matt Gibson, Abhi Rajagopala, Carl Elks</li>
+						  <li><b>A Polyglot OpenTelemetry Framework for Cloud-Native Reliability and Performance Engineering in Connected-Vehicle Platforms</b> by Gaurav Saxena, Niladri Bihari Mohanty</li>						  
+						  <li><b>CRISP: End-to-End Fingerprint Recognition Leveraging Hardware-Anchored Liveness Detection</b> by Subin Ki, Kyuseung Han, Hyuk Kim, Taewook Kang, Kwang-Il Oh, Hyeonguk Jang, Sukho Lee, Jae-Jin Lee, Jaehyoung Lee, Woojoo Lee, Jinho Lee</li>
 						</ul>
 					  </div>
 
@@ -1207,7 +1272,7 @@
 								<td class="td-1"><span class="">11:00 - 12:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS12"><b>R12</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS13"><b>RS13</b></td>
-								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="RS14"><b>RS14</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="doctoral_1"><b>Doctoral Forum 1</b></td>
 								<td class="td-2 it-session session-cell" rowspan="1" data-target="I6"><b>Industry 6</b></td>
 
 							</tr>
@@ -1220,6 +1285,7 @@
 								<td class="td-1"><span class="">14:00 - 15:30</span></td>
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS15"><b>RS15</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS16"><b>RS16</b></td>
+								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="doctoral_2"><b>Doctoral Forum 2</b></td>
 							</tr>													
 						
 							<tr>
@@ -1277,18 +1343,6 @@
 						  <li><b>Whiplash on the Grid: Emulation of a Cyber-Physical Attack Misusing Inverter-Based Resources in a Distribution Grid (Practical Experience Report)</b> by Arman A. Attar, Kaibin Bao (Karlsruhe Institute of Technology); Oliver Gehrke, Kai Heussen (Technical University of Denmark)</li>
 						</ul>
 					  </div>
-
-
-					<div class="session" id="RS14">
-						<h6>RS14: Distributed Protocols, at <i>Room 1104, 11:00 - 12:30, June 25</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
-						<ul>
-						  <li><b>FORTIHTLC: Because a Atomic Swap Must Resist Bribery Attacks</b> by Nitin Awathare (Indian Institute of Technology, Jodhpur)</li>
-						  <li><b>Efficient Merkle-Tree Consistent Accumulator</b> by Anna Mendonca, Hudson Shi, Triet (PJ) Huynh (University of Connecticut); Ivan Pryvalov (Brandenburg University of Technology)</li>
-						  <li><b>Robust and Automated Reconfiguration of Byzantine Wide-Area Replication</b> by Rowdy Chotkan, Bulat Nasrulin, Johan Pouwelse, Jérémie Decouchant (Delft University of Technology)</li>
-						  <li><b>Fault-tolerant and Self-recovering Sharing of Multicast Transmission</b> by Sinchan Sengupta (LS2N, Nantes Université); Arannya Mukherjee (Adhrith AI); Matthieu Perrin (LS2N)</li>
-						</ul>
-					  </div>
 					  
 					  <div class="session" id="RS15">
 						<h6>RS15: AI-Driven Security Analysis, at <i>Auditorium, 14:00 - 15:30, June 25</i></h6>
@@ -1319,11 +1373,34 @@
 						<h6>Industry 6: Distributed Systems and Networks, at <i>Room 1105, 11:00 - 12:30, June 25</i></h6>
 						<p><b>Session Chair:</b> TBD</p>
 						<ul>
-						  <li><b>Decentralized Root Cause Analysis for Cloud-Native Microservices: Experience with Distributed PageRank in Production</b> by Shabbir Hussain, Hari Charan Panjwani</li>
-						  <li><b>PeerLumen: A Bitcoin P2P Honeypot Telescope</b> by Wenjun Fan, Fei Du, Jungho Kim, and Sang-Yoon Chang</li>
-						  <li><b>SNAS: A Multi-Layer Defense-in-Depth Architecture for Secure Egress in Sandboxed Workloads</b> by Niranjan Kumar Sharma, S Muralidhar, Samy Boshra-Riad, Mike Halcrow, Yuxiong He, Nitya Kumar Sharma, Shawn Xia, Haowei Yu, Elliott Brossard, Derek Denny-Brown, Choden Konigsmark, Chenwei Xie, Bhanu Prakash, Brandon Baker, Andong Zhan</li>
-						  <li><b>An IPsec Tunnel Recovery Protocol to Overcome QKD Key desynchronization</b> by Hong-Sung Kim, Hyong-Shik Kim</li>
-						  <li><b>Preventing Cross-Domain Resource Abuse in MCP</b> by Shriti Priya, Teryl Taylor, Frederico Araujo</li>
+						  <li><b>Cross-Referencing Whitepaper Claims and Smart Contract Code for Automated ICO Auditing</b> by Chenglong Fu, Chi Zhang, Mengtian Li</li>
+						  <li><b>Structural Compliance, Governed Adaptation: Dependable Evolution in the ePayroll Governmental Blockchain Platform</b> by Attila Klenik, Imre Kocsis, Sándor Pap, Péter Tóth, László Gönczy, Ferenc Vágujhelyi, András Pataricza</li>
+						  <li><b>VeriExist: Blockchain-Assisted Existence-Verifiable Protocol in User-Centric Data Sharing</b> by Rui Han, Weizhong Qiang, Weijie Chen, Yulin Tang</li>
+						</ul>
+					  </div>
+
+					  <div class="session" id="doctoral_1">
+						<h6>Doctoral Forum 1: AI/ML Dependability and Security, at <i>Room 1104, 14:00 - 15:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+						  
+						  <li><b>Location-Aware Prompt Injection in Semantically Routed Multi-Agent Systems</b> by Jean Tonday Rodriguez, Muhammad Nadeem and Mohammad Ashiqur Rahman</li>
+						  <li><b>Bridging the Research-Implementation Gap in Dependable Federated Learning with Autonomous Multi-Agent Orchestration</b> by Raman Zatsarenko and Leon Reznik</li> 
+						  <li><b>Automating Research and Development of Dependable Federated Learning Systems</b> by Dmitrii Korobeinikov and Leon Reznik</li>
+						  <li><b>Data Quality and Fairness in Federated Learning</b> by James Edward Sudlow and Sara Bouchenak</li>
+						  <li><b>Agentic Reinforcement Learning for Adaptive Moving Target Defense in Cyber-Physical Systems</b> by Mohammad Zakaria Haider and Mohammad Ashiqur Rahman</li>
+						</ul>
+					  </div>
+
+					  <div class="session" id="doctoral_2">
+						<h6>Doctoral Forum 2: Security and Reliability of Networked Systems, at <i>Room 1104, 16:00 - 17:30, June 24</i></h6>
+						<p><b>Session Chair:</b> TBD</p>
+						<ul>
+							<li><b>Securing Blockchain Applications by Transaction Analysis</b> by Rui Xi</li>
+							<li><b>Dynamic Wakeup with Collision Costs</b> by Umesh Biswas and Maxwell Young</li>
+							<li><b>Contention Resolution with Evictions</b> by Umesh Biswas, Vini Chaudhary, Shafqat Hasan and Maxwell Young</li>						  
+						  	<li><b>Dependable Real-Time Guarantees in Converged 5G and Time-Sensitive Networks</b> by Simon Egger, Frank Dürr and Christian Becker</li>
+						  	<li><b>Balancing Mutation Entropy and Session Continuity in SDN-Based Moving Target Defense</b> by Souhail Chakkour, Umesh Biswas and Charan Gudla</li>
 						</ul>
 					  </div>
 
