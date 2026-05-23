@@ -56,15 +56,15 @@
 
 		--room-1105-color: #bdb2ff;
 
-		--room-905-color: rgba(0,176,240);
-		--room-905-2-color: rgb(51, 196, 249);
-		--room-905-3-color: rgb(91, 209, 252);
+		--room-904-color: rgba(0,176,240);
+		--room-904-2-color: rgb(51, 196, 249);
+		--room-904-3-color: rgb(91, 209, 252);
 		
-		--room-906-color: rgba(255, 192, 0, 0.95);
-		--room-906-2-color: rgba(255, 207, 61, 0.95);
-		--room-906-3-color: rgba(250, 215, 108, 0.95);
+		--room-905-color: rgba(255, 192, 0, 0.95);
+		--room-905-2-color: rgba(255, 207, 61, 0.95);
+		--room-905-3-color: rgba(250, 215, 108, 0.95);
 
-		--room-_-color: rgba(220, 158, 126, 0.75); 
+		--room-906-color: rgba(220, 158, 126, 0.75); 
 
 	}
 
@@ -126,6 +126,18 @@
 		background-color: var(--room-1105-color);
 		font-weight: 600;
 	}
+	.room-904-session {
+		background-color: var(--room-904-color);
+		font-weight: 600;
+	}
+	.room-904-2-session {
+		background-color: var(--room-904-2-color);
+		font-weight: 600;
+	}
+	.room-904-3-session {
+		background-color: var(--room-904-3-color);
+		font-weight: 600;
+	}
 	.room-905-session {
 		background-color: var(--room-905-color);
 		font-weight: 600;
@@ -140,18 +152,6 @@
 	}
 	.room-906-session {
 		background-color: var(--room-906-color);
-		font-weight: 600;
-	}
-	.room-906-2-session {
-		background-color: var(--room-906-2-color);
-		font-weight: 600;
-	}
-	.room-906-3-session {
-		background-color: var(--room-906-3-color);
-		font-weight: 600;
-	}
-	.room-_-session {
-		background-color: var(--room-_-color);
 		font-weight: 600;
 	}
 	.auditorium-session {
@@ -484,8 +484,7 @@
 		<div class="w3-container w3-padding-large" style="margin-bottom:32px; text-align:justify">
         <b>
           <p style="color: red; font-size: 1.25em;">NOTES:</p>
-		  <p style="color: red; font-size: 1.25em;">1. We need one more room for the workshops.</p>
-		  <p style="color: red; font-size: 1.25em;">2. We need the actual workshop program.</p>
+		  <p style="color: red; font-size: 1.25em;">1. We need the actual workshop program.</p>
 		</b>
       </p>
 
@@ -522,9 +521,9 @@
 								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
 								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
 								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+								<td class="td-3 room-904-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 904</td>
 								<td class="td-3 room-905-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 905</td>
-								<td class="td-3 room-906-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 906</td>
-                                <td class="td-3 room-_-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room ?</td>
+                                <td class="td-3 room-906-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 906</td>
 
 							</tr>
 							<tr>
@@ -534,14 +533,19 @@
 							<tr>
 								<td class="td-1"><span class="">9:00 - 10:30</span></td>
 								
-								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_1"><b>DSML 1</b></td>
+								<!---<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_1"><b>DSML 1</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_1"><b>HAP 1</b></td>
 								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_1"><b>FORCE 1</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_1"><b>CRAI+RASACC 1</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_1"><b>CRAI+RASACC 1</b></td>!--->
+
+								<td class="td-3 auditorium-session session-cell" rowspan="1" onclick="window.open('workshop_dsml.html', '_blank')" style="cursor:pointer;"><b>DSML 1</b></td>								
+								<td class="td-3 room-1102-session session-cell" rowspan="1" onclick="window.open('workshop_hap.html', '_blank')" style="cursor:pointer;"><b>HAP 1</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1"  onclick="window.open('workshop_force.html', '_blank')" style="cursor:pointer;"><b>FORCE 1</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" onclick="window.open('workshop_crai.html', '_blank')" style="cursor:pointer;"><b>CRAI+RASACC 1</b></td>
 								
-								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
-								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
-								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
+								<td class="td-3 room-904-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
+								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
 
 								
 							</tr>
@@ -552,13 +556,19 @@
 							<tr>
 								<td class="td-1"><span class="">11:00 - 12:30</span></td>
 								
-								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_2"><b>DSML 2</b></td>
+								<!---<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_2"><b>DSML 2</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_2"><b>HAP 2</b></td>
 								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_2"><b>FORCE 2</b></td>
 								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_2"><b>CRAI + RASACC 2</b></td>
-								<td class="td-3 room-905-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
-								<td class="td-3 room-906-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 3</b></td>
-								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
+								!-->
+								<td class="td-3 auditorium-session session-cell" rowspan="1" onclick="window.open('workshop_dsml.html', '_blank')" style="cursor:pointer;"><b>DSML 2</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" onclick="window.open('workshop_hap.html', '_blank')" style="cursor:pointer;"><b>HAP 2</b></td>
+								<td class="td-3 room-1104-session session-cell" rowspan="1" onclick="window.open('workshop_force.html', '_blank')" style="cursor:pointer;"><b>FORCE 2</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" onclick="window.open('workshop_crai.html', '_blank')" style="cursor:pointer;"><b>CRAI + RASACC 2</b></td>
+
+								<td class="td-3 room-904-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 3</b></td>
+								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 5</b></td>
 
 							</tr>
 							
@@ -570,14 +580,20 @@
 							<tr>
 								<td class="td-1"><span class="">14:00 - 15:30</span></td>
 								
-								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_3"><b>DSML 3</b></td>
+								<!--<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_3"><b>DSML 3</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_3"><b>HAP 3</b></td>
 								<td class="td-3 room-1104-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_1"><b>DSAS + DT4DRS 1</b></td>
 								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_3"><b>CRAI + RASACC 3</b></td>
+								!-->
 
-								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
-								<td class="td-3 room-906-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
-								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>
+								<td class="td-3 auditorium-session session-cell" rowspan="1" onclick="window.open('workshop_dsml.html', '_blank')" style="cursor:pointer;"><b>DSML 3</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" onclick="window.open('workshop_hap.html', '_blank')" style="cursor:pointer;"><b>HAP 3</b></td>
+								<td class="td-3 room-1104-2-session session-cell" rowspan="1" onclick="window.open('workshop_dsas.html', '_blank')" style="cursor:pointer;"><b>DSAS + DT4DRS 1</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" onclick="window.open('workshop_crai.html', '_blank')" style="cursor:pointer;"><b>CRAI + RASACC 3</b></td>
+
+								<td class="td-3 room-904-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
+								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>
 
 								
 							</tr>
@@ -590,14 +606,19 @@
 							<tr>
 								<td class="td-1"><span class="">16:00 - 17:30</span></td>
 								
-								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_4"><b>DSML 4</b></td>
+								<!--<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_4"><b>DSML 4</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_4"><b>HAP 4</b></td>
 								<td class="td-3 room-1104-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_2"><b>DSAS + DT4DRS 2</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_4"><b>CRAI + RASACC 4</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_4"><b>CRAI + RASACC 4</b></td>!-->
 
-								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
-								<td class="td-3 room-906-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
-								<td class="td-3 room-_-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>								
+								<td class="td-3 auditorium-session session-cell" rowspan="1" onclick="window.open('workshop_dsml.html', '_blank')" style="cursor:pointer;"><b>DSML 4</b></td>
+								<td class="td-3 room-1102-session session-cell" rowspan="1" onclick="window.open('workshop_hap.html', '_blank')" style="cursor:pointer;"><b>HAP 4</b></td>
+								<td class="td-3 room-1104-2-session session-cell" rowspan="1" onclick="window.open('workshop_dsas.html', '_blank')" style="cursor:pointer;"><b>DSAS + DT4DRS 2</b></td>
+								<td class="td-3 room-1105-session session-cell" rowspan="1" onclick="window.open('workshop_crai.html', '_blank')" style="cursor:pointer;"><b>CRAI + RASACC 4</b></td>
+
+								<td class="td-3 room-904-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
+								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 4</b></td>
+								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T6"><b>Tutorial 5</b></td>								
 
 							</tr>								
 							
@@ -610,6 +631,7 @@
 
 					<hr>
 					
+					<!---
 					<div class="session" id="DSML_1">
 						<h6>DSML 1: TBD at <i>Auditorium, 9:00 - 10:30, June 22</i></h6>
 						<ul>
@@ -739,38 +761,38 @@
 							<li><b>TBD</b></li>
 						</ul>
 					</div>
-					
+					!--->
 
 					<div class="session" id="T1">
-						<h6>Tutorial 1: at <i>Room 905, 09:00 - 17:30, June 22</i></h6>
+						<h6>Tutorial 1: at <i>Room 904, 09:00 - 17:30, June 22</i></h6>
 						<ul>
 							<li><b>RESIST: Resilience against Silent Silicon Threats - A Cross-Layer Perspective</b> by Peter W. Deutsch (MIT), Vincent Quentin Ulitzsch (MIT), Mengjia Yan (MIT), Sudhanva Gurumurthi (AMD), Vilas Sridharan (AMD), Harish Dixit (Meta), Sriram Sankar (Meta)</li>
 						</ul>
 					</div>
 					
 					<div class="session" id="T2">
-						<h6>Tutorial 2: at <i>Room 906, 09:00 - 10:30, June 22</i></h6>
+						<h6>Tutorial 2: at <i>Room 905, 09:00 - 10:30, June 22</i></h6>
 						<ul>
 							<li><b>Fault Injection for ML Applications: From DNNs to LLMs</b> by Karthik Pattabiraman (Univ. of British Columbia), Bo Fang (Univ. of Texas, Arlington), Lishan Yang (George Mason Univ.), Abraham Chan (Univ. of British Columbia), Yu Sun (George Mason University)</li>
 						</ul>
 					</div>
 					
 					<div class="session" id="T3">
-						<h6>Tutorial 3: at <i>Room 906, 11:00 - 12:30, June 22</i></h6>
+						<h6>Tutorial 3: at <i>Room 905, 11:00 - 12:30, June 22</i></h6>
 						<ul>
 							<li><b>Evaluating Blockchain Fault Tolerance with STABL</b> by Vincent Gramoli (University of Sydney and Redbelly Network, Australia), Rachid Guerraoui (EPFL, Switzerland), Andrei Lebedev (University of Sydney, Australia), Gauthier Voron (EPFL, Switzerland)</li>
 						</ul>
 					</div>
 					
 					<div class="session" id="T4">
-						<h6>Tutorial 4: at <i>Room 906, 14:00 - 17:30, June 22</i></h6>
+						<h6>Tutorial 4: at <i>Room 905, 14:00 - 17:30, June 22</i></h6>
 						<ul>
 							<li><b>Securing Your Airspace: The Interplay Between Cybersecurity, Sensing, and Safety</b> by Alireza Famili (WayWave Inc), Amir Fakhim Babaei (WayWave Inc), Tolga O. Atalay (A2 Labs LLC), Angelos Stavrou (WayWave Inc, A2 Labs LLC, Virginia Tech, Arlingto)</li>
 						</ul>
 					</div>
 					
 					<div class="session" id="T5">
-						<h6>Tutorial 5: at <i>Room ?, 09:00 - 17:30, June 22</i></h6>
+						<h6>Tutorial 5: at <i>Room 906, 09:00 - 17:30, June 22</i></h6>
 						<ul>
 							<li><b>Preventing Human Errors for Dependable Computer System Design</b> by Fuqun Huang (Western Washington University)</li>
 						</ul>
@@ -861,12 +883,12 @@
 					<hr>
 					<div class="session" id="opening">
 						<h6>Opening, at <i>Auditorium, 9:00 - 9:15, June 23</i></h6>
-						<p><b>Speakers:</b> Bojan Cukic and Marco Vieira, University of North Carolina at Charlotte</p>
-						<p><b>Speakers:</b> ??</p>
+						<p>Bojan Cukic and Marco Vieira (University of North Carolina at Charlotte)</p>
+						<p>Miguel P. Correia (University of Lisbon) and Lydia Y. Chen (University of Neuchatel / TU Delft)</p>
 					</div>
 					<div class="session" id="opening">
 						<h6>Test of Time (TOT) Award, at <i>Auditorium, 09:15 - 09:45, June 23</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Cristina Nita-Rotaru</p>
 						<ul>
 							<li><b>Targeted Attacks on Teleoperated Surgical Robots: Dynamic Model-Based Detection and Mitigation</b> by Homa Alemzadeh, Daniel Chen, Xiao Li, Thenkurussi Kesavadas, Zbigniew T. Kalbarczyk, Ravishankar K. Iyer</li>
 							<li><b>PARBOR: An Efficient System-Level Technique to Detect Data-Dependent Failures in DRAM</b> by Samira Khan, Donghyuk Lee, Onur Mutlu</li>							
@@ -876,7 +898,7 @@
 					
 					<div class="session" id="keynote1">
 						<h6>Keynote 1, at <i>Auditorium, 9:45 - 10:30, June 23</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Cristina Nita-Rotaru</p>
 						<ul>
 							<li><b>On the Dependability of ML for Security-Related Tasks</b> by Michael Reiter</li>
 						</ul>
@@ -884,7 +906,7 @@
 					
 					<div class="session" id="RS1">
 						<h6>RS1: Best Paper Candidates, at <i>Auditorium, 11:00 - 12:30, June 23</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Miguel Correia, Lydia Y. Chen</p>
 						<ul>
 							<li><b>PRAXIS: Integrating Program Analysis with Observability for Root-Cause Analysis</b> by Shengkun Cui, Ravishankar K. Iyer (UIUC); Rahul Krishna, Saurabh Jha (IBM Research)</li>
 							<li><b>Thinking Inside the Box: Injecting Realistic Radiation Faults in ML Accelerators</b> by Bruno Loureiro Coelho (University of Trento); Mani Sadati, Abraham Chan (University of British Columbia); Alex Hands (TRL)</li>
@@ -961,7 +983,7 @@
 
 					<div class="session" id="POSTER_PITCH_1">
 						<h6>Poster Pitch, at <i>Room 1104, 14:00 - 15:30, June 23</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> José D'Abruzzo Pereira, Chenglong Fu</p>
 						<ul>
 							<li><b>FGF: A Fact-Graph Feedback Loop Framework for Verifiable LLM-based Decision Making</b> by Subi Kim, Jimin Ryu, Jieun Kang, Yong Ik Yoon</li>
 							<li><b>Adaptive Symbolic Execution with LLMs for Evasive Malware Analysis</b> by Ajay Kumara Makanahalli Annaiah, Shahid Ali Lodin, William Setters<br></li>
@@ -986,7 +1008,7 @@
 					
 					<div class="session" id="DISRUPT_1">
 						<h6>Disrupt 1: Disruptive Distributed Systems and Networks, at <i>Room 1104, 16:00 - 17:30, June 23</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Elias Duarte</p>
 						<ul>
 							<li><b>Trust, but Verify: ByzTwin-Range, a Digital Twin Cyber-Range for Byzantine Faults</b> by Tadeu Freitas, João Soares and Rolando Martins</li>
 							<li><b>Taming the Airwaves: Resilient Spectrum Sharing with BFT</b> by Xiaoxuan Qin, Prashant Krishnamurthy and Amy Babay</li>
@@ -1084,7 +1106,7 @@
 					<hr>
 					<div class="session" id="JCL">
 						<h6>Jean-Claude Laprie (JCL) Award, at <i>Auditorium, 09:00 - 09:45, June 24</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Marco Vieira</p>
 						<ul>
 						  <li><b>Orthogonal Defect Classification – A Concept for In-Process Measurements</b> by Ram Chillarege, Inderpal S. Bhandari, Jarir K. Chaar, Michael J. Halliday, Diane S. Moebus, Bonnie K. Ray, and Man-Yuen Wong. <a href="https://doi.org/10.1109/32.177364" target="_blank">https://doi.org/10.1109/32.177364</a></li>
 						</ul>
@@ -1092,7 +1114,7 @@
 					  
 					<div class="session" id="keynote2">
 						<h6>Keynote 2, at <i>Auditorium, 09:45 - 10:30, June 24</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Marco Vieira</p>
 						<ul>
 						  <li><b>Robust Power Management in AI-Centric Systems</b> by Pradip Bose</li>
 						</ul>
@@ -1186,7 +1208,7 @@
 
 					  <div class="session" id="DISRUPT_2">
 						<h6>Disrupt 2: Security and Resilience in Emerging Computing Paradigms, at <i>Room 1104, 11:00 - 12:30, June 24</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Fumio Machida</p>
 						<ul>
 						  <li><b>Fast or Slow? Human-Inspired Self-Evolving Framework for Resilient AI Systems</b> byHaoran Qiu, Phuong Cao, Shengkun Cui, Archit Patke and Ravi Iyer</li>
 						  <li><b>RO: Reliable Orchestration of LLM Programs via Deterministic-Generative Separation</b> by Saurabh Jha</li>
@@ -1301,7 +1323,7 @@
 					<hr>
 					<div class="session" id="RS">
 						<h6>Award: Rising Star and William Carter, at <i>Auditorium, 09:00 - 09:45, June 25</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Cristina Nita-Rotaru</p>
 						<ul>
 						  <li><b>Rising Star:</b> Jianshan Yu (University of Sydney, Australia)</li>
 						  <li><b>William Carter:</b> “Software Solutions for Mitigating Physical  Attacks against Robotic Autonomous Vehicles” by Pritam Dash (University of British Columbia, Canada)</li>
@@ -1310,7 +1332,7 @@
 					
 					<div class="session" id="keynote3">
 						<h6>Keynote 3, at <i>Auditorium, 09:45 - 10:30, June 25</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Bojan Cukic</p>
 						<ul>
 						  <li><b>Self-Healing Mechanisms to Safeguard Critical Firmware Infrastructure</b> by Bernard McShea</li>
 						</ul>
@@ -1374,7 +1396,7 @@
 
 					  <div class="session" id="doctoral_1">
 						<h6>Doctoral Forum 1: AI/ML Dependability and Security, at <i>Room 1104, 11:00 - 12:30, June 25</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Ilir Gashi</p>
 						<ul>
 						  
 						  <li><b>Location-Aware Prompt Injection in Semantically Routed Multi-Agent Systems</b> by Jean Tonday Rodriguez, Muhammad Nadeem and Mohammad Ashiqur Rahman</li>
@@ -1387,7 +1409,7 @@
 
 					  <div class="session" id="doctoral_2">
 						<h6>Doctoral Forum 2: Security and Reliability of Networked Systems, at <i>Room 1104, 14:00 - 15:30, June 25</i></h6>
-						<p><b>Session Chair:</b> TBD</p>
+						<p><b>Session Chair:</b> Long Wang</p>
 						<ul>
 							<li><b>Securing Blockchain Applications by Transaction Analysis</b> by Rui Xi</li>
 							<li><b>Dynamic Wakeup with Collision Costs</b> by Umesh Biswas and Maxwell Young</li>
