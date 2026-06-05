@@ -54,7 +54,7 @@
 		--room-1104-color:  #6a96c2;
 		--room-1104-2-color: #567ca1;
 
-		--room-1105-color: #bdb2ff;
+		--room-1101-color: #bdb2ff;
 
 		--room-904-color: rgba(0,176,240);
 		--room-904-2-color: rgb(51, 196, 249);
@@ -123,8 +123,8 @@
 		background-color: var(--room-1104-2-color);
 		font-weight: 600;
 	}
-	.room-1105-session {
-		background-color: var(--room-1105-color);
+	.room-1101-session {
+		background-color: var(--room-1101-color);
 		font-weight: 600;
 	}
 	.room-904-session {
@@ -465,7 +465,116 @@
 	}
   </style>
 
-		
+<style>
+/* ================================
+   MOBILE RESPONSIVE — PROGRAM PAGE
+   ================================ */
+
+/* Allow horizontal scroll on tablets where table may overflow */
+.tab-pane {
+    overflow-x: auto;
+}
+
+#mobile-date-select-wrapper {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Show dropdown, hide tab buttons */
+    #mobile-date-select-wrapper {
+        display: block !important;
+        margin-bottom: 12px;
+    }
+    #program-tab {
+        display: none !important;
+    }
+    #mobile-date-select {
+        max-width: 100% !important;
+        width: 100% !important;
+        font-size: 1rem;
+        border: 2px solid #003366;
+        color: #003366;
+        font-weight: 600;
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 10px 12px;
+        margin-bottom: 16px;
+    }
+
+    /* ---- Table → stacked time-slot cards ---- */
+    .table-prog {
+        display: block;
+        box-shadow: none;
+        border-radius: 4px;
+        overflow: visible;
+    }
+    .table-prog tbody {
+        display: block;
+    }
+    /* Each time-slot row becomes a card */
+    .table-prog tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    /* Hide the column-header row (room names row) */
+    .table-prog tr:first-child {
+        display: none !important;
+    }
+    /* All cells become full-width blocks */
+    .table-prog td {
+        display: block;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        box-sizing: border-box;
+        text-align: left;
+        border: none;
+        border-top: 1px solid rgba(0,0,0,0.07);
+        padding: 8px 12px;
+    }
+    /* Time label becomes a dark header band */
+    .table-prog .td-1 {
+        background-color: #003366 !important;
+        color: #fff !important;
+        text-align: center !important;
+        font-size: 0.95rem;
+        font-weight: 700;
+        white-space: normal;
+        padding: 8px 12px;
+    }
+    /* Session cells full-width */
+    .session-cell {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+    }
+    /* Room label shown above session name via data attribute */
+    .session-cell[data-room]::before {
+        content: attr(data-room);
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 700;
+        color: rgba(0,0,0,0.45);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 2px;
+    }
+    /* Centre full-span cells (Registration, Lunch, Coffee Break) */
+    .table-prog td.tdbg,
+    .table-prog td.social-session {
+        text-align: center !important;
+    }
+    /* Hide empty placeholder cells */
+    .table-prog td.void-session {
+        display: none !important;
+    }
+}
+</style>
+
+
 
 <body class="w3-light-grey w3-content" style="max-width:1640px">
 
@@ -491,6 +600,17 @@
 			<h1><b>Conference Program</b></h1>
 
 			<p></p>
+
+			<!-- Mobile date selector (hidden on desktop via CSS) -->
+			<div id="mobile-date-select-wrapper">
+				<label for="mobile-date-select" style="font-weight:700; color:#003366; margin-bottom:6px; display:block;">Select Day:</label>
+				<select id="mobile-date-select">
+					<option value="day1-tab">Monday, June 22</option>
+					<option value="day2-tab">Tuesday, June 23</option>
+					<option value="day3-tab">Wednesday, June 24</option>
+					<option value="day4-tab">Thursday, June 25</option>
+				</select>
+			</div>
 
 			<ul class="nav nav-tabs" id="program-tab" role="tablist">
 				<li class="nav-item" role="presentation">
@@ -522,7 +642,7 @@
 								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
 								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
 								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
-								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+								<td class="td-3 room-1101-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1101</td>
 								<td class="td-3 room-904-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 904</td>
 								<td class="td-3 room-905-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 905</td>
                                 <td class="td-3 room-906-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 906</td>
@@ -538,7 +658,7 @@
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_1"><b>DSML 1</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_1"><b>HAP 1</b></td>
 								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_1"><b>FORCE 1</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_1"><b>CRAI+RASACC 1</b></td>	
+								<td class="td-3 room-1101-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_1"><b>CRAI+RASACC 1</b></td>	
 								<td class="td-3 room-904-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
 								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
 								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 4</b></td>
@@ -555,7 +675,7 @@
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_2"><b>DSML 2</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_2"><b>HAP 2</b></td>
 								<td class="td-3 room-1104-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="FORCE_2"><b>FORCE 2</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_2"><b>CRAI + RASACC 2</b></td>
+								<td class="td-3 room-1101-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_2"><b>CRAI + RASACC 2</b></td>
 								<td class="td-3 room-904-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
 								<td class="td-3 room-905-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T2"><b>Tutorial 2</b></td>
 								<td class="td-3 room-906-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 4</b></td>
@@ -573,7 +693,7 @@
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_3"><b>DSML 3</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_3"><b>HAP 3</b></td>
 								<td class="td-3 room-1104-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_1"><b>DSAS + DT4DRS 1</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_3"><b>CRAI + RASACC 3</b></td>
+								<td class="td-3 room-1101-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_3"><b>CRAI + RASACC 3</b></td>
 								<td class="td-3 room-904-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T4"><b>Tutorial 1</b></td>
 								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 3</b></td>
 								<td class="td-3 room-906-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 5</b></td>
@@ -592,7 +712,7 @@
 								<td class="td-3 auditorium-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSML_4"><b>DSML 4</b></td>
 								<td class="td-3 room-1102-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="HAP_4"><b>HAP 4</b></td>
 								<td class="td-3 room-1104-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="DSAS_DT4DRS_2"><b>DSAS + DT4DRS 2</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_4"><b>CRAI + RASACC 4</b></td>
+								<td class="td-3 room-1101-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="CRAI_RASACC_4"><b>CRAI + RASACC 4</b></td>
 								<td class="td-3 room-904-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T1"><b>Tutorial 1</b></td>
 								<td class="td-3 room-905-3-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T3"><b>Tutorial 3</b></td>
 								<td class="td-3 room-906-2-session session-cell" rowspan="1" data-bs-toggle="tooltip" data-target="T5"><b>Tutorial 5</b></td>								
@@ -731,7 +851,7 @@
 
 					
 					<div class="session" id="CRAI_RASACC_1">
-						<h6>CRAI + RASACC 1 at <i>Room 1105, 9:00 - 10:30, June 22</i></h6>
+						<h6>CRAI + RASACC 1 at <i>Room 1101, 9:00 - 10:30, June 22</i></h6>
 						<ul>
 							<li><b>Opening remarks</b></li>
 							<li><b>Keynote: Using Trusted Execution Environments to accelerate and reinforce blockchain consensus</b> by Jérémie Decouchant</li>
@@ -739,7 +859,7 @@
 					</div>
 					
 					<div class="session" id="CRAI_RASACC_2">
-						<h6>CRAI + RASACC 2: Foundations of Resilient Agentic Systems at <i>Room 1105, 11:00 - 12:30, June 22</i></h6>
+						<h6>CRAI + RASACC 2: Foundations of Resilient Agentic Systems at <i>Room 1101, 11:00 - 12:30, June 22</i></h6>
 						<ul>
 							<li><b>Automated Resilience Assessment for Autonomous System-based System-on-Chip Architectures</b> by Abigail Butka and Brian Butka</li>
 							<li><b> DisTrust: Adaptive Trust-Based Verification for Resilient Distributed Computation</b> by Fouad Afiouni, Saurabh Bagchi, and Aravind Machiry</li>
@@ -749,14 +869,14 @@
 					</div>
 					
 					<div class="session" id="CRAI_RASACC_3">
-						<h6>CRAI + RASACC 3 at <i>Room 1105, 14:00 - 15:30, June 22</i></h6>
+						<h6>CRAI + RASACC 3 at <i>Room 1101, 14:00 - 15:30, June 22</i></h6>
 						<ul>
 							<li><b>Keynote talk (TBD)</b></li>
 						</ul>
 					</div>
 					
 					<div class="session" id="CRAI_RASACC_4">
-						<h6>CRAI + RASACC 4: Secure and Adaptive Agentic Systems at <i>Room 1105, 16:00 - 17:30, June 22</i></h6>
+						<h6>CRAI + RASACC 4: Secure and Adaptive Agentic Systems at <i>Room 1101, 16:00 - 17:30, June 22</i></h6>
 						<ul>
 							<li><b>Multi-Agent-based Failure Recovery Planning for a Connected Vehicle Platform</b> by Aoi Matsuda, Ippo Hiroi, Fumio Machida, and Naohiro Ohtsuka</li>
 							<li><b>Composable Trust in Agentic AI: Bridging Architectural Capability and System-Level Assurance</b> by Omar Al-Refai, Ibrahim Shahbaz, and Eman Hammad</li>
@@ -813,7 +933,7 @@
 								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
 								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
 								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
-								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+								<td class="td-3 room-1101-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1101</td>
                                 
 							</tr>
 							
@@ -853,7 +973,7 @@
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS2"><b>RS2</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS3"><b>RS3</b></td>
 								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="POSTER_PITCH_1"><b>Poster Pitch</b></td>
-								<td class="td-2 room-1105-session session-cell" rowspan="1" data-target="I1"><b>Industry 1</b></td>
+								<td class="td-2 room-1101-session session-cell" rowspan="1" data-target="I1"><b>Industry 1</b></td>
 
 								
 							</tr>
@@ -867,7 +987,7 @@
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS4"><b>RS4</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS5"><b>RS5</b></td>
 								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="DISRUPT_1"><b>Disrupt 1</b></td>
-								<td class="td-2 room-1105-session session-cell" rowspan="1" data-target="I2"><b>Industry 2</b></td>
+								<td class="td-2 room-1101-session session-cell" rowspan="1" data-target="I2"><b>Industry 2</b></td>
 
 							</tr>																									
 						</tbody>
@@ -963,7 +1083,7 @@
 					</div>
 					
 					<div class="session" id="I1">
-						<h6>Industry 1: Distributed Systems and Networks, at <i>Room 1105, 14:00 - 15:30, June 23</i></h6>
+						<h6>Industry 1: Distributed Systems and Networks, at <i>Room 1101, 14:00 - 15:30, June 23</i></h6>
 						<p><b>Session Chair:</b> Rajarshi Chowdhury, Oracle America Inc</p>
 						<ul>
 						  <li><b>Decentralized Root Cause Analysis for Cloud-Native Microservices: Experience with Distributed PageRank in Production</b> by Shabbir Hussain, Hari Charan Panjwani</li>
@@ -975,7 +1095,7 @@
 					</div>
 
 					<div class="session" id="I2">
-						<h6>Industry 2: Processors and Memories, at <i>Room 1105, 16:00 - 17:30, June 23</i></h6>
+						<h6>Industry 2: Processors and Memories, at <i>Room 1101, 16:00 - 17:30, June 23</i></h6>
 						<p><b>Session Chair:</b> Jong Min Lee, Samsung Semiconductor Inc</p>
 						<ul>
 						  <li><b>Harpocrates-in-action: Using Simulation-based Functional Test Programs to Catch Marginal Defects in CPUs</b> by Nikos Karystinos, Odysseas Chatzopoulos, Dimitris Gizopoulos, Ashish Kumar, Sankar Gurumurthy, Sudhanva Gurumurthi, Vilas Sridharan</li>
@@ -1033,7 +1153,7 @@
 								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
 								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
 								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
-								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+								<td class="td-3 room-1101-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1101</td>
                                 
 							</tr>	
 							<tr>
@@ -1060,7 +1180,7 @@
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS6"><b>RS6</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS7"><b>RS7</b></td>
 								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="DISRUPT_2"><b>Disrupt 2</b></td>
-								<td class="td-3 room-1105-session session-cell" rowspan="1" data-target="I3"><b>Industry 3</b></td>
+								<td class="td-3 room-1101-session session-cell" rowspan="1" data-target="I3"><b>Industry 3</b></td>
 
 							</tr>
 							<tr>
@@ -1074,7 +1194,7 @@
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS8"><b>RS8</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS9"><b>RS9</b></td>
 								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="RS10"><b>RS10</b></td>
-								<td class="td-2 room-1105-session session-cell" rowspan="1" data-target="I4"><b>Industry 4</b></td>
+								<td class="td-2 room-1101-session session-cell" rowspan="1" data-target="I4"><b>Industry 4</b></td>
 								<!---<td class="td-3 wdmd session-cell" rowspan="1" colspan="1" data-target="WDMD_3"><b>PC Chairs Meeting</b></td>!-->
 							</tr>
 							
@@ -1088,7 +1208,7 @@
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS11"><b>RS11</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS12"><b>RS12</b></td>
 								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="RS13"><b>RS13</b></td>
-								<td class="td-2 room-1105-session session-cell" rowspan="1" data-target="I5"><b>Industry 5</b></td>
+								<td class="td-2 room-1101-session session-cell" rowspan="1" data-target="I5"><b>Industry 5</b></td>
 
 							</tr>
 							<tr>
@@ -1226,7 +1346,7 @@
 					  </div>
 					
 					  <div class="session" id="I3">
-						<h6>Industry 3: Security Threats and Countermeasures, at <i>Room 1105, 11:00 - 12:30, June 24</i></h6>
+						<h6>Industry 3: Security Threats and Countermeasures, at <i>Room 1101, 11:00 - 12:30, June 24</i></h6>
 						<p><b>Session Chair:</b> Niranjan Sharma, Snowflake Inc</p>
 						<ul>
 							<li><b>Knowledge Transfer from LLMs to Provenance Analysis: Semantic-Augmented APT Detection</b> by Fei Zuo, Junghwan Rhee, Yung Ryn Choe, Chung Hwan Kim</li>
@@ -1237,7 +1357,7 @@
 					  </div>
 					  
 					  <div class="session" id="I4">
-						<h6>Industry 4: Dependable AI and AI for Dependability, at <i>Room 1105, 14:00 - 15:30, June 24</i></h6>
+						<h6>Industry 4: Dependable AI and AI for Dependability, at <i>Room 1101, 14:00 - 15:30, June 24</i></h6>
 						<p><b>Session Chair:</b> Chung-Hsuan Tung, Duke University</p>
 						<ul>
 							<li><b>Harnessing Large Language Models for Seed Generation in Greybox Fuzzing</b> by Yunhang Zhang, Wenxuan Shi, Xinyu Xing, Jun Xu</li>
@@ -1249,7 +1369,7 @@
 					  </div>
 
 					  <div class="session" id="I5">
-						<h6>Industry 5: Critical Systems and Sensors, at <i>Room 1105, 16:00 - 17:10, June 24</i></h6>
+						<h6>Industry 5: Critical Systems and Sensors, at <i>Room 1101, 16:00 - 17:10, June 24</i></h6>
 						<p><b>Session Chair:</b> Antonio Iannaccone, University of Naples Parthenope</p>
 						<ul>
 						  <li><b>A Configurable Logic Architecture Based on Micro-Electromechanical Relays for Safety Critical Nuclear Power Protection Systems</b> by Coby Cockrell, Aidan Collins, Ben Smith, Umit Ozgur, Vitaliy Avrutin, Matt Gibson, Abhi Rajagopala, Carl Elks</li>
@@ -1270,7 +1390,7 @@
 								<td class="td-3 auditorium-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Auditorium</td>
 								<td class="td-3 room-1102-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1102</td>
 								<td class="td-3 room-1104-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1104</td>
-								<td class="td-3 room-1105-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1105</td>
+								<td class="td-3 room-1101-session session-cell" data-bs-toggle="tooltip" data-target="venue_map">Room 1101</td>
                                 
 							</tr>							
 							<tr>
@@ -1296,7 +1416,7 @@
 								<td class="td-2 rt-session session-cell" rowspan="1" data-target="RS14"><b>R14</b></td>
 								<td class="td-2 room-1102-session session-cell" rowspan="1" data-target="RS15"><b>RS15</b></td>
 								<td class="td-2 room-1104-session session-cell" rowspan="1" data-target="doctoral_1"><b>Doctoral Forum 1</b></td>
-								<td class="td-2 room-1105-session session-cell" rowspan="1" data-target="I6"><b>Industry 6</b></td>
+								<td class="td-2 room-1101-session session-cell" rowspan="1" data-target="I6"><b>Industry 6</b></td>
 
 							</tr>
 							<tr>
@@ -1394,7 +1514,7 @@
 					  </div>
 					  
 					  <div class="session" id="I6">
-						<h6>Industry 6: Smart Contracts and Blockchain, at <i>Room 1105, 11:00 - 12:30, June 25</i></h6>
+						<h6>Industry 6: Smart Contracts and Blockchain, at <i>Room 1101, 11:00 - 12:30, June 25</i></h6>
 						<p><b>Session Chair:</b> Niladri Mohanty, Independent Research</p>
 						<ul>
 						  <li><b>Cross-Referencing Whitepaper Claims and Smart Contract Code for Automated ICO Auditing</b> by Chenglong Fu, Chi Zhang, Mengtian Li</li>
@@ -1520,6 +1640,52 @@
 			}
 			
 		});
+		});
+	</script>
+
+	<script>
+		// Mobile: annotate session cells with room labels and wire dropdown ↔ Bootstrap tabs
+		document.addEventListener('DOMContentLoaded', function () {
+			var roomClassMap = {
+				'auditorium-session':  'Auditorium',
+				'rt-session':          'Auditorium',
+				'room-1102-session':   'Room 1102',
+				'room-1102-2-session': 'Room 1102',
+				'room-1104-session':   'Room 1104',
+				'room-1104-2-session': 'Room 1104',
+				'room-1101-session':   'Room 1101',
+				'room-904-session':    'Room 904',
+				'room-904-2-session':  'Room 904',
+				'room-904-3-session':  'Room 904',
+				'room-905-session':    'Room 905',
+				'room-905-2-session':  'Room 905',
+				'room-905-3-session':  'Room 905',
+				'room-906-session':    'Room 906',
+				'room-906-2-session':  'Room 906'
+			};
+
+			document.querySelectorAll('.session-cell').forEach(function (cell) {
+				for (var cls in roomClassMap) {
+					if (cell.classList.contains(cls)) {
+						cell.setAttribute('data-room', roomClassMap[cls]);
+						break;
+					}
+				}
+			});
+
+			var mobileSelect = document.getElementById('mobile-date-select');
+			if (mobileSelect) {
+				mobileSelect.addEventListener('change', function () {
+					var tabEl = document.getElementById(this.value);
+					if (tabEl) bootstrap.Tab.getOrCreateInstance(tabEl).show();
+				});
+
+				document.querySelectorAll('#program-tab button[data-bs-toggle="tab"]').forEach(function (btn) {
+					btn.addEventListener('shown.bs.tab', function (e) {
+						mobileSelect.value = e.target.id;
+					});
+				});
+			}
 		});
 	</script>
 
