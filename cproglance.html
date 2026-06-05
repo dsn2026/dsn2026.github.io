@@ -1690,6 +1690,85 @@
 	</script>
 
 	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Get current date/time in conference timezone (America/New_York = UTC-4 in June)
+			var now = new Date();
+			var parts = {};
+			new Intl.DateTimeFormat('en-US', {
+				timeZone: 'America/New_York',
+				year: 'numeric', month: 'numeric', day: 'numeric',
+				hour: 'numeric', minute: 'numeric', hour12: false
+			}).formatToParts(now).forEach(function (p) {
+				parts[p.type] = parseInt(p.value, 10);
+			});
+
+			var month  = parts.month;
+			var day    = parts.day;
+			var year   = parts.year;
+			var hour   = (parts.hour === 24) ? 0 : parts.hour;
+			var minute = parts.minute;
+
+			// Outside June 22-25, 2026: leave the page as-is (day1 selected, top of page)
+			if (!(year === 2026 && month === 6 && day >= 22 && day <= 25)) {
+				return;
+			}
+
+			var dayMap = {
+				5: { tabId: 'day1-tab', contentId: 'day1' },
+				23: { tabId: 'day2-tab', contentId: 'day2' },
+				24: { tabId: 'day3-tab', contentId: 'day3' },
+				25: { tabId: 'day4-tab', contentId: 'day4' }
+			};
+			var info = dayMap[day];
+			if (!info) return;
+
+			// Activate the correct tab (desktop); the shown.bs.tab event will sync the mobile dropdown
+			var tabEl = document.getElementById(info.tabId);
+			if (tabEl) {
+				bootstrap.Tab.getOrCreateInstance(tabEl).show();
+			}
+
+			// Direct sync for mobile dropdown as a fallback
+			var mobileSelect = document.getElementById('mobile-date-select');
+			if (mobileSelect) {
+				mobileSelect.value = info.tabId;
+			}
+
+			// Mobile only: scroll to the current (or next upcoming) time slot
+			if (window.innerWidth <= 768) {
+				// Wait for the tab fade-in to complete before scrolling
+				setTimeout(function () {
+					var tabContent = document.getElementById(info.contentId);
+					if (!tabContent) return;
+
+					var currentMin = hour * 60 + minute;
+					console.log(currentMin)
+					var targetRow = null;
+
+					tabContent.querySelectorAll('table.table-prog tr').forEach(function (row) {
+						var timeCell = row.querySelector('.td-1:not(.thd)');
+						if (!timeCell) return;
+						var m = timeCell.textContent.trim().match(/(\d{1,2}):(\d{2})\s*[-–]\s*(\d{1,2}):(\d{2})/);
+						if (!m) return;
+						var startMin = parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+						var endMin   = parseInt(m[3], 10) * 60 + parseInt(m[4], 10);
+
+						if (currentMin >= startMin && currentMin < endMin) {
+							targetRow = row; // currently in this slot — highest priority
+						} else if (!targetRow && startMin > currentMin) {
+							targetRow = row; // first upcoming slot
+						}
+					});
+
+					if (targetRow) {
+						targetRow.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					}
+				}, 400);
+			}
+		});
+	</script>
+
+	<script>
 		const tabToPdfMap = {
 		day1: 'day_1.webp',
 		day2: 'day_2.webp',
